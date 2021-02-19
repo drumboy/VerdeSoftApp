@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:VerdeSoftApp"
+             mc:Ignorable="d"
+             x:Class="VerdeSoftApp.PageCashReg">
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Place new controls here -->
+
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnStackLayout_Tapped" NumberOfTapsRequired="1" />
+                <TapGestureRecognizer Tapped="OnStackLayout_Tapped2" NumberOfTapsRequired="2" />
+            </StackLayout.GestureRecognizers>
+
+            <Label x:Name="LabelTitle" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Kassa</Label>
+            <Label x:Name="LabelTotal" FontSize="22" Text="Total € 0.00" TextColor="White" BackgroundColor="#1690F4" HorizontalTextAlignment= "Center" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+                <!--<Button x:Name="BtnSearch" BorderColor="Black" BorderWidth="1" Text=""  Clicked="BtnSearch_Clicked" Grid.Row="0" Grid.Column="1" /> -->
+                <Frame Grid.Row="0" Grid.Column="1" BorderColor="Gray" CornerRadius="5" Padding="2">
+                    <Entry x:Name="EntryScan" FontSize="14" Grid.Row="0" Grid.Column="1" Placeholder="Scan Barcode" 
+                       PlaceholderColor="Olive" Keyboard="Default" Completed="EntryScan_Completed" Focused="EntryScan_Focussed" Unfocused="EntryScan_Unfocused"></Entry>
+                </Frame>
+                <ImageButton x:Name="ImgBtnSearch" Source="search.png"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked= "ImageButton_Clicked" 
+                             Grid.Row="0" Grid.Column="2"/>
+            </Grid>
+
+            <Label x:Name="LabelArtName" Font ="Bold,16"  Text="" HorizontalTextAlignment= "Center" TextColor="Green"/>
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+                                
+                <Frame Grid.Row="0" Grid.Column="1" BorderColor="Gray" CornerRadius="5" Padding="2">
+                    <local:NumericEntry x:Name="EntryQuantity" FontSize="14" Grid.Row="1" Grid.Column="1" Placeholder="Quantity" PlaceholderColor="Olive" 
+                       Focused="EntryQuantity_Focused" Unfocused="EntryQuantity_Unfocused"  Completed="EntryQuantity_Completed" HorizontalTextAlignment="End" Keyboard="Numeric">
+                        <Entry.Behaviors>
+                            <local:NumericValidationBehavior />
+                        </Entry.Behaviors>
+                    </local:NumericEntry>
+                </Frame>
+                
+                <Frame Grid.Row="0" Grid.Column="2" BorderColor="Gray" CornerRadius="5" Padding="2">
+                    <local:NumericEntry x:Name="EntryPrice" FontSize="14" Grid.Row="1" Grid.Column="2" Placeholder="Price" PlaceholderColor="Olive" 
+                           Focused="EntryPrice_Focused" Unfocused="EntryPrice_Unfocused" Completed="EntryPrice_Completed" HorizontalTextAlignment="End" Keyboard="Numeric" >
+                        <Entry.Behaviors>
+                            <local:NumericValidationBehavior />
+                        </Entry.Behaviors>
+                    </local:NumericEntry>
+                </Frame>
+
+                <Frame Grid.Row="0" Grid.Column="3" BorderColor="Gray" CornerRadius="5" Padding="2">
+                    <local:NumericEntry x:Name="EntryDiscount" FontSize="14" Grid.Row="1" Grid.Column="3" Placeholder="Reduction" PlaceholderColor="Olive" 
+                           Focused="EntryDiscount_Focused" Unfocused="EntryDiscount_Unfocused" Completed="EntryDiscount_Completed" HorizontalTextAlignment="End" Keyboard="Numeric">
+                        <Entry.Behaviors>
+                            <local:NumericValidationBehavior />
+                        </Entry.Behaviors>
+                    </local:NumericEntry>
+                </Frame>
+            </Grid>
+
+            
+            <Label x:Name="LabelCustomer" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="#1690F4">Customer</Label>
+            <!--
+            <BoxView HorizontalOptions="FillAndExpand" WidthRequest="1" HeightRequest="4" Color="#1690F4" />
+            -->
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55" />
+                    <RowDefinition Height="55" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BtnMinus" HorizontalOptions="Center"  Text ="+/-"  BackgroundColor="Green" TextColor="White" Clicked="BtnMinus_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+                <Button x:Name="BtnList" HorizontalOptions="Center" Text ="Lijst"  BackgroundColor="Green" TextColor="White" Clicked= "BtnList_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+                <Button x:Name="BtnPay" HorizontalOptions="Center" Text ="Betalen" BackgroundColor="Orange" TextColor="White" Clicked="BtnPay_Clicked" Grid.Row="0" Grid.Column="3"></Button>
+                <Button x:Name="BtnReturn" HorizontalOptions="Center" Text ="Terug"  BackgroundColor="Green" TextColor="White" Clicked="BtnReturn_Clicked" Grid.Row="0" Grid.Column="4"></Button>
+
+                <Button x:Name="BtnCustomers" HorizontalOptions="Center" Text ="Klanten"  BackgroundColor="Green" TextColor="White" Clicked="BtnCustomers_Clicked" Grid.Row="1" Grid.Column="1"></Button>
+                <Button x:Name="BtnStockLocation" HorizontalOptions="Center" Text ="Stockplaats"  BackgroundColor="#1690F4" TextColor="White" Clicked="BtnStockLocation_Clicked" Grid.Row="1" Grid.Column="2"></Button>
+                <Button x:Name="BtnPrev" HorizontalOptions="Center" Text = ""  BackgroundColor="Green" TextColor="White" Clicked="BtnPrev_Clicked" Grid.Row="1" Grid.Column="3"></Button>
+                <Button x:Name="BtnNext" HorizontalOptions="Center" Text = ""  BackgroundColor="Green" TextColor="White" Clicked="BtnNext_Clicked" Grid.Row="1" Grid.Column="4"></Button>
+
+                
+
+            </Grid>
+
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

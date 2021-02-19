@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VerdeSoftApp.PageScanned">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label x:Name="LabelTitle" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Lijst</Label>
+            <Label x:Name="LabelTotal" FontSize="20" Text="Total € 0.00" TextColor="White" BackgroundColor="#1690F4" HorizontalTextAlignment= "Center" />
+            
+            <ListView ItemsSource="{Binding scannedArticles}"
+           x:Name="ListViewArticles"
+          HasUnevenRows="true"
+          ItemSelected="OnListViewItemSelected"
+          ItemTapped="OnListViewItemTapped">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="40" />
+                                    <ColumnDefinition Width="50" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding Quantity}" FontAttributes="Bold" />
+                                <Label Grid.Column="1" Text="{Binding Name}" FontAttributes="Bold" />
+                                <Label Grid.Column="2" Text="{Binding Price, StringFormat='{0:F2}' }" FontAttributes="Bold" HorizontalTextAlignment="End" />
+                                <Label Grid.Column="3" Text="{Binding Discount, StringFormat='{0:F2}' }" FontAttributes="Bold" HorizontalTextAlignment="End" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BtnDelete" Text ="Verwijderen" BackgroundColor="Green" TextColor="White" Clicked="BtnDelete_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+                <Button x:Name="BtnModify" Text ="Wijzigen" BackgroundColor="Green" TextColor="White" Clicked= "BtnModify_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+                <Button x:Name="BtnReturn" Text ="Terug" BackgroundColor="Green" TextColor="White" Clicked="BtnReturn_Clicked" Grid.Row="0" Grid.Column="3"></Button>
+
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

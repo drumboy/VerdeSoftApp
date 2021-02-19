@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VerdeSoftApp.PageCustomers">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label x:Name="LabelTitle" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Klanten</Label>
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+                
+                <Label FontSize="14" Text="Naam"  Grid.Row="0" Grid.Column="1"  VerticalTextAlignment="Center"/>
+                <Entry x:Name="EntryName" FontSize="14" HorizontalTextAlignment="End" Placeholder="Naam" PlaceholderColor="Olive" 
+                           Completed="EntryName_Completed" Grid.Row="0" Grid.Column="2"></Entry>
+
+                <Label FontSize="14" Text="Code" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" />
+                <Entry x:Name="EntryCode" FontSize="14" HorizontalTextAlignment="End" Completed="EntryCode_Completed" Grid.Row="1" Grid.Column="2"></Entry>
+            </Grid>
+
+            <BoxView HorizontalOptions="FillAndExpand" WidthRequest="1" HeightRequest="4" Color="#1690F4" />
+
+            <ListView x:Name="lvCustomers" ItemsSource="{Binding Customers}"
+          HasUnevenRows="true"
+          ItemSelected="OnListViewItemSelected"
+          ItemTapped="OnListViewItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="270" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="1" Text="{Binding Name}" FontAttributes="Bold" />
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Code}"  VerticalOptions="End" />
+                                <Label Grid.Row="1" Grid.Column="2" Text="{Binding Price}"  VerticalOptions="End" FontAttributes="Bold" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BtnChoose" Text ="Kiezen" BackgroundColor="Green" TextColor="White" Clicked="BtnChoose_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+                <Button x:Name="BtnReturn" Text ="Terug" BackgroundColor="Green" TextColor="White" Clicked="BtnReturn_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+                
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VerdeSoftApp.PageSearchArt">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="LabelTitle" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Zoeken</Label>
+            <Label x:Name="LabelDescription" FontSize="16" Text="Omschrijving" />
+            <Entry x:Name="EntryName" FontSize="16" HorizontalTextAlignment="End" Completed="EntryName_Completed"></Entry>
+            <Label x:Name="LabelCode" FontSize="16" Text="Code" />
+            <Entry x:Name="EntryCode" FontSize="16" HorizontalTextAlignment="End" Completed="EntryCode_Completed"></Entry>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BtnReturn" Text = "Terug"  BackgroundColor="Green" TextColor="White" Clicked="BtnReturn_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+                <Button x:Name="BtnSearch" Text ="Zoeken"  BackgroundColor="Green" TextColor="White" Clicked= "BtnSearch_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

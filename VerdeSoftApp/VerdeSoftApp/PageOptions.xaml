@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VerdeSoftApp.PageOptions">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="LabelTitle" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Opties</Label>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BtnInit" BackgroundColor="Green" TextColor="White" Text="Initialiseer"  Clicked="BtnInit_Clicked" Grid.Row="1" Grid.Column="1"/>
+                <Button x:Name= "BtnSettings" BackgroundColor="Orange" TextColor="White" Text="Instellingen"  Clicked="BtnSettings_Clicked"  Grid.Row="1" Grid.Column="2" />
+            </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BtnReturn" BackgroundColor="Green" TextColor="White" Text="Terug"  Clicked="BtnReturn_Clicked" Grid.Row="0" Grid.Column="1" />
+            </Grid>
+
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
