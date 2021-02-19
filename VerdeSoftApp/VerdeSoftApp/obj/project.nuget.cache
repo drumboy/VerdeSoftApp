@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NGHNgjaN7V4z+iV1Ohi/v60vjzMGs8XOprTVQiUmHfxb4f6D+n3+h5xzoNPrXwmom9Tr/vR/s6bwJOZKyCwSHg==",
+  "dgSpecHash": "CejwgfgcFo3XvJ2FYRD5CSqkXOs/8QG4jCD6ips5l0/0q6TeSfvmN20HXzanaPpmygXBNzm2CwG8Xuw9SeoXsg==",
   "success": true,
-  "projectFilePath": "D:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp_backup_17022021_origineel\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj",
+  "projectFilePath": "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Laurens\\.nuget\\packages\\microsoft.bcl\\1.1.6\\microsoft.bcl.1.1.6.nupkg.sha512",
     "C:\\Users\\Laurens\\.nuget\\packages\\microsoft.bcl.async\\1.0.165\\microsoft.bcl.async.1.0.165.nupkg.sha512",

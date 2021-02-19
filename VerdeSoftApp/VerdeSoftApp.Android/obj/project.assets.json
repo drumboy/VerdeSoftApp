@@ -2631,11 +2631,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp_backup_17022021_origineel\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\VerdeSoftApp.Android.csproj",
+      "projectUniqueName": "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\VerdeSoftApp.Android.csproj",
       "projectName": "VerdeSoftApp.Android",
-      "projectPath": "D:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp_backup_17022021_origineel\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\VerdeSoftApp.Android.csproj",
+      "projectPath": "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\VerdeSoftApp.Android.csproj",
       "packagesPath": "C:\\Users\\Laurens\\.nuget\\packages\\",
-      "outputPath": "D:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp_backup_17022021_origineel\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\obj\\",
+      "outputPath": "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2656,8 +2656,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp_backup_17022021_origineel\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj": {
-              "projectPath": "D:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp_backup_17022021_origineel\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj"
+            "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj": {
+              "projectPath": "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj"
             }
           }
         }

@@ -2113,11 +2113,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp_backup_17022021_origineel\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj",
+      "projectUniqueName": "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj",
       "projectName": "VerdeSoftApp",
-      "projectPath": "D:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp_backup_17022021_origineel\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj",
+      "projectPath": "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj",
       "packagesPath": "C:\\Users\\Laurens\\.nuget\\packages\\",
-      "outputPath": "D:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp_backup_17022021_origineel\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\obj\\",
+      "outputPath": "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

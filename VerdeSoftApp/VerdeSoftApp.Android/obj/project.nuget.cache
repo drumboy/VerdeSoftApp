@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Yp/LFXPavT7Exd2apoTBioDFgK7TPLru+OPNonlepteg6TJQi2x5+4rIXSUHfMPpHBnW/jP58eLwX6g3b5FIrw==",
+  "dgSpecHash": "/91JXRZ3mOpwvgTylVHy1C8oaOksTmQrSYkQzX12YluHfRwyU6aVqT4eW9q8LFl2kgfxbgwU+Okbh9zFT1as7w==",
   "success": true,
-  "projectFilePath": "D:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp_backup_17022021_origineel\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\VerdeSoftApp.Android.csproj",
+  "projectFilePath": "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\VerdeSoftApp.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Laurens\\.nuget\\packages\\mysqlconnector\\0.64.0\\mysqlconnector.0.64.0.nupkg.sha512",
     "C:\\Users\\Laurens\\.nuget\\packages\\pclstorage\\1.0.2\\pclstorage.1.0.2.nupkg.sha512",
