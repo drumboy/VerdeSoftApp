@@ -45,7 +45,7 @@ namespace VerdeSoftApp
             BtnReturnVervolg.Text = cTranslate.getValue("Terug");
         }
 
-        private void BtnSaveInstellingen_Clicked(object sender, EventArgs e)
+        private async void BtnSaveInstellingen_Clicked(object sender, EventArgs e)
         {
             item.MobileService = EntryMobileService.Text;
             item.Identification = EntryIdentification.Text;
@@ -56,15 +56,17 @@ namespace VerdeSoftApp
             item.Language = EntryLanguage.Text;
 
             cSQLite.saveSettings(item);
-            //cNavigate.openPreviousPage();
+            await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Opslaan gelukt"), "OK");
+            cNavigate.openSpecificPage("MainPage");
         }
 
-        private void BtnSaveVervolg_Clicked(object sender, EventArgs e)
+        private async void BtnSaveVervolg_Clicked(object sender, EventArgs e)
         {
             item.ConnString = EntryConnectionString.Text;
 
             cSQLite.saveSettings(item);
-            //cNavigate.openPreviousPage();
+            await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Opslaan gelukt"), "OK");
+            cNavigate.openSpecificPage("MainPage");
         }
 
         private void initEntries()

@@ -1,2 +1,2 @@
-AdbTarget=-s R58N51M2TEK
+AdbTarget=-s emulator-5554
 AdbOptions=
