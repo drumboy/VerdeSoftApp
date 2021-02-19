@@ -47,7 +47,8 @@ namespace VerdeSoftApp
 
         private void BtnSettings_Clicked(object sender, EventArgs e)
         {
-            cNavigate.openPage(new PageSettings());
+            //cNavigate.openPage(new PageSettings());
+            cNavigate.openPage(new PageSettingsTabbed());
         }
 
         private void BtnReturn_Clicked(object sender, EventArgs e)

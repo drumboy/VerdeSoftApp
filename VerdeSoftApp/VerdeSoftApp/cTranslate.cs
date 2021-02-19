@@ -95,6 +95,8 @@ namespace VerdeSoftApp
 
             translations.Add(new eTranslate() { Code = "Herhaal aantal", NL = "Herhaal aantal", FR = "Répéter qté", EN = "Repeat quantity", DE = "" }); //1.0.4 b
 
+            translations.Add(new eTranslate() { Code = "Vervolg", NL = "Vervolg", FR = "Continuation", EN = "Next", DE = "" }); 
+
         }
 
         public static string getValue(string Code)

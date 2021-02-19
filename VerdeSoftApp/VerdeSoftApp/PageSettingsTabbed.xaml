@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VerdeSoftApp.PageSettingsTabbed">
+  <!--Pages can be added as references or inline-->
+    <ContentPage x:Name="contentTabInstellingen" Title="Intstellingen">
+        <ContentPage.Content>
+            <StackLayout>
+
+                <Label x:Name="LabelTitleInstellingen" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Instellingen</Label>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="40" />
+                        <!-- <RowDefinition Height="20" />
+                        <RowDefinition Height="40" />-->
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" />
+                        <!--<ColumnDefinition Width="10" />-->
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="LabelWCF" FontSize="12" Text="WCF Service" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
+                    <Entry x:Name="EntryMobileService" FontSize="14" Placeholder="http://192.168.1.116:8000/MobileService" PlaceholderColor="Olive" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="1"></Entry>
+                    <!--<Label x:Name="LabelCNSTR" FontSize="12" Text="ConnectionString" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"/>
+                    <Entry x:Name="EntryConnectionString" FontSize="14" Placeholder="Userid=root;database=verdesoft;server=192.168.1.111;password=root;CharSet=utf8" PlaceholderColor="Olive" HorizontalTextAlignment="End" Grid.Row="3" Grid.Column="1"></Entry>-->
+                </Grid>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="10" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="LabelIdentif" FontSize="12" Text="Identificatie" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" />
+                    <Entry x:Name="EntryIdentification" FontSize="14" Placeholder="Identification" PlaceholderColor="Olive" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2"></Entry>
+                    <Label x:Name="LabelTicket" FontSize="12" Text="Ticket"  Grid.Row="1" Grid.Column="1" VerticalOptions="Center"/>
+                    <Entry x:Name="EntryTicket" FontSize="14" Placeholder="Ticket" PlaceholderColor="Olive" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="2"></Entry>
+                    <Label x:Name="LabelCustomerCode" FontSize="12" Text="Klantcode" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" />
+                    <Entry x:Name="EntryCustomerCode" FontSize="14" Placeholder="CustomerCode" PlaceholderColor="Olive" HorizontalTextAlignment="End" Grid.Row="2" Grid.Column="2"></Entry>
+                    <Label x:Name="LabelLanguage" FontSize="12" Text="Taal" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" />
+                    <Entry x:Name="EntryLanguage" FontSize="14" Placeholder="Language" PlaceholderColor="Olive" HorizontalTextAlignment="End" Grid.Row="3" Grid.Column="2"></Entry>
+
+                    <Label x:Name="LabelFocusPrice" FontSize="12" Text="Focus Price"  VerticalOptions="Center" Grid.Row="4" Grid.Column="1"/>
+                    <CheckBox x:Name="CheckBoxFocusPrice" VerticalOptions="Center" Grid.Row="4" Grid.Column="2" />
+                    <Label x:Name="LabelPayments" FontSize="12" Text="Payments" VerticalOptions="Center" Grid.Row="5" Grid.Column="1"/>
+                    <CheckBox x:Name="CheckBoxPayments" VerticalOptions="Center" Grid.Row="5" Grid.Column="2" />
+
+                </Grid>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="55" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="BtnSave" Text ="Opslaan"  BackgroundColor="Green" TextColor="White" Clicked="BtnSaveInstellingen_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+                    <Button x:Name="BtnReturn" Text ="Terug"  BackgroundColor="Green" TextColor="White" Clicked= "BtnReturn_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+
+                </Grid>
+            </StackLayout>
+        </ContentPage.Content>
+
+    </ContentPage>
+
+    <ContentPage x:Name="contentTabVervolg" Title="Vervolg">
+
+        <StackLayout>
+            <Label x:Name="LabelTitleVervolg" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Vervolg</Label>
+            <Label x:Name="LabelCNSTR" FontSize="12" Text="ConnectionString" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"/>
+            <Entry x:Name="EntryConnectionString" FontSize="14" Placeholder="Userid=root;database=verdesoft;server=192.168.1.111;password=root;CharSet=utf8" PlaceholderColor="Olive" HorizontalTextAlignment="End" Grid.Row="3" Grid.Column="1"></Entry>
+
+            <!--<Grid>
+                <Grid.RowDefinitions>
+                    --><!--<RowDefinition Height="20" />
+                    <RowDefinition Height="40" />--><!--
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    --><!--<ColumnDefinition Width="10" />--><!--
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="LabelCNSTR" FontSize="12" Text="ConnectionString" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"/>
+                <Entry x:Name="EntryConnectionString" FontSize="14" Placeholder="Userid=root;database=verdesoft;server=192.168.1.111;password=root;CharSet=utf8" PlaceholderColor="Olive" HorizontalTextAlignment="End" Grid.Row="3" Grid.Column="1"></Entry>
+            </Grid>-->
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BtnSaveVervolg" Text ="Opslaan"  BackgroundColor="Green" TextColor="White" Clicked="BtnSaveVervolg_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+                <Button x:Name="BtnReturnVervolg" Text ="Terug"  BackgroundColor="Green" TextColor="White" Clicked= "BtnReturn_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+
+            </Grid>
+        </StackLayout>
+
+
+    </ContentPage>
+
+</TabbedPage>
