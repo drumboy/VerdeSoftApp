@@ -66,6 +66,8 @@ namespace VerdeSoftApp
         public bool Payments { get; set; }
         public long Ticket { get; set; }
         public string Language { get; set; }
+        public bool KeybAlpha { get; set; }
+
 
     }
 

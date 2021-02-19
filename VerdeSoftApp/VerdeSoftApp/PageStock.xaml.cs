@@ -20,7 +20,15 @@ namespace VerdeSoftApp
         {
             InitializeComponent();
 
-            EntryScan.Keyboard = cData.kBoard;
+            //is keyboard alpha numeric uit settings - Laurens
+            if (cData.settings.KeybAlpha == true)
+            {
+                EntryScan.Keyboard = Keyboard.Default;
+            }
+            else
+            {
+                EntryScan.Keyboard = cData.kBoard;
+            }
 
             EntryScan.Text = "";
             cData.hArticleSelected += ArticleSelected_Handler;

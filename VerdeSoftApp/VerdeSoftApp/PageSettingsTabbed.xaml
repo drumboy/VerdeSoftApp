@@ -37,6 +37,8 @@
 
                         <RowDefinition Height="35" />
                         <RowDefinition Height="35" />
+
+                        <RowDefinition Height="35" /> <!-- rij voor Keyboard Alphanumeric -->
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="10" />
@@ -58,6 +60,9 @@
                     <CheckBox x:Name="CheckBoxFocusPrice" VerticalOptions="Center" Grid.Row="4" Grid.Column="2" />
                     <Label x:Name="LabelPayments" FontSize="12" Text="Payments" VerticalOptions="Center" Grid.Row="5" Grid.Column="1"/>
                     <CheckBox x:Name="CheckBoxPayments" VerticalOptions="Center" Grid.Row="5" Grid.Column="2" />
+
+                    <Label x:Name="LabelKeybAlpha" FontSize="12" Text="KeybAlpha" VerticalOptions="Center" Grid.Row="6" Grid.Column="1"/>
+                    <CheckBox x:Name="CheckBoxKeybAlpha" VerticalOptions="Center" Grid.Row="6" Grid.Column="2" />
 
                 </Grid>
 

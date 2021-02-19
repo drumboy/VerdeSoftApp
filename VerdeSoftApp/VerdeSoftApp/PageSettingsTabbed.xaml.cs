@@ -43,6 +43,7 @@ namespace VerdeSoftApp
             BtnReturn.Text = cTranslate.getValue("Terug");
             BtnSaveVervolg.Text = cTranslate.getValue("Opslaan");
             BtnReturnVervolg.Text = cTranslate.getValue("Terug");
+            LabelKeybAlpha.Text = cTranslate.getValue("Keyboard Alpha");
         }
 
         private async void BtnSaveInstellingen_Clicked(object sender, EventArgs e)
@@ -54,6 +55,7 @@ namespace VerdeSoftApp
             item.Payments = CheckBoxPayments.IsChecked;
             item.Ticket = Convert.ToInt64(EntryTicket.Text);
             item.Language = EntryLanguage.Text;
+            item.KeybAlpha = CheckBoxKeybAlpha.IsChecked;
 
             cSQLite.saveSettings(item);
             await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Opslaan gelukt"), "OK");
@@ -79,6 +81,7 @@ namespace VerdeSoftApp
             CheckBoxPayments.IsChecked = item.Payments;
             EntryLanguage.Text = item.Language;
             EntryTicket.Text = Convert.ToString(item.Ticket);
+            CheckBoxKeybAlpha.IsChecked = item.KeybAlpha;
         }
 
         private void BtnReturn_Clicked(object sender, EventArgs e)
