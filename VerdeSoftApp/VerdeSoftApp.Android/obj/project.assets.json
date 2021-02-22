@@ -2625,24 +2625,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Laurens\\.nuget\\packages\\": {},
+    "C:\\Users\\Andy\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\VerdeSoftApp.Android.csproj",
+      "projectUniqueName": "C:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\VerdeSoftApp.Android.csproj",
       "projectName": "VerdeSoftApp.Android",
-      "projectPath": "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\VerdeSoftApp.Android.csproj",
-      "packagesPath": "C:\\Users\\Laurens\\.nuget\\packages\\",
-      "outputPath": "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\obj\\",
+      "projectPath": "C:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\VerdeSoftApp.Android.csproj",
+      "packagesPath": "C:\\Users\\Andy\\.nuget\\packages\\",
+      "outputPath": "C:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Laurens\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Andy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2656,8 +2656,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj": {
-              "projectPath": "D:\\Github_projects\\Repositories\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj"
+            "C:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj": {
+              "projectPath": "C:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj"
             }
           }
         }

@@ -34,7 +34,7 @@ namespace VerdeSoftApp
             }
             else 
             {
-                EntryScan.Keyboard = cData.kBoard;
+                EntryScan.Keyboard = Keyboard.Numeric; //cData.kBoard;
             }
              
 

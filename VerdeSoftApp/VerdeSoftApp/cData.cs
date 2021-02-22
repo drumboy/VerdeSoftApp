@@ -35,7 +35,7 @@ namespace VerdeSoftApp
         public static string stockLocation = ""; //1.0.4
         public static double DefPricePerc = 0; //1.0.0.4
 
-        public static Keyboard kBoard = Keyboard.Numeric;
+        //public static Keyboard kBoard = Keyboard.Numeric;
 
         public delegate void ArticleSelected_Handler();
         public static event ArticleSelected_Handler hArticleSelected;

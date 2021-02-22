@@ -87,3 +87,4 @@ D:\Github_projects\Repositories\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp\obj\Relea
 D:\Github_projects\Repositories\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp\obj\Release\netstandard2.0\VerdeSoftApp.dll
 D:\Github_projects\Repositories\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp\obj\Release\netstandard2.0\ref\VerdeSoftApp.dll
 D:\Github_projects\Repositories\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp\obj\Release\netstandard2.0\VerdeSoftApp.pdb
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp\obj\Release\netstandard2.0\PageSettingsTabbed.xaml.g.cs

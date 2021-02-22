@@ -849,3 +849,4 @@ D:\Github_projects\Repositories\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\o
 D:\Github_projects\Repositories\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Release\90\stamp\_GenerateJavaStubs.stamp
 D:\Github_projects\Repositories\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Release\90\stamp\_GeneratePackageManagerJava.stamp
 D:\Github_projects\Repositories\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Release\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Release\90\stamp\_CleanIntermediateIfNeeded.stamp
