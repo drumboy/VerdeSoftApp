@@ -8,13 +8,25 @@ an internationalization string table (strings.xml) and some icons (drawable-XXX/
 would keep its resources in the "Resources" directory of the application:
 
 Resources/
-    drawable-hdpi/
+    mipmap/
         icon.png
 
-    drawable-ldpi/
+    mipmap-ldpi/
         icon.png
 
-    drawable-mdpi/
+    mipmap-mdpi/
+        icon.png
+		
+	mipmap-mdpi/
+        icon.png
+		
+	mipmap-xhdpi/
+        icon.png
+		
+	mipmap-xxhdpi/
+        icon.png
+		
+	mipmap-xxxhdpi/
         icon.png
 
     layout/
