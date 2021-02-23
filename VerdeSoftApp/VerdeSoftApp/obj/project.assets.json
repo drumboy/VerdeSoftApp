@@ -2107,9 +2107,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Andy\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Laurens\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -2117,15 +2116,14 @@
       "projectUniqueName": "C:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj",
       "projectName": "VerdeSoftApp",
       "projectPath": "C:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.csproj",
-      "packagesPath": "C:\\Users\\Andy\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Laurens\\.nuget\\packages\\",
       "outputPath": "C:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Andy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Laurens\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
