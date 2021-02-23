@@ -27,7 +27,7 @@ namespace VerdeSoftApp
 
         private void translatePage()
         {
-            LabelTitle.Text = cTranslate.getValue("Betalen");
+            LabelTitle.Text = cTranslate.getValue("Instellingen"); //change title Betalingen to Instellingen - Laurens
 
             BtnReturn.Text = cTranslate.getValue("Terug");
             BtnInit.Text = cTranslate.getValue("Initialiseer");
