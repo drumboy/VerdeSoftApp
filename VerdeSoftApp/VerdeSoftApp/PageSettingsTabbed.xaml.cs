@@ -51,11 +51,8 @@ namespace VerdeSoftApp
             item.MobileService = EntryMobileService.Text;
             item.Identification = EntryIdentification.Text;
             item.CustomerCode = EntryCustomerCode.Text;
-            item.FocusPrice = CheckBoxFocusPrice.IsChecked;
-            item.Payments = CheckBoxPayments.IsChecked;
             item.Ticket = Convert.ToInt64(EntryTicket.Text);
             item.Language = EntryLanguage.Text;
-            item.KeybAlpha = CheckBoxKeybAlpha.IsChecked;
 
             cSQLite.saveSettings(item);
             await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Opslaan gelukt"), "OK");
@@ -65,6 +62,9 @@ namespace VerdeSoftApp
         private async void BtnSaveVervolg_Clicked(object sender, EventArgs e)
         {
             item.ConnString = EntryConnectionString.Text;
+            item.FocusPrice = CheckBoxFocusPrice.IsChecked;
+            item.Payments = CheckBoxPayments.IsChecked;
+            item.KeybAlpha = CheckBoxKeybAlpha.IsChecked;
 
             cSQLite.saveSettings(item);
             await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Opslaan gelukt"), "OK");
