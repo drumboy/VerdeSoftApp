@@ -99,7 +99,7 @@ namespace VerdeSoftApp
             translations.Add(new eTranslate() { Code = "Opslaan gelukt", NL = "Opslaan gelukt", FR = "Enregistrement réussi", EN = "Save successful", DE = "" });
 
             translations.Add(new eTranslate() { Code = "Keyboard Alpha", NL = "Keyboard Alphanumeric", FR = "Clavier alphanumérique", EN = "Keyboard Alphanumeric", DE = "" });
-
+            translations.Add(new eTranslate() { Code = "Zoekveld", NL = "Zoekveld", FR = "Champ de recherche", EN = "Searchfield", DE = "" });
         }
 
         public static string getValue(string Code)

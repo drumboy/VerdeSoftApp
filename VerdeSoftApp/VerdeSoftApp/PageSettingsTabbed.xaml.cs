@@ -44,6 +44,7 @@ namespace VerdeSoftApp
             BtnSaveVervolg.Text = cTranslate.getValue("Opslaan");
             BtnReturnVervolg.Text = cTranslate.getValue("Terug");
             LabelKeybAlpha.Text = cTranslate.getValue("Keyboard Alpha");
+            LabelSearchField.Text = cTranslate.getValue("Zoekveld");
         }
 
         private async void BtnSaveInstellingen_Clicked(object sender, EventArgs e)
@@ -66,6 +67,25 @@ namespace VerdeSoftApp
             item.Payments = CheckBoxPayments.IsChecked;
             item.KeybAlpha = CheckBoxKeybAlpha.IsChecked;
 
+            //Save SearchField
+            if (RbtSearchFieldNothing.IsChecked)
+            {
+                item.SearchField = " ";
+            }
+            else if (RbtSearchFieldName.IsChecked)
+            {
+                item.SearchField = "Name";
+            }
+            else if (RbtSearchFieldCode.IsChecked)
+            {
+                item.SearchField = "Code";
+            }
+            else 
+            {
+                item.SearchField = "";
+            }
+
+
             cSQLite.saveSettings(item);
             await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Opslaan gelukt"), "OK");
             cNavigate.openSpecificPage("MainPage");
@@ -82,6 +102,60 @@ namespace VerdeSoftApp
             EntryLanguage.Text = item.Language;
             EntryTicket.Text = Convert.ToString(item.Ticket);
             CheckBoxKeybAlpha.IsChecked = item.KeybAlpha;
+
+            if (String.IsNullOrEmpty(item.SearchField))
+            {
+                item.SearchField = "";
+                CheckedInSearchFieldRadio(item.SearchField);
+            }
+            else 
+            {
+                CheckedInSearchFieldRadio(item.SearchField);
+            }
+
+            //try
+            //{
+            //    if (String.IsNullOrEmpty(item.SearchField))
+            //    {
+            //        item.SearchField = "-1";
+            //        CheckedInSearchFieldRadio(item.SearchField);
+            //    }
+            //    else 
+            //    {
+            //        CheckedInSearchFieldRadio(item.SearchField);
+            //    }
+            //}
+            //catch (Exception)
+            //{
+            //    throw;
+            //}
+        }
+
+        private void CheckedInSearchFieldRadio(string searchField)
+        {
+            if (searchField.Equals("")) 
+            {
+                RbtSearchFieldNothing.IsChecked = RbtSearchFieldName.IsChecked = RbtSearchFieldCode.IsChecked = false;
+            }
+            else 
+            {
+                switch (searchField)
+                {
+                    case " ":
+                        item.SearchField = " ";
+                        RbtSearchFieldNothing.IsChecked = true;
+                        break;
+                    case "Name":
+                        item.SearchField = "Name";
+                        RbtSearchFieldName.IsChecked = true;
+                        break;
+                    case "Code":
+                        item.SearchField = "Code";
+                        RbtSearchFieldCode.IsChecked = true;
+                        break;
+                }
+
+            }
         }
 
         private void BtnReturn_Clicked(object sender, EventArgs e)
@@ -89,5 +163,17 @@ namespace VerdeSoftApp
             //cNavigate.openSpecificPage("MainPage");
             cNavigate.openPreviousPage();
         }
+
+
+        private void RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb.IsChecked) 
+            {
+                item.SearchField = rb.Text;            
+            }
+                
+        }
+
     }
 }
