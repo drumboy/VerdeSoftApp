@@ -28,7 +28,7 @@
 .L.compressed_assembly_descriptors:
 	/* 0: FormsViewGroup.dll */
 	/* uncompressed_file_size */
-	.long	14336
+	.long	13824
 	/* loaded */
 	.byte	0
 	/* data */
@@ -46,7 +46,7 @@
 
 	/* 2: Mono.Android.dll */
 	/* uncompressed_file_size */
-	.long	1960960
+	.long	2012672
 	/* loaded */
 	.byte	0
 	/* data */
@@ -289,7 +289,7 @@
 
 	/* 29: System.dll */
 	/* uncompressed_file_size */
-	.long	900608
+	.long	901632
 	/* loaded */
 	.byte	0
 	/* data */
@@ -298,7 +298,7 @@
 
 	/* 30: VerdeSoftApp.Android.dll */
 	/* uncompressed_file_size */
-	.long	159232
+	.long	197632
 	/* loaded */
 	.byte	0
 	/* data */
@@ -307,7 +307,7 @@
 
 	/* 31: VerdeSoftApp.dll */
 	/* uncompressed_file_size */
-	.long	724480
+	.long	743936
 	/* loaded */
 	.byte	0
 	/* data */
@@ -613,7 +613,7 @@
 
 	/* 65: Xamarin.Android.Support.v7.AppCompat.dll */
 	/* uncompressed_file_size */
-	.long	369152
+	.long	439296
 	/* loaded */
 	.byte	0
 	/* data */
@@ -649,7 +649,7 @@
 
 	/* 69: Xamarin.Forms.Core.dll */
 	/* uncompressed_file_size */
-	.long	926720
+	.long	1097728
 	/* loaded */
 	.byte	0
 	/* data */
@@ -658,7 +658,7 @@
 
 	/* 70: Xamarin.Forms.Platform.Android.dll */
 	/* uncompressed_file_size */
-	.long	669184
+	.long	753152
 	/* loaded */
 	.byte	0
 	/* data */
@@ -667,7 +667,7 @@
 
 	/* 71: Xamarin.Forms.Platform.dll */
 	/* uncompressed_file_size */
-	.long	19072
+	.long	127104
 	/* loaded */
 	.byte	0
 	/* data */
@@ -676,7 +676,7 @@
 
 	/* 72: Xamarin.Forms.Xaml.dll */
 	/* uncompressed_file_size */
-	.long	101888
+	.long	104448
 	/* loaded */
 	.byte	0
 	/* data */

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AJwKT77THIIDA8Aoly5OrBnnq5NBzr4P4ejiOsgjvQsV8xBObJlttRXDTF2TdwpWaLWrTUFwbEhhbpnE5auHbA==",
+  "dgSpecHash": "XlUpoDQhjxhJF8Ld6e2dzuDq9ZTYFoiU7qiYwTVjoD2E9m+vuCRHU3athqZ7npNNn3oRV2oZbhUjsJDTiFR7dQ==",
   "success": true,
   "projectFilePath": "C:\\VerdeSoft\\Software\\VS2019\\vSoft\\VerdeSoftApp\\VerdeSoftApp\\VerdeSoftApp.Android\\VerdeSoftApp.Android.csproj",
   "expectedPackageFiles": [
@@ -59,7 +59,7 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
     "C:\\Users\\Laurens\\.nuget\\packages\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
-    "C:\\Users\\Laurens\\.nuget\\packages\\xamarin.forms\\4.3.0.908675\\xamarin.forms.4.3.0.908675.nupkg.sha512"
+    "C:\\Users\\Laurens\\.nuget\\packages\\xamarin.forms\\4.6.0.800\\xamarin.forms.4.6.0.800.nupkg.sha512"
   ],
   "logs": []
 }

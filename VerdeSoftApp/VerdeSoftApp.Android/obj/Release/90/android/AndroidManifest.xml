@@ -7,7 +7,7 @@
   <uses-feature android:name="android.hardware.camera" android:required="true" />
   <uses-feature android:name="android.hardware.camera.autofocus" android:required="true" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-  <application android:label="VerdeSoftApp.Android" android:icon="@mipmap/icon" android:name="android.app.Application" android:allowBackup="true">
+  <application android:label="VerdeSoftApp.Android" android:icon="@mipmap/icon" android:name="android.app.Application" android:allowBackup="true" android:extractNativeLibs="true">
     <provider android:name="android.support.v4.content.FileProvider" android:authorities="verdesoft.app.fileprovider" android:exported="false" android:grantUriPermissions="true">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
     </provider>
