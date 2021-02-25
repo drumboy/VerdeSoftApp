@@ -240,6 +240,9 @@ namespace VerdeSoftApp
             e.Ticket = 1;
             e.CustomerCode = "";
             e.Language = "N";
+            e.SearchField = "";
+            e.KeybAlpha = false;
+            
             SQLiteConn.Insert(e);
         }
 
