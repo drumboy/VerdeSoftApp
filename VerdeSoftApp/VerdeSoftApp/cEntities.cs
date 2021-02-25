@@ -67,6 +67,7 @@ namespace VerdeSoftApp
         public long Ticket { get; set; }
         public string Language { get; set; }
         public bool KeybAlpha { get; set; }
+        public string SearchField { get; set; }
 
 
     }

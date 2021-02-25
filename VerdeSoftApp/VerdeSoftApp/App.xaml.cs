@@ -11,6 +11,14 @@ namespace VerdeSoftApp
         
         public App()
         {
+
+            Device.SetFlags(new string[]
+            {   "RadioButton_Experimental",
+                "AppTheme_Experimental",
+                "Markup_Experimental",
+                "Expander_Experimental"
+            });
+
             if (cNavigate.listPages == null)
             {
                 InitializeComponent();
