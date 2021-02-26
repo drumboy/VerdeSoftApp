@@ -376,3 +376,26 @@ MigrationBackup/
 .ionide/
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,xamarinstudio
+*.props
+*.cache
+.vs/VerdeSoftApp/v16/.suo
+*.sln
+*.sln
+.vs/VerdeSoftApp/v16/.suo
+*.v2
+.vs/VerdeSoftApp/v16/.suo
+*.props
+*.cache
+*.dll
+*.dll
+*.pdb
+*.props
+*.config
+*.zip
+*.props
+*.cache
+*.dll
+*.pdb
+*.config
+*.zip
+*.o

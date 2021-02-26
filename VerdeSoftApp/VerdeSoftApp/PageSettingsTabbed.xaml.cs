@@ -45,6 +45,7 @@ namespace VerdeSoftApp
             BtnReturnVervolg.Text = cTranslate.getValue("Terug");
             LabelKeybAlpha.Text = cTranslate.getValue("Keyboard Alpha");
             LabelSearchField.Text = cTranslate.getValue("Zoekveld");
+            RbtSearchFieldNothing.Text = cTranslate.getValue("NietsSearchField");
         }
 
         private async void BtnSaveInstellingen_Clicked(object sender, EventArgs e)
@@ -70,7 +71,7 @@ namespace VerdeSoftApp
             //Save SearchField
             if (RbtSearchFieldNothing.IsChecked)
             {
-                item.SearchField = " ";
+                item.SearchField = "";
             }
             else if (RbtSearchFieldName.IsChecked)
             {
@@ -112,37 +113,21 @@ namespace VerdeSoftApp
             {
                 CheckedInSearchFieldRadio(item.SearchField);
             }
-
-            //try
-            //{
-            //    if (String.IsNullOrEmpty(item.SearchField))
-            //    {
-            //        item.SearchField = "-1";
-            //        CheckedInSearchFieldRadio(item.SearchField);
-            //    }
-            //    else 
-            //    {
-            //        CheckedInSearchFieldRadio(item.SearchField);
-            //    }
-            //}
-            //catch (Exception)
-            //{
-            //    throw;
-            //}
         }
 
         private void CheckedInSearchFieldRadio(string searchField)
         {
             if (searchField.Equals("")) 
             {
-                RbtSearchFieldNothing.IsChecked = RbtSearchFieldName.IsChecked = RbtSearchFieldCode.IsChecked = false;
+                RbtSearchFieldNothing.IsChecked = true;
+                RbtSearchFieldName.IsChecked = RbtSearchFieldCode.IsChecked = false;
             }
             else 
             {
                 switch (searchField)
                 {
-                    case " ":
-                        item.SearchField = " ";
+                    case "":
+                        item.SearchField = "";
                         RbtSearchFieldNothing.IsChecked = true;
                         break;
                     case "Name":
@@ -170,7 +155,14 @@ namespace VerdeSoftApp
             RadioButton rb = sender as RadioButton;
             if (rb.IsChecked) 
             {
-                item.SearchField = rb.Text;            
+                if (rb.FindByName("RbtSearchFieldNothing") == rb)
+                {
+                    item.SearchField = "";
+                }
+                else 
+                {
+                    item.SearchField = rb.Text;
+                } 
             }
                 
         }
