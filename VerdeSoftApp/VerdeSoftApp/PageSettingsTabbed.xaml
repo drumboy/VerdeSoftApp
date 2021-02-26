@@ -119,7 +119,7 @@
                 </Grid.ColumnDefinitions>
                 <Label x:Name="LabelSearchField" FontSize="12" Text="SearchField"  VerticalOptions="Center"  Grid.Row="0" Grid.Column="1"/>
                 <RadioButton   
-                   GroupName="SearchField"   
+                   GroupName="SearchField"
                    Text="" 
                    Grid.Row="0" Grid.Column="2"
                    HorizontalOptions="Start" x:Name="RbtSearchFieldNothing" CheckedChanged="RadioButton_CheckedChanged" />
