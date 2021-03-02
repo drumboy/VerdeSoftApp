@@ -69,6 +69,10 @@ namespace VerdeSoftApp
         public bool KeybAlpha { get; set; }
         public string SearchField { get; set; }
 
+        public string CustomerCard { get; set; }
+
+        public bool PaymentScreen { get; set; }
+
 
     }
 

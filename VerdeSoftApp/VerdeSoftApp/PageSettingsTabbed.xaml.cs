@@ -45,6 +45,8 @@ namespace VerdeSoftApp
             BtnReturnVervolg.Text = cTranslate.getValue("Terug");
             LabelKeybAlpha.Text = cTranslate.getValue("Keyboard Alpha");
             LabelSearchField.Text = cTranslate.getValue("Zoekveld");
+            LabelCustomerCard.Text = cTranslate.getValue("CustomerCard");
+            LabelPaymentScreen.Text = cTranslate.getValue("PaymentScreen");
         }
 
         private async void BtnSaveInstellingen_Clicked(object sender, EventArgs e)
@@ -81,6 +83,9 @@ namespace VerdeSoftApp
                 item.SearchField = "Code";
             }
 
+            item.CustomerCard = EntryCustomerCard.Text;
+
+            item.PaymentScreen = CheckBoxPaymentScreen.IsChecked;
 
             cSQLite.saveSettings(item);
             await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Opslaan gelukt"), "OK");
@@ -105,6 +110,10 @@ namespace VerdeSoftApp
             }
 
             CheckedInSearchFieldRadio(item.SearchField);
+
+            EntryCustomerCard.Text = item.CustomerCard;
+
+            CheckBoxPaymentScreen.IsChecked = item.PaymentScreen;
         }
 
         private void CheckedInSearchFieldRadio(string searchField)

@@ -130,7 +130,34 @@
                    Grid.Row="0" Grid.Column="4"
                    HorizontalOptions="Start" x:Name="RbtSearchFieldCode" CheckedChanged="RadioButton_CheckedChanged" />
             </Grid>
-            
+
+            <!-- grid voor de Customer Card -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="31" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="18" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="LabelCustomerCard" FontSize="12" Text="CustomerCard"  VerticalOptions="Center"  Grid.Row="0" Grid.Column="1"/>
+                <Entry x:Name="EntryCustomerCard" FontSize="14" Placeholder="" PlaceholderColor="Olive" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2"></Entry>
+            </Grid>
+
+            <!-- grid voor de PaymentScreen checkbox -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="18" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="18" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="LabelPaymentScreen" FontSize="12" Text="PaymentScreen"  VerticalOptions="Center"  Grid.Row="0" Grid.Column="1"/>
+                <CheckBox x:Name="CheckBoxPaymentScreen" VerticalOptions="Center" Grid.Row="0" Grid.Column="2" />
+            </Grid>
+
+
             <!-- grid voor knoppen Save en Terug -->
             <Grid>
                 <Grid.RowDefinitions>

@@ -100,6 +100,9 @@ namespace VerdeSoftApp
 
             translations.Add(new eTranslate() { Code = "Keyboard Alpha", NL = "Keyboard Alphanumeric", FR = "Clavier alphanumérique", EN = "Keyboard Alphanumeric", DE = "" });
             translations.Add(new eTranslate() { Code = "Zoekveld", NL = "Zoekveld", FR = "Champ de recherche", EN = "Searchfield", DE = "" });
+
+            translations.Add(new eTranslate() { Code = "CustomerCard", NL = "Klantenkaart", FR = "Carte client", EN = "Customer card", DE = "" });
+            translations.Add(new eTranslate() { Code = "PaymentScreen", NL = "Toon betaalscherm", FR = "Afficher l'écran de paiement", EN = "Show Payment screen", DE = "" });
         }
 
         public static string getValue(string Code)
