@@ -234,14 +234,15 @@ namespace VerdeSoftApp
             eSettings e = new eSettings();
             e.ConnString = "Userid=root;database=verdesoft;server=192.168.1.111;password=root;CharSet=utf8";
             e.MobileService = @"http://192.168.1.116:8000/MobileService";
-            e.Payments = false;
-            e.FocusPrice = true; //lengte barcode
-            e.Payments = false;
+            e.RepeatQuantity = false;
+            e.VerifyBarcode = true; //lengte barcode
             e.Ticket = 1;
             e.CustomerCode = "";
             e.Language = "N";
             e.SearchField = "";
             e.KeybAlpha = false;
+            e.PaymentScreen = false;
+            e.CustomerCard = "";
             
             SQLiteConn.Insert(e);
         }

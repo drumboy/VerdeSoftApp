@@ -98,10 +98,10 @@
                     <ColumnDefinition Width="18" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Label x:Name="LabelFocusPrice" FontSize="12" Text="Focus Price"  VerticalOptions="Center" Grid.Row="0" Grid.Column="1"/>
-                <CheckBox x:Name="CheckBoxFocusPrice" VerticalOptions="Center" Grid.Row="0" Grid.Column="2" />
-                <Label x:Name="LabelPayments" FontSize="12" Text="Payments" VerticalOptions="Center" Grid.Row="1" Grid.Column="1"/>
-                <CheckBox x:Name="CheckBoxPayments" VerticalOptions="Center" Grid.Row="1" Grid.Column="2" />
+                <Label x:Name="LabelVerifyBarcode" FontSize="12" Text="Verify Barcode"  VerticalOptions="Center" Grid.Row="0" Grid.Column="1"/>
+                <CheckBox x:Name="CheckBoxVerifyBarcode" VerticalOptions="Center" Grid.Row="0" Grid.Column="2" />
+                <Label x:Name="LabelRepeatQuantity" FontSize="12" Text="Herhaal aantal" VerticalOptions="Center" Grid.Row="1" Grid.Column="1"/>
+                <CheckBox x:Name="CheckBoxRepeatQuantity" VerticalOptions="Center" Grid.Row="1" Grid.Column="2" />
                 <Label x:Name="LabelKeybAlpha" FontSize="12" Text="KeybAlpha" VerticalOptions="Center" Grid.Row="2" Grid.Column="1"/>
                 <CheckBox x:Name="CheckBoxKeybAlpha" VerticalOptions="Center" Grid.Row="2" Grid.Column="2" />
             </Grid>

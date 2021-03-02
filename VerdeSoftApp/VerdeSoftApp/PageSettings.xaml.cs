@@ -50,8 +50,8 @@ namespace VerdeSoftApp
             EntryMobileService.Text = item.MobileService;
             EntryIdentification.Text = item.Identification;
             EntryCustomerCode.Text = item.CustomerCode;
-            CheckBoxFocusPrice.IsChecked = item.FocusPrice;
-            CheckBoxPayments.IsChecked = item.Payments;
+            CheckBoxFocusPrice.IsChecked = item.VerifyBarcode;
+            CheckBoxRepeatQuantity.IsChecked = item.RepeatQuantity;
             EntryLanguage.Text = item.Language;
             EntryTicket.Text = Convert.ToString(item.Ticket);
         }
@@ -62,8 +62,8 @@ namespace VerdeSoftApp
             item.ConnString = EntryConnectionString.Text;
             item.Identification = EntryIdentification.Text;
             item.CustomerCode = EntryCustomerCode.Text;
-            item.FocusPrice = CheckBoxFocusPrice.IsChecked;
-            item.Payments = CheckBoxPayments.IsChecked;
+            item.VerifyBarcode = CheckBoxFocusPrice.IsChecked;
+            item.RepeatQuantity = CheckBoxRepeatQuantity.IsChecked;
             item.Ticket = Convert.ToInt64(EntryTicket.Text);
             item.Language = EntryLanguage.Text;
 

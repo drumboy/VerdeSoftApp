@@ -68,7 +68,7 @@ namespace VerdeSoftApp
             translations.Add(new eTranslate() { Code = "Identificatie", NL = "Identificatie", FR = "Identification", EN = "Identification", DE = "" });
             translations.Add(new eTranslate() { Code = "Ticket", NL = "Ticket", FR = "Ticket", EN = "Ticket", DE = "" });
             translations.Add(new eTranslate() { Code = "Taal", NL = "Taal", FR = "Langue", EN = "Language", DE = "" });
-            translations.Add(new eTranslate() { Code = "Stoppen prijs", NL = "Stoppen prijs", FR = "Arrêter prix", EN = "Hold on price", DE = "" });
+            translations.Add(new eTranslate() { Code = "VerifyBarcode", NL = "Bevestig Barcode", FR = "Vérifier le code-barres", EN = "Verify Barcode", DE = "" });
             translations.Add(new eTranslate() { Code = "Betaalscherm", NL = "Betaalscherm", FR = "Ecran paiement", EN = "Payment screen", DE = "" });
             translations.Add(new eTranslate() { Code = "Klantcode", NL = "Klantcode", FR = "Code client", EN = "Client code", DE = "" });
             translations.Add(new eTranslate() { Code = "Opslaan", NL = "Opslaan", FR = "Enregistrer", EN = "Save", DE = "" });

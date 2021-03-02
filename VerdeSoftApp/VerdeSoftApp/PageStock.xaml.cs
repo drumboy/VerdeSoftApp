@@ -155,7 +155,7 @@ namespace VerdeSoftApp
         private async void SearchValue()
         {
             cData.name = EntryScan.Text;
-            if (cData.settings.FocusPrice == true) //Lengte barcode
+            if (cData.settings.VerifyBarcode == true) //Lengte barcode
             {
                 if (cData.name.Length == 7) cData.name = "0" + cData.name;
                 if (cData.name.Length == 12) cData.name = "0" + cData.name;

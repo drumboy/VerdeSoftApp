@@ -155,7 +155,7 @@ namespace VerdeSoftApp
                         LabelArtName.Text = cData.selectedArticle.Name;
                         EntryPrice.Text = cData.getSelectedPriceStr("1");
                         EntryQuantity.Text = "1";
-                        if (cData.settings.Payments == true) EntryQuantity.Text = cData.qty; //1.0.4b (repeat quantity)
+                        if (cData.settings.RepeatQuantity == true) EntryQuantity.Text = cData.qty; //1.0.4b (repeat quantity)
                         EntryQuantity.Focus();
                         if (cData.DefPricePerc > 0) EntryDiscount.Text = Convert.ToString(cData.DefPricePerc); //1.0.4 na getSelectedPrice
                     }
@@ -184,7 +184,7 @@ namespace VerdeSoftApp
             EntryScan.Text = "";
             EntryPrice.Text = "0,00";
             EntryQuantity.Text = "1";
-            if (cData.settings.Payments == true) 
+            if (cData.settings.RepeatQuantity == true) 
                 EntryQuantity.Text = cData.qty; //1.0.4b (repeat quantity)
             EntryDiscount.Text = "0";
             LabelArtName.Text = "";
@@ -209,7 +209,7 @@ namespace VerdeSoftApp
 
             cData.name = EntryScan.Text;
 
-            if (cData.settings.FocusPrice == true) //Lengte barcode
+            if (cData.settings.VerifyBarcode == true) //Lengte barcode
             {
                 if (cData.name.Length == 7) cData.name = "0" + cData.name;
                 if (cData.name.Length == 12) cData.name = "0" + cData.name;
@@ -260,7 +260,7 @@ namespace VerdeSoftApp
                     {
                         string nextBarcode = EntryQuantity.Text;
                         string qty = "1";
-                        if (cData.settings.Payments == true) qty = cData.qty; //1.0.4b (repeat quantity) *
+                        if (cData.settings.RepeatQuantity == true) qty = cData.qty; //1.0.4b (repeat quantity) *
                         insertScannedArticle(qty); //huidig toevoegen met aantal 1 (standaard)
                         EntryScan.Text = nextBarcode;
                         SearchValue();
@@ -269,7 +269,7 @@ namespace VerdeSoftApp
                     {
                         cSound.beepSound();
                         EntryQuantity.Text = "1";
-                        if (cData.settings.Payments == true) EntryQuantity.Text = cData.qty; //1.0.4b (repeat quantity) *
+                        if (cData.settings.RepeatQuantity == true) EntryQuantity.Text = cData.qty; //1.0.4b (repeat quantity) *
                         EntryPrice.Focus();
                     }
                 }

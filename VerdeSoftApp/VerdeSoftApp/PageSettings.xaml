@@ -58,7 +58,7 @@
                 <Label x:Name="LabelFocusPrice" FontSize="12" Text="Focus Price"  VerticalOptions="Center" Grid.Row="4" Grid.Column="1"/>
                 <CheckBox x:Name="CheckBoxFocusPrice" VerticalOptions="Center" Grid.Row="4" Grid.Column="2" />
                 <Label x:Name="LabelPayments" FontSize="12" Text="Payments" VerticalOptions="Center" Grid.Row="5" Grid.Column="1"/>
-                <CheckBox x:Name="CheckBoxPayments" VerticalOptions="Center" Grid.Row="5" Grid.Column="2" />
+                <CheckBox x:Name="CheckBoxRepeatQuantity" VerticalOptions="Center" Grid.Row="5" Grid.Column="2" />
 
             </Grid>
 

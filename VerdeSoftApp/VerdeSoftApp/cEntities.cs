@@ -62,8 +62,8 @@ namespace VerdeSoftApp
         public string MobileService { get; set; }
         public string Identification { get; set; }
         public string CustomerCode { get; set; }
-        public bool FocusPrice { get; set; }
-        public bool Payments { get; set; }
+        public bool VerifyBarcode { get; set; }
+        public bool RepeatQuantity { get; set; }
         public long Ticket { get; set; }
         public string Language { get; set; }
         public bool KeybAlpha { get; set; }
