@@ -9,9 +9,9 @@
         <StackLayout>
             <Label x:Name="LabelTitle" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Zoeken</Label>
             <Label x:Name="LabelDescription" FontSize="16" Text="Omschrijving" />
-            <Entry x:Name="EntryName" FontSize="16" HorizontalTextAlignment="End" Completed="EntryName_Completed"></Entry>
+            <Entry x:Name="EntryName" FontSize="16" HorizontalTextAlignment="Start" Completed="EntryName_Completed"></Entry>
             <Label x:Name="LabelCode" FontSize="16" Text="Code" />
-            <Entry x:Name="EntryCode" FontSize="16" HorizontalTextAlignment="End" Completed="EntryCode_Completed"></Entry>
+            <Entry x:Name="EntryCode" FontSize="16" HorizontalTextAlignment="Start" Completed="EntryCode_Completed"></Entry>
 
             <Grid>
                 <Grid.RowDefinitions>
