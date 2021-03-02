@@ -90,9 +90,9 @@
             <!-- grid voor de 3 checkboxen -->
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="40" />
-                    <RowDefinition Height="40" />
-                    <RowDefinition Height="40" />
+                    <RowDefinition Height="19" />
+                    <RowDefinition Height="19" />
+                    <RowDefinition Height="19" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="18" />
@@ -109,7 +109,7 @@
             <!-- grid voor de radiobuttons voor SearchField -->
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="40" />
+                    <RowDefinition Height="19" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="18" />
