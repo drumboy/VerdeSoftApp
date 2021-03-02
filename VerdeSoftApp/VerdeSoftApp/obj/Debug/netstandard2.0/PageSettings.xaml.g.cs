@@ -56,16 +56,16 @@ namespace VerdeSoftApp {
         private global::Xamarin.Forms.Entry EntryLanguage;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label LabelFocusPrice;
+        private global::Xamarin.Forms.Label LabelVerifyBarcode;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.CheckBox CheckBoxFocusPrice;
+        private global::Xamarin.Forms.CheckBox CheckBoxVerifyBarcode;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label LabelPayments;
+        private global::Xamarin.Forms.Label LabelRepeatQuantity;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.CheckBox CheckBoxPayments;
+        private global::Xamarin.Forms.CheckBox CheckBoxRepeatQuantity;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Button BtnSave;
@@ -89,10 +89,10 @@ namespace VerdeSoftApp {
             EntryCustomerCode = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "EntryCustomerCode");
             LabelLanguage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelLanguage");
             EntryLanguage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "EntryLanguage");
-            LabelFocusPrice = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelFocusPrice");
-            CheckBoxFocusPrice = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "CheckBoxFocusPrice");
-            LabelPayments = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelPayments");
-            CheckBoxPayments = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "CheckBoxPayments");
+            LabelVerifyBarcode = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelVerifyBarcode");
+            CheckBoxVerifyBarcode = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "CheckBoxVerifyBarcode");
+            LabelRepeatQuantity = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelRepeatQuantity");
+            CheckBoxRepeatQuantity = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "CheckBoxRepeatQuantity");
             BtnSave = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "BtnSave");
             BtnReturn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "BtnReturn");
         }

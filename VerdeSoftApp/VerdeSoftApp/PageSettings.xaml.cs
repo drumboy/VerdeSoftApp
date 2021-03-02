@@ -37,8 +37,8 @@ namespace VerdeSoftApp
             LabelIdentif.Text = cTranslate.getValue("Identificatie");
             LabelTicket.Text = cTranslate.getValue("Ticket");
             LabelLanguage.Text = cTranslate.getValue("Taal");
-            LabelFocusPrice.Text = cTranslate.getValue("Lengte barcode"); //Stoppen prijs
-            LabelPayments.Text = cTranslate.getValue("Herhaal aantal"); //nieuw
+            LabelVerifyBarcode.Text = cTranslate.getValue("Lengte barcode"); //Stoppen prijs
+            LabelRepeatQuantity.Text = cTranslate.getValue("Herhaal aantal"); //nieuw
             LabelCustomerCode.Text = cTranslate.getValue("Klantcode");
             BtnSave.Text = cTranslate.getValue("Opslaan");
             BtnReturn.Text = cTranslate.getValue("Terug");
@@ -50,7 +50,7 @@ namespace VerdeSoftApp
             EntryMobileService.Text = item.MobileService;
             EntryIdentification.Text = item.Identification;
             EntryCustomerCode.Text = item.CustomerCode;
-            CheckBoxFocusPrice.IsChecked = item.VerifyBarcode;
+            CheckBoxVerifyBarcode.IsChecked = item.VerifyBarcode;
             CheckBoxRepeatQuantity.IsChecked = item.RepeatQuantity;
             EntryLanguage.Text = item.Language;
             EntryTicket.Text = Convert.ToString(item.Ticket);
@@ -62,7 +62,7 @@ namespace VerdeSoftApp
             item.ConnString = EntryConnectionString.Text;
             item.Identification = EntryIdentification.Text;
             item.CustomerCode = EntryCustomerCode.Text;
-            item.VerifyBarcode = CheckBoxFocusPrice.IsChecked;
+            item.VerifyBarcode = CheckBoxVerifyBarcode.IsChecked;
             item.RepeatQuantity = CheckBoxRepeatQuantity.IsChecked;
             item.Ticket = Convert.ToInt64(EntryTicket.Text);
             item.Language = EntryLanguage.Text;
