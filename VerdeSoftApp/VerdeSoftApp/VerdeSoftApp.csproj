@@ -25,6 +25,8 @@
     <None Remove="myBeepShort.wav" />
     <None Remove="search.png" />
     <None Remove="uitsplitsen32.jpg" />
+	<None Remove="keyboard-alpha.png" />
+	<None Remove="keyboard-num.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -67,6 +69,12 @@
     <EmbeddedResource Include="uitsplitsen32.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+	<EmbeddedResource Include="keyboard-alpha.png">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="keyboard-num.png">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
