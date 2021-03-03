@@ -103,11 +103,11 @@ namespace VerdeSoftApp
             {
                 LabelTitle.Text = cTranslate.getValue("Kassa");
 
-                if (cData.settings.PaymentScreen) 
+                if (cData.settings.PaymentScreen) //105
                 {
                     BtnPay.Text = cTranslate.getValue("Betalen");
                 }
-                else
+                else //105
                 {
                     BtnPay.Text = cTranslate.getValue("Versturen");
                 }
@@ -221,31 +221,57 @@ namespace VerdeSoftApp
                 if (cData.name.Length == 7) cData.name = "0" + cData.name;
                 if (cData.name.Length == 12) cData.name = "0" + cData.name;
             }
-            //cWCF.SearchArticles_WCF(cData.settings.Identification, "Barcode", EntryScan.Text, false);
-            cSQLite.selectArticlesBarcode(cData.name);
-            if (cData.articleList.Count > 1)
+
+            //check als kassa is EN Klantenkaart is ingevuld EN barcode begint met klantenkaart, toon boodschap dat het om een klantenkaart is //105
+            if (kind == "K" && (!String.IsNullOrEmpty(cData.settings.CustomerCard)) && (cData.name.StartsWith(cData.settings.CustomerCard)))
             {
-                cNavigate.openPage(new PageArticles());
-            }
-            else if (cData.articleList.Count == 1)
-            {
-                cData.selectedArticle = cData.articleList[0];
-                ArticleSelected_Handler();
-            }
-            else
-            {
-                string entryNotFound = EntryScan.Text;
-                EntryScan.Text = "";
-                EntryScan.Focus();
-                cSound.beepSound();
-                //await DisplayAlert("Alert", cData.name + " " + "niet gevonden ", "OK");
-                bool answer = await DisplayAlert(cTranslate.getValue("Vraag"), cData.name + " " + cTranslate.getValue("Niet gevonden") + ". "+ cTranslate.getValue("Doorgaan")+" ?", cTranslate.getValue("Ja"), cTranslate.getValue("Nee"));
-                if (answer == true)
+                //await DisplayAlert("Klantenkaart!", "Ingevulde barcode is start met klantenkaart code, ", "OK");
+                
+                cSQLite.selectCustomersField("Barcode", cData.name, enumOperator.Equals);
+
+                if (cData.customerList.Count >= 1)
                 {
-                    EntryScan.Text = entryNotFound;
-                    eArticle newArt = cData.createArtNotFound(entryNotFound);
-                    cData.selectedArticle = newArt;
+                    eCustomer customerItem = cData.customerList[0];
+                    List<eScanned> scannedArticles = cData.Get_ScannedArticles(kind);
+                    if (scannedArticles.Count > 0)
+                    {
+                        bool answer = await DisplayAlert(cTranslate.getValue("Vraag"), cTranslate.getValue("Prijzen aanpassen") + " ?", cTranslate.getValue("Ja"), cTranslate.getValue("Nee"));
+                        if (answer == true)
+                        {
+                            cData.Set_Customer(kind, customerItem);
+                            cData.bTotalChanged = true;
+                        }
+                    }
+                }
+            }
+            else 
+            {
+                //cWCF.SearchArticles_WCF(cData.settings.Identification, "Barcode", EntryScan.Text, false);
+                cSQLite.selectArticlesBarcode(cData.name);
+                if (cData.articleList.Count > 1)
+                {
+                    cNavigate.openPage(new PageArticles());
+                }
+                else if (cData.articleList.Count == 1)
+                {
+                    cData.selectedArticle = cData.articleList[0];
                     ArticleSelected_Handler();
+                }
+                else
+                {
+                    string entryNotFound = EntryScan.Text;
+                    EntryScan.Text = "";
+                    EntryScan.Focus();
+                    cSound.beepSound();
+                    //await DisplayAlert("Alert", cData.name + " " + "niet gevonden ", "OK");
+                    bool answer = await DisplayAlert(cTranslate.getValue("Vraag"), cData.name + " " + cTranslate.getValue("Niet gevonden") + ". " + cTranslate.getValue("Doorgaan") + " ?", cTranslate.getValue("Ja"), cTranslate.getValue("Nee"));
+                    if (answer == true)
+                    {
+                        EntryScan.Text = entryNotFound;
+                        eArticle newArt = cData.createArtNotFound(entryNotFound);
+                        cData.selectedArticle = newArt;
+                        ArticleSelected_Handler();
+                    }
                 }
             }
         }
