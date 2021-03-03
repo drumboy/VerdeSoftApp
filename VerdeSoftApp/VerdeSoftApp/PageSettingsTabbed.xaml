@@ -134,7 +134,7 @@
             <!-- grid voor de Customer Card -->
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="31" />
+                    <RowDefinition Height="33" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="18" />

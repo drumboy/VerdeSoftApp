@@ -242,9 +242,23 @@ namespace VerdeSoftApp
                             cData.bTotalChanged = true;
                         }
                     }
+                    cData.selectedCustomer = customerItem; //hierdoor wordt de klant geset en event CData_hCustomerSelected uitgevoerd. (event is in cEntities gedefinieerd)
+                    EntryScan.Text = "";
+                    EntryScan.Focus();
+                }
+                else 
+                {
+                    //klantenkaart met barcode niet gevonden //105
+                    cSound.beepSound();
+                    await DisplayAlert(cTranslate.getValue("Foute klantenkaart"), cTranslate.getValue("CustomerCard") + ": " + EntryScan.Text +  " " + cTranslate.getValue("Niet gevonden").ToLower()+ ".", "OK");
+                    EntryScan.Focus();
+                    EntryScan.CursorPosition = 0;
+                    EntryScan.SelectionLength = EntryScan.Text.Length;
                 }
             }
             else 
+
+
             {
                 //cWCF.SearchArticles_WCF(cData.settings.Identification, "Barcode", EntryScan.Text, false);
                 cSQLite.selectArticlesBarcode(cData.name);

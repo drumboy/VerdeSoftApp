@@ -102,6 +102,7 @@ namespace VerdeSoftApp
             translations.Add(new eTranslate() { Code = "Zoekveld", NL = "Zoekveld", FR = "Champ de recherche", EN = "Searchfield", DE = "" });
 
             translations.Add(new eTranslate() { Code = "CustomerCard", NL = "Klantenkaart", FR = "Carte client", EN = "Customer card", DE = "" });
+            translations.Add(new eTranslate() { Code = "Foute klantenkaart", NL = "Foutieve klantenkaart barcode", FR = "Carte client de barcode incorrecte", EN = "Incorrect barcode customer card", DE = "" });
             translations.Add(new eTranslate() { Code = "PaymentScreen", NL = "Toon betaalscherm", FR = "Afficher l'écran de paiement", EN = "Show Payment screen", DE = "" });
         }
 
