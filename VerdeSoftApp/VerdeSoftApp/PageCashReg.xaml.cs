@@ -18,25 +18,46 @@ namespace VerdeSoftApp
 
         private string lastFocused = "";
 
+        private string lastStatusSwitchKeyboard = "";
+        private string lastStatusSwitchKeyboardSourceImage = "";
+
         public PageCashReg()
         {
             InitializeComponent();
+
         }
 
         public PageCashReg(string pKind)
         {
             InitializeComponent();
 
-            //is keyboard alpha numeric uit settings - Laurens
-            if (cData.settings.KeybAlpha == true)
+
+            if (!string.IsNullOrEmpty(lastStatusSwitchKeyboard))
             {
-                EntryScan.Keyboard = Keyboard.Default;
+                SwitchKeyboard(lastStatusSwitchKeyboard);
+                ImgBtnSwitchKeyboard.Source = ImageSource.FromResource(lastStatusSwitchKeyboardSourceImage);
             }
             else 
             {
-                EntryScan.Keyboard = Keyboard.Numeric; //cData.kBoard;
+                //is keyboard alpha numeric uit settings - Laurens
+                if (cData.settings.KeybAlpha == true)
+                {
+                    EntryScan.Keyboard = Keyboard.Default;
+                    lastStatusSwitchKeyboard = "alpha";
+                    lastStatusSwitchKeyboardSourceImage = "VerdeSoftApp.keyboard-num.png";
+                }
+                else
+                {
+                    EntryScan.Keyboard = Keyboard.Numeric; //cData.kBoard;
+                    lastStatusSwitchKeyboard = "num";
+                    lastStatusSwitchKeyboardSourceImage = "VerdeSoftApp.keyboard-alpha.png";
+                }
+                ImgBtnSwitchKeyboard.Source = ImageSource.FromResource(lastStatusSwitchKeyboardSourceImage);
             }
-             
+
+            
+            
+            
 
             kind = pKind;
 
@@ -54,6 +75,7 @@ namespace VerdeSoftApp
 
             //BtnSearch.ImageSource = ImageSource.FromResource("VerdeSoftApp.search.png");
             ImgBtnSearch.Source = ImageSource.FromResource("VerdeSoftApp.search.png");
+            
 
             //Device.StartTimer(TimeSpan.FromMilliseconds(50), () =>
             //{
@@ -75,6 +97,28 @@ namespace VerdeSoftApp
 
             translatePage();
         }
+
+        private void SwitchKeyboard(string statusKeyboard) 
+        {
+            if (statusKeyboard.Equals("num")) 
+            {
+                lastStatusSwitchKeyboard = "alpha";
+                ImgBtnSwitchKeyboard.Source = ImageSource.FromResource("VerdeSoftApp.keyboard-num.png");
+                lastStatusSwitchKeyboardSourceImage = "VerdeSoftApp.keyboard-num.png";
+                EntryScan.Keyboard = Keyboard.Default;
+                EntryScan.Focus();
+            }
+            else
+            {
+                lastStatusSwitchKeyboard = "num";
+                ImgBtnSwitchKeyboard.Source = ImageSource.FromResource("VerdeSoftApp.keyboard-alpha.png");
+                lastStatusSwitchKeyboardSourceImage = "VerdeSoftApp.keyboard-alpha.png";
+                EntryScan.Keyboard = Keyboard.Numeric;
+                EntryScan.Focus();
+            }
+        }
+
+
 
         protected override void OnAppearing()
         {
@@ -457,6 +501,12 @@ namespace VerdeSoftApp
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
             cNavigate.openPage(new PageSearchArt("PageCashReg"));
+        }
+
+        private void ImgBtnSwitchKeyboard_Clicked(object sender, EventArgs e)
+        {
+            //cNavigate.openPage(new PageSearchArt("PageCashReg"));
+            SwitchKeyboard(lastStatusSwitchKeyboard);
         }
 
         async void OnAlertYesNoClicked(object sender, EventArgs e)
