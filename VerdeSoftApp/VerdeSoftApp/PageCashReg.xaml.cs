@@ -102,8 +102,15 @@ namespace VerdeSoftApp
             if (kind == "K")
             {
                 LabelTitle.Text = cTranslate.getValue("Kassa");
-                BtnPay.Text = cTranslate.getValue("Betalen");
 
+                if (cData.settings.PaymentScreen) 
+                {
+                    BtnPay.Text = cTranslate.getValue("Betalen");
+                }
+                else
+                {
+                    BtnPay.Text = cTranslate.getValue("Versturen");
+                }
             }
             else if (kind == "L")
             {
@@ -496,25 +503,37 @@ namespace VerdeSoftApp
             {
                 if (kind == "K")
                 {
-                    cNavigate.openPage(new PagePay(kind));
+                    if (cData.settings.PaymentScreen)
+                    {
+                        cNavigate.openPage(new PagePay(kind));
+                    }
+                    else 
+                    {
+                        VersturenNaarWCF();
+                    }
                 }
                 else
                 {
-                    List<eScanned> scannedArticles = cData.Get_ScannedArticles(kind);
-                    string err = cWCF.InsertScannedArticles_WCF(cData.settings.Identification, scannedArticles);
-                    if (err == "")
-                    {
-                        cData.Delete_ScannedArticles(kind);
-                        calculateTotal();
-                        EntryScan.Focus(); //1.0.4b (focus)
-                        await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Lijst verstuurd"), "OK");
-                        
-                    }
-                    else
-                    {
-                        await DisplayAlert("Error WCF", err, "OK");
-                    }
+                    VersturenNaarWCF();
                 }
+            }
+        }
+
+        private async void VersturenNaarWCF() 
+        {
+            List<eScanned> scannedArticles = cData.Get_ScannedArticles(kind);
+            string err = cWCF.InsertScannedArticles_WCF(cData.settings.Identification, scannedArticles);
+            if (err == "")
+            {
+                cData.Delete_ScannedArticles(kind);
+                calculateTotal();
+                EntryScan.Focus(); //1.0.4b (focus)
+                await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Lijst verstuurd"), "OK");
+
+            }
+            else
+            {
+                await DisplayAlert("Error WCF", err, "OK");
             }
         }
 
