@@ -66,15 +66,24 @@ namespace VerdeSoftApp
 
         public async void EntryName_Completed(object sender, EventArgs e)
         {
-            if (cTools.isNumeric(EntryName.Text, System.Globalization.NumberStyles.Number, false) == true)
+            try
             {
-                cSQLite.selectCustomersField("Barcode", EntryName.Text, enumOperator.Equals);
+                if (cTools.isNumeric(EntryName.Text, System.Globalization.NumberStyles.Number, false) == true)
+                {
+                    cSQLite.selectCustomersField("Barcode", EntryName.Text, enumOperator.Equals);
+                }
+                else
+                {
+                    cSQLite.selectCustomersField("Name", EntryName.Text, enumOperator.Contains);
+                }
+                Customers = cData.customerList;
             }
-            else
+            catch (Exception)
             {
-                cSQLite.selectCustomersField("Name", EntryName.Text,enumOperator.Contains);
+                EntryName.Text = "";
             }
-            Customers = cData.customerList;
+            
+            
 
             lvCustomers.ItemsSource = null;
             lvCustomers.ItemsSource = Customers;
