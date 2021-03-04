@@ -260,7 +260,7 @@ namespace VerdeSoftApp
 
             cData.name = EntryScan.Text;
 
-            if (cData.settings.VerifyBarcode == true) //Lengte barcode
+            if ((cData.settings.VerifyBarcode == true) && (cTools.isNumeric(cData.name, System.Globalization.NumberStyles.Number, false) == true)) //Lengte barcode
             {
                 if (cData.name.Length == 7) cData.name = "0" + cData.name;
                 if (cData.name.Length == 12) cData.name = "0" + cData.name;
@@ -301,11 +301,9 @@ namespace VerdeSoftApp
                 }
             }
             else 
-
-
             {
                 //cWCF.SearchArticles_WCF(cData.settings.Identification, "Barcode", EntryScan.Text, false);
-                cSQLite.selectArticlesBarcode(cData.name);
+                cSQLite.selectArticlesBarcodeOrCodeName(cData.name); //105 (search also on Code or Name)
                 if (cData.articleList.Count > 1)
                 {
                     cNavigate.openPage(new PageArticles());

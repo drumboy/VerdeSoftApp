@@ -77,10 +77,10 @@ namespace VerdeSoftApp {
         private global::Xamarin.Forms.CheckBox CheckBoxVerifyBarcode;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label LabelPayments;
+        private global::Xamarin.Forms.Label LabelRepeatQuantity;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.CheckBox CheckBoxPayments;
+        private global::Xamarin.Forms.CheckBox CheckBoxRepeatQuantity;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Label LabelKeybAlpha;
@@ -138,8 +138,8 @@ namespace VerdeSoftApp {
             EntryConnectionString = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "EntryConnectionString");
             LabelVerifyBarcode = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelVerifyBarcode");
             CheckBoxVerifyBarcode = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "CheckBoxVerifyBarcode");
-            LabelPayments = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelPayments");
-            CheckBoxPayments = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "CheckBoxPayments");
+            LabelRepeatQuantity = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelRepeatQuantity");
+            CheckBoxRepeatQuantity = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "CheckBoxRepeatQuantity");
             LabelKeybAlpha = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelKeybAlpha");
             CheckBoxKeybAlpha = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "CheckBoxKeybAlpha");
             LabelSearchField = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelSearchField");

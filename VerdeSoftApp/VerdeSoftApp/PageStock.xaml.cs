@@ -160,7 +160,7 @@ namespace VerdeSoftApp
                 if (cData.name.Length == 7) cData.name = "0" + cData.name;
                 if (cData.name.Length == 12) cData.name = "0" + cData.name;
             }
-            cSQLite.selectArticlesBarcode(cData.name);
+            cSQLite.selectArticlesBarcodeOrCodeName(cData.name);
             if (cData.articleList.Count > 1)
             {
                 cNavigate.openPage(new PageArticles());

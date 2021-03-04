@@ -367,14 +367,35 @@ namespace VerdeSoftApp
             SQLiteConn.CreateTable<eBarcodes>();
         }
 
-        public static void selectArticlesBarcode(string pValue)
+        public static void selectArticlesBarcodeOrCodeName(string pValue)
         {
             if (pValue != "")
             {
-                if (cTools.isNumeric(pValue, System.Globalization.NumberStyles.Number, false) == true && pValue.Length >= 1 && pValue.Length <= 2)
+                //if (cTools.isNumeric(pValue, System.Globalization.NumberStyles.Number, false) == true && pValue.Length >= 1 && pValue.Length <= 2)
+                //{
+                //    cData.articleList = SQLiteConn.Query<eArticle>("select * from eArticle where Code = ? ", pValue);
+                //}
+                //Zoeken op Code of Naam als lengte < 7
+                if (pValue.Length >= 1 && pValue.Length < 7) //105
                 {
-                    cData.articleList = SQLiteConn.Query<eArticle>("select * from eArticle where Code = ? ", pValue);
+                    if ((!String.IsNullOrEmpty(cData.settings.SearchField)) && (cData.settings.SearchField.Equals("Name")))
+                    {
+                        cData.articleList = SQLiteConn.Query<eArticle>("select * from eArticle where Name like ? ", "%" + pValue + "%");
+                    }
+                    else if ((!String.IsNullOrEmpty(cData.settings.SearchField)) && (cData.settings.SearchField.Equals("Code"))) 
+                    {
+                        if (cTools.isNumeric(pValue, System.Globalization.NumberStyles.Number, false) == true)
+                        {
+                            cData.articleList = SQLiteConn.Query<eArticle>("select * from eArticle where Code = ? ", pValue);
+                        }
+                        else 
+                        {
+                            cData.articleList = SQLiteConn.Query<eArticle>("select * from eArticle where Code like ? ", "%" + pValue + "%");
+                        }
+                    }
                 }
+
+                //Zoeken op barcode als lengte value > 7 => zoeken op barcode !! //105
                 else
                 {
                     cData.articleList = SQLiteConn.Query<eArticle>("select * from eArticle where Barcode = ? ", pValue);
