@@ -26,6 +26,9 @@ namespace VerdeSoftApp {
         private global::Xamarin.Forms.Entry EntryScan;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.ImageButton ImgBtnSwitchKeyboard;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.ImageButton ImgBtnSearch;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -73,6 +76,7 @@ namespace VerdeSoftApp {
             LabelTitle = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelTitle");
             LabelTotal = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelTotal");
             EntryScan = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "EntryScan");
+            ImgBtnSwitchKeyboard = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "ImgBtnSwitchKeyboard");
             ImgBtnSearch = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "ImgBtnSearch");
             LabelArtName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelArtName");
             EntryQuantity = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::VerdeSoftApp.NumericEntry>(this, "EntryQuantity");

@@ -48,6 +48,22 @@ namespace MobileServiceRef
         
         private double Price8Field;
         
+        private int QuantityPrice1Field;
+        
+        private int QuantityPrice2Field;
+        
+        private int QuantityPrice3Field;
+        
+        private int QuantityPrice4Field;
+        
+        private int QuantityPrice5Field;
+        
+        private int QuantityPrice6Field;
+        
+        private int QuantityPrice7Field;
+        
+        private int QuantityPrice8Field;
+        
         private string Size1Field;
         
         private string Size2Field;
@@ -248,6 +264,110 @@ namespace MobileServiceRef
             set
             {
                 this.Price8Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int QuantityPrice1
+        {
+            get
+            {
+                return this.QuantityPrice1Field;
+            }
+            set
+            {
+                this.QuantityPrice1Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int QuantityPrice2
+        {
+            get
+            {
+                return this.QuantityPrice2Field;
+            }
+            set
+            {
+                this.QuantityPrice2Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int QuantityPrice3
+        {
+            get
+            {
+                return this.QuantityPrice3Field;
+            }
+            set
+            {
+                this.QuantityPrice3Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int QuantityPrice4
+        {
+            get
+            {
+                return this.QuantityPrice4Field;
+            }
+            set
+            {
+                this.QuantityPrice4Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int QuantityPrice5
+        {
+            get
+            {
+                return this.QuantityPrice5Field;
+            }
+            set
+            {
+                this.QuantityPrice5Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int QuantityPrice6
+        {
+            get
+            {
+                return this.QuantityPrice6Field;
+            }
+            set
+            {
+                this.QuantityPrice6Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int QuantityPrice7
+        {
+            get
+            {
+                return this.QuantityPrice7Field;
+            }
+            set
+            {
+                this.QuantityPrice7Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int QuantityPrice8
+        {
+            get
+            {
+                return this.QuantityPrice8Field;
+            }
+            set
+            {
+                this.QuantityPrice8Field = value;
             }
         }
         

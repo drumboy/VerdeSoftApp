@@ -528,6 +528,8 @@ C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Androi
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Debug\myBeepShort.wav
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Debug\search.png
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Debug\uitsplitsen32.jpg
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Debug\keyboard-alpha.png
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Debug\keyboard-num.png
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Debug\VerdeSoftApp.Android.dll
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Debug\VerdeSoftApp.Android.pdb
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Debug\verdesoft.app.apk
@@ -767,6 +769,8 @@ C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Androi
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselPageRenderer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselSpacingItemDecoration.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselViewRenderer.java
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselViewRenderer_CarouselViewOnScrollListener.java
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselViewRenderer_CarouselViewwOnGlobalLayoutListener.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CellAdapter.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CellRenderer_RendererHolder.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CenterSnapHelper.java
@@ -798,6 +802,7 @@ C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Androi
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormattedStringExtensions_FontSpan.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormattedStringExtensions_LineHeightSpan.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormattedStringExtensions_TextDecorationSpan.java
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsAnimationDrawable.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsAppCompatActivity.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsApplicationActivity.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsEditText.java
@@ -805,11 +810,13 @@ C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Androi
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsImageView.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsSeekBar.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsTextView.java
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsVideoView.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsWebChromeClient.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsWebViewClient.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FrameRenderer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FrameRenderer_FrameDrawable.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericAnimatorListener.java
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericGlobalLayoutListener.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericMenuClickListener.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GestureManager_TapAndPanGestureDetector.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GridLayoutSpanSizeLookup.java
@@ -820,6 +827,7 @@ C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Androi
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ImageCache_CacheEntry.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ImageCache_FormsLruCache.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ImageRenderer.java
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\IndicatorViewRenderer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\InnerGestureListener.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\InnerScaleListener.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ItemContentView.java
@@ -834,9 +842,11 @@ C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Androi
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\LocalizedDigitsKeyListener.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\MasterDetailContainer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\MasterDetailRenderer.java
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\MediaElementRenderer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\NativeViewWrapperRenderer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\NavigationRenderer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\NongreedySnapHelper.java
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\NongreedySnapHelper_InitialScrollListener.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ObjectJavaBox_1.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\OpenGLViewRenderer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\OpenGLViewRenderer_Renderer.java
@@ -852,8 +862,10 @@ C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Androi
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PositionalSmoothScroller.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PowerSaveModeBroadcastReceiver.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ProgressBarRenderer.java
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\RadioButtonRenderer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\RefreshViewRenderer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ScrollHelper.java
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ScrollLayoutManager.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ScrollViewContainer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ScrollViewRenderer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SearchBarRenderer.java
@@ -891,6 +903,7 @@ C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Androi
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\StepperRendererManager_StepperListener.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\StructuredItemsViewAdapter_2.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\StructuredItemsViewRenderer_3.java
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SwipeViewRenderer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SwitchCellView.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SwitchRenderer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TabbedRenderer.java
@@ -903,6 +916,7 @@ C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Androi
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TimePickerRendererBase_1.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewCellRenderer_ViewCellContainer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewCellRenderer_ViewCellContainer_LongPressGestureListener.java
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewCellRenderer_ViewCellContainer_TapGestureListener.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewRenderer.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewRenderer_2.java
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\VisualElementRenderer_1.java
@@ -1032,15 +1046,3 @@ C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Androi
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselViewRenderer_CarouselViewOnScrollListener.java
-C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselViewRenderer_CarouselViewwOnGlobalLayoutListener.java
-C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsAnimationDrawable.java
-C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsVideoView.java
-C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericGlobalLayoutListener.java
-C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\IndicatorViewRenderer.java
-C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\MediaElementRenderer.java
-C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\NongreedySnapHelper_InitialScrollListener.java
-C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\RadioButtonRenderer.java
-C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ScrollLayoutManager.java
-C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SwipeViewRenderer.java
-C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewCellRenderer_ViewCellContainer_TapGestureListener.java

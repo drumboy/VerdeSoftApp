@@ -443,7 +443,49 @@ namespace VerdeSoftApp
                 }
             }
 
-             return price;
+
+            switch_Staffel(quantityInDocument, ref price);
+
+            return price;
+        }
+
+        private static void switch_Staffel(double quantityInDocument, ref string price) //105 (voor Juiste Staffel prijs te nemen als er staffel prijzen zijn)
+        {
+            if (selectedArticle != null)
+            {
+                if (selectedArticle.QuantityPrice8 > 0 && quantityInDocument >= selectedArticle.QuantityPrice8 && selectedArticle.Price8 > 0)
+                {
+                    price = selectedArticle.Price8.ToString("0.00");
+                }
+                else if (selectedArticle.QuantityPrice7 > 0 && quantityInDocument >= selectedArticle.QuantityPrice7 && selectedArticle.Price7 > 0) 
+                {
+                    price = selectedArticle.Price7.ToString("0.00");
+                }
+                else if (selectedArticle.QuantityPrice6 > 0 && quantityInDocument >= selectedArticle.QuantityPrice6 && selectedArticle.Price6 > 0)
+                {
+                    price = selectedArticle.Price6.ToString("0.00");
+                }
+                else if (selectedArticle.QuantityPrice5 > 0 && quantityInDocument >= selectedArticle.QuantityPrice5 && selectedArticle.Price5 > 0)
+                {
+                    price = selectedArticle.Price5.ToString("0.00");
+                }
+                else if (selectedArticle.QuantityPrice4 > 0 && quantityInDocument >= selectedArticle.QuantityPrice4 && selectedArticle.Price4 > 0)
+                {
+                    price = selectedArticle.Price4.ToString("0.00");
+                }
+                else if (selectedArticle.QuantityPrice3 > 0 && quantityInDocument >= selectedArticle.QuantityPrice3 && selectedArticle.Price3 > 0)
+                {
+                    price = selectedArticle.Price3.ToString("0.00");
+                }
+                else if (selectedArticle.QuantityPrice2 > 0 && quantityInDocument >= selectedArticle.QuantityPrice2 && selectedArticle.Price2 > 0)
+                {
+                    price = selectedArticle.Price2.ToString("0.00");
+                }
+                else if (selectedArticle.QuantityPrice1 > 0 && quantityInDocument >= selectedArticle.QuantityPrice1 && selectedArticle.Price1 > 0)
+                {
+                    price = selectedArticle.Price1.ToString("0.00");
+                }
+            }
         }
 
         private static bool switch_DefinePrice_Loop(string pCode, double quantityInDocument, ref double currentPrice, ref bool excl, eArticle itemArt, ref double DefPricePerc) //v35 //1.0.0.4

@@ -300,6 +300,14 @@ namespace VerdeSoftApp
                     a.DefPriceCode2 = i.DefPriceCode2;
                     if (i.Size1 != "") a.Name = a.Name + " " + i.Size1;
                     if (i.Size2 != "") a.Name = a.Name + " " + i.Size2;
+                    a.QuantityPrice1 = i.QuantityPrice1;
+                    a.QuantityPrice2 = i.QuantityPrice2;
+                    a.QuantityPrice3 = i.QuantityPrice3;
+                    a.QuantityPrice4 = i.QuantityPrice4;
+                    a.QuantityPrice5 = i.QuantityPrice5;
+                    a.QuantityPrice6 = i.QuantityPrice6;
+                    a.QuantityPrice7 = i.QuantityPrice7;
+                    a.QuantityPrice8 = i.QuantityPrice8;
                     cData.articleList.Add(a);
                 }
             }

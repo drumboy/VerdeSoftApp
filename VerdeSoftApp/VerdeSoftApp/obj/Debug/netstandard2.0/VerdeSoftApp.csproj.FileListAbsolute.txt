@@ -53,6 +53,8 @@ C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp\bin\De
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp\bin\Debug\netstandard2.0\delete.png
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp\bin\Debug\netstandard2.0\delete146.png
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp\bin\Debug\netstandard2.0\search.png
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp\bin\Debug\netstandard2.0\keyboard-alpha.png
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp\bin\Debug\netstandard2.0\keyboard-num.png
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp\bin\Debug\netstandard2.0\myBeepLong.wav
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp\bin\Debug\netstandard2.0\myBeepShort.wav
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp\bin\Debug\netstandard2.0\uitsplitsen32.jpg

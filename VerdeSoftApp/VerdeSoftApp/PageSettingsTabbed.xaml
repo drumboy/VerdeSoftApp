@@ -93,6 +93,7 @@
                     <RowDefinition Height="19" />
                     <RowDefinition Height="19" />
                     <RowDefinition Height="19" />
+                    <RowDefinition Height="19" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="18" />
@@ -104,6 +105,8 @@
                 <CheckBox x:Name="CheckBoxRepeatQuantity" VerticalOptions="Center" Grid.Row="1" Grid.Column="2" />
                 <Label x:Name="LabelKeybAlpha" FontSize="12" Text="KeybAlpha" VerticalOptions="Center" Grid.Row="2" Grid.Column="1"/>
                 <CheckBox x:Name="CheckBoxKeybAlpha" VerticalOptions="Center" Grid.Row="2" Grid.Column="2" />
+                <Label x:Name="LabelPaymentScreen" FontSize="12" Text="PaymentScreen"  VerticalOptions="Center"  Grid.Row="3" Grid.Column="1"/>
+                <CheckBox x:Name="CheckBoxPaymentScreen" VerticalOptions="Center" Grid.Row="3" Grid.Column="2" />
             </Grid>
 
             <!-- grid voor de radiobuttons voor SearchField -->
@@ -144,18 +147,7 @@
                 <Entry x:Name="EntryCustomerCard" FontSize="14" Placeholder="" PlaceholderColor="Olive" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2"></Entry>
             </Grid>
 
-            <!-- grid voor de PaymentScreen checkbox -->
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="18" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="18" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Label x:Name="LabelPaymentScreen" FontSize="12" Text="PaymentScreen"  VerticalOptions="Center"  Grid.Row="0" Grid.Column="1"/>
-                <CheckBox x:Name="CheckBoxPaymentScreen" VerticalOptions="Center" Grid.Row="0" Grid.Column="2" />
-            </Grid>
+            
 
 
             <!-- grid voor knoppen Save en Terug -->

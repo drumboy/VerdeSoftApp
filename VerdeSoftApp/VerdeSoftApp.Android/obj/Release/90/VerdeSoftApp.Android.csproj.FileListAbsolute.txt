@@ -432,6 +432,8 @@ C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Androi
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Release\myBeepShort.wav
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Release\search.png
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Release\uitsplitsen32.jpg
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Release\keyboard-alpha.png
+C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Release\keyboard-num.png
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Release\VerdeSoftApp.Android.dll
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Release\VerdeSoftApp.Android.pdb
 C:\VerdeSoft\Software\VS2019\vSoft\VerdeSoftApp\VerdeSoftApp\VerdeSoftApp.Android\bin\Release\verdesoft.app.apk

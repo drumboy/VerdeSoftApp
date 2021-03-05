@@ -307,7 +307,7 @@
 
 	/* 31: VerdeSoftApp.dll */
 	/* uncompressed_file_size */
-	.long	743936
+	.long	757760
 	/* loaded */
 	.byte	0
 	/* data */

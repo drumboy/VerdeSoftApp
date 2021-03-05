@@ -28,6 +28,18 @@ namespace VerdeSoftApp
         public double Price8 { get; set; }
         public string DefPriceCode1 { get; set; }
         public string DefPriceCode2 { get; set; }
+
+
+        public int QuantityPrice1 { get; set; } //v105
+        public int QuantityPrice2 { get; set; } //v105
+        public int QuantityPrice3 { get; set; } //v105
+        public int QuantityPrice4 { get; set; } //v105
+        public int QuantityPrice5 { get; set; } //v105
+        public int QuantityPrice6 { get; set; } //v105
+        public int QuantityPrice7 { get; set; } //v105
+        public int QuantityPrice8 { get; set; } //v105
+
+
         public override string ToString()
         {
             return Name;

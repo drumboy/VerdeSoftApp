@@ -610,14 +610,33 @@ namespace VerdeSoftApp
         private async void VersturenNaarWCF() 
         {
             List<eScanned> scannedArticles = cData.Get_ScannedArticles(kind);
-            string err = cWCF.InsertScannedArticles_WCF(cData.settings.Identification, scannedArticles);
+            string err = "";
+            if (kind == "K")
+            {
+                List<ePayItem> payList = new List<ePayItem>();
+                err = cWCF.InsertScannedArticles_CR_WCF(cData.settings.Identification, scannedArticles, payList);
+                if (err == "")
+                {
+                    cData.Delete_ScannedArticles(kind);
+                    cData.IncreaseTicket();
+                    cData.setDefaultCustomerCode();
+                    calculateTotal();
+                    EntryScan.Focus();
+                }
+            }
+            else
+            {
+                err = cWCF.InsertScannedArticles_WCF(cData.settings.Identification, scannedArticles);
+                if (err == "")
+                {
+                    cData.Delete_ScannedArticles(kind);
+                    calculateTotal();
+                    EntryScan.Focus(); //1.0.4b (focus)
+                }
+            }
             if (err == "")
             {
-                cData.Delete_ScannedArticles(kind);
-                calculateTotal();
-                EntryScan.Focus(); //1.0.4b (focus)
                 await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Lijst verstuurd"), "OK");
-
             }
             else
             {

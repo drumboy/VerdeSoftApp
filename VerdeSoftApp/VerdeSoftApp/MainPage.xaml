@@ -9,7 +9,7 @@
     <StackLayout>
         <!-- Place new controls here -->
 
-        <Label x:Name="Titel" HorizontalTextAlignment="Center" BackgroundColor="Green" TextColor="White">VerdeSoft 1.0.0.35 - v 1.0.5 </Label>
+        <Label x:Name="Titel" HorizontalTextAlignment="Center" BackgroundColor="Green" TextColor="White">VerdeSoft 1.0.0.35 - v 1.0.5</Label>
 
         <Image x:Name="backgroundImage" Source="https://www.verdesoft.be/images/Verdesoft-02.png" 
                HeightRequest="80" WidthRequest="30"></Image>
