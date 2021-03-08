@@ -89,7 +89,7 @@
             <Button x:Name="BtnSync" BackgroundColor="#1690F4" TextColor="White" Text="Synchroniseer"  Clicked="BtnSync_Clicked" Grid.Row="0" Grid.Column="1"/>
             <Button x:Name= "BtnSettings" BackgroundColor="Orange" TextColor="White" Text="Instellingen"  Clicked="BtnSettings_Clicked"  Grid.Row="0" Grid.Column="2" />
         </Grid>
-        
+
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="45" />

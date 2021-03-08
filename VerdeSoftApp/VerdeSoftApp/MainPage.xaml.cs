@@ -169,8 +169,7 @@ namespace VerdeSoftApp
         {
             cSQLite.getSettings();
             cNavigate.openPage(new PageCashReg("L"));
-
-            
+            //cNavigate.openPage(new PageImage());
         }
 
         private void BtnOrder_Clicked(object sender, EventArgs e)

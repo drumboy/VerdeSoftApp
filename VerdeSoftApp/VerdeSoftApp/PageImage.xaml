@@ -7,7 +7,7 @@
              x:Class="VerdeSoftApp.PageImage">
     <ContentPage.Content>
         <StackLayout>
-
+            <Button x:Name="BtnReturn" Text ="Terug" BackgroundColor="Green" TextColor="White" Clicked="BtnReturn_Clicked" Grid.Row="1" Grid.Column="1"></Button>
             <Button x:Name="BtnTakePhoto" HorizontalOptions="Center" Text ="Klanten"  BackgroundColor="Green" TextColor="White" Clicked="BtnTakePhoto_Clicked" Grid.Row="1" Grid.Column="1"></Button>
             <Image x:Name="MyImage" />
         </StackLayout>
