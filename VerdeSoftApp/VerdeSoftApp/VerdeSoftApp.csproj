@@ -27,6 +27,7 @@
     <None Remove="uitsplitsen32.jpg" />
 	<None Remove="keyboard-alpha.png" />
 	<None Remove="keyboard-num.png" />
+	<None Remove="Verdesoft-02.png" /> <!-- logo Applicatie v105-->
   </ItemGroup>
 
   <ItemGroup>
@@ -73,6 +74,9 @@
 		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</EmbeddedResource>
 	<EmbeddedResource Include="keyboard-num.png">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="Verdesoft-02.png">
 		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</EmbeddedResource>
   </ItemGroup>
