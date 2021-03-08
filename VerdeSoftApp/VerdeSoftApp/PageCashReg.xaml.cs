@@ -279,6 +279,7 @@ namespace VerdeSoftApp
                     List<eScanned> scannedArticles = cData.Get_ScannedArticles(kind);
                     if (scannedArticles.Count > 0)
                     {
+                        cSound.beepSound();
                         bool answer = await DisplayAlert(cTranslate.getValue("Vraag"), cTranslate.getValue("Prijzen aanpassen") + " ?", cTranslate.getValue("Ja"), cTranslate.getValue("Nee"));
                         if (answer == true)
                         {

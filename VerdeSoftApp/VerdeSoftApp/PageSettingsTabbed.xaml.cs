@@ -15,14 +15,35 @@ namespace VerdeSoftApp
 
         private eSettings item = null;
 
+        private List<string> SearchFieldList = null;
+
         public PageSettingsTabbed()
         {
             InitializeComponent();
+
+            SearchFieldList = new List<String>();
+            SearchFieldList.Add("Code");
+            SearchFieldList.Add("Name");
+
+            DropDownSearchField.ItemsSource = SearchFieldList;
+            DropDownSearchField.SelectedIndex = 0; //Code
+            DropDownSearchField.SelectedIndexChanged += DropDownSearchField_SelectedIndexChanged;
 
             item = cSQLite.getSettings();
             initEntries();
 
             translatePage();
+        }
+
+        private void DropDownSearchField_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var picker = (Xamarin.Forms.Picker)sender;
+            int selectedIndex = picker.SelectedIndex;
+
+            if (selectedIndex != -1)
+            {
+                item.SearchField = (string)picker.ItemsSource[selectedIndex]; //0: Code, //1: Name
+            }
         }
 
         private void translatePage()
@@ -69,19 +90,21 @@ namespace VerdeSoftApp
             item.RepeatQuantity = CheckBoxRepeatQuantity.IsChecked;
             item.KeybAlpha = CheckBoxKeybAlpha.IsChecked;
 
-            //Save SearchField
-            if (RbtSearchFieldName.IsChecked)
-            {
-                item.SearchField = "Name";
-            }
-            else if (RbtSearchFieldCode.IsChecked)
-            {
-                item.SearchField = "Code";
-            }
-            else 
-            {
-                item.SearchField = "Code";
-            }
+            //Save SearchField //werkt niet met Android v 4.4 (Kitkat) //105
+            //if (RbtSearchFieldName.IsChecked)
+            //{
+            //    item.SearchField = "Name";
+            //}
+            //else if (RbtSearchFieldCode.IsChecked)
+            //{
+            //    item.SearchField = "Code";
+            //}
+            //else 
+            //{
+            //    item.SearchField = "Code";
+            //}
+
+            item.SearchField = DropDownSearchField.SelectedItem.ToString(); //0: Code, 1: Name
 
             item.CustomerCard = EntryCustomerCard.Text;
 
@@ -104,32 +127,29 @@ namespace VerdeSoftApp
             EntryTicket.Text = Convert.ToString(item.Ticket);
             CheckBoxKeybAlpha.IsChecked = item.KeybAlpha;
 
-            if(String.IsNullOrEmpty(item.SearchField)) //Set RbtSearchField Code op checked en save SearchField 'Code'
-            {
-                item.SearchField = "Code";
-            }
-
-            CheckedInSearchFieldRadio(item.SearchField);
+            //CheckedInSearchFieldRadio(item.SearchField); //werkt niet met Android v 4.4 (KitKat) //105
+            DropDownSearchField.SelectedItem = item.SearchField;
 
             EntryCustomerCard.Text = item.CustomerCard;
 
             CheckBoxPaymentScreen.IsChecked = item.PaymentScreen;
         }
 
-        private void CheckedInSearchFieldRadio(string searchField)
-        {
-            switch (searchField)
-            {
-                case "Name":
-                    item.SearchField = "Name";
-                    RbtSearchFieldName.IsChecked = true;
-                    break;
-                case "Code":
-                    item.SearchField = "Code";
-                    RbtSearchFieldCode.IsChecked = true;
-                    break;
-            }
-        }
+        //werkt niet met Android v 4.4 (KitKat) //105
+        //private void CheckedInSearchFieldRadio(string searchField)
+        //{
+        //    switch (searchField)
+        //    {
+        //        case "Name":
+        //            item.SearchField = "Name";
+        //            RbtSearchFieldName.IsChecked = true;
+        //            break;
+        //        case "Code":
+        //            item.SearchField = "Code";
+        //            RbtSearchFieldCode.IsChecked = true;
+        //            break;
+        //    }
+        //}
 
         private void BtnReturn_Clicked(object sender, EventArgs e)
         {
@@ -137,12 +157,12 @@ namespace VerdeSoftApp
             cNavigate.openPreviousPage();
         }
 
-
-        private void RadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            RadioButton rb = sender as RadioButton;
-            if (rb.IsChecked) item.SearchField = rb.Text;
-        }
+        //werkt niet met Android v 4.4 (KitKat) //105
+        //private void RadioButton_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    RadioButton rb = sender as RadioButton;
+        //    if (rb.IsChecked) item.SearchField = rb.Text;
+        //}
 
     }
 }

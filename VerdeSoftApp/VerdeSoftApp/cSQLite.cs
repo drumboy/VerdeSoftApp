@@ -239,7 +239,7 @@ namespace VerdeSoftApp
             e.Ticket = 1;
             e.CustomerCode = "";
             e.Language = "N";
-            e.SearchField = "";
+            e.SearchField = "Code"; //0: Code, //1: Name
             e.KeybAlpha = false;
             e.PaymentScreen = false;
             e.CustomerCard = "";

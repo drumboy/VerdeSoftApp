@@ -112,7 +112,7 @@
             <!-- grid voor de radiobuttons voor SearchField -->
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="19" />
+                    <RowDefinition Height="35" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="18" />
@@ -121,7 +121,7 @@
                 </Grid.ColumnDefinitions>
                 <Label x:Name="LabelSearchField" FontSize="12" Text="SearchField"  VerticalOptions="Center"  Grid.Row="0" Grid.Column="1"/>
 
-                <RadioButton   
+                <!--<RadioButton   // werkt niet met Android v 4.4 (Kitkat) //v105
                    GroupName="SearchField"   
                    Text="Name"
                    Grid.Row="0" Grid.Column="3"
@@ -131,8 +131,14 @@
                    GroupName="SearchField"    
                    Text="Code"
                    Grid.Row="0" Grid.Column="4"
-                   HorizontalOptions="Start" x:Name="RbtSearchFieldCode" CheckedChanged="RadioButton_CheckedChanged" />
+                   HorizontalOptions="Start" x:Name="RbtSearchFieldCode" CheckedChanged="RadioButton_CheckedChanged" />-->
+
+                <Frame  BorderColor="Gray" CornerRadius="5" Padding="1" Grid.Row="0" Grid.Column="3">
+                    <Picker x:Name="DropDownSearchField" FontSize="Small" Title="Selecteer zoekveld" ItemsSource="{Binding SearchFieldList}" SelectedItem="{Binding SelectedColorName, Mode=TwoWay}" BackgroundColor="Beige"  />
+                </Frame>
             </Grid>
+            
+            
 
             <!-- grid voor de Customer Card -->
             <Grid>

@@ -11,13 +11,13 @@ namespace VerdeSoftApp
         
         public App()
         {
-
-            Device.SetFlags(new string[]
-            {   "RadioButton_Experimental",
-                "AppTheme_Experimental",
-                "Markup_Experimental",
-                "Expander_Experimental"
-            });
+            //Werkt niet met Android versie 4.4 (Kitkat) //105
+            //Device.SetFlags(new string[]
+            //{   "RadioButton_Experimental",
+            //    "AppTheme_Experimental",
+            //    "Markup_Experimental",
+            //    "Expander_Experimental"
+            //});
 
             if (cNavigate.listPages == null)
             {
