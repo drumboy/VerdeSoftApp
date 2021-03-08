@@ -49,6 +49,11 @@ namespace VerdeSoftApp
 
         public static string userCode = "";
 
+        public static IList<eScanned> scannedSameArtikelsInKassa = new List<eScanned>();
+
+
+
+
         private static eArticle _selectedArticle = null;
         public static eArticle selectedArticle
         {
@@ -405,13 +410,29 @@ namespace VerdeSoftApp
             return selectedPrice;
         }
 
+        public static int getSumQuantitySelectedArtikelById(int selectedArtikelID) 
+        {
+            int sumQuantity = 0;
+            scannedSameArtikelsInKassa = cSQLite.SQLiteConn.Query<eScanned>("select * from eScanned where ArtId=? ", selectedArtikelID);
+
+            foreach (eScanned eScannedItemKassa in scannedSameArtikelsInKassa)
+            {
+                sumQuantity += Convert.ToInt32(eScannedItemKassa.Quantity);
+            }
+            return sumQuantity;
+        }
+
+
         public static string getSelectedPriceStr(string strQuantity)
         {
             string price = "0.00";
             double quantityInDocument = Convert.ToDouble(strQuantity);
+            double iSumSameQuantityScannedArtikel = 0;
             if (selectedArticle != null)
             {
                 price = selectedArticle.Price1.ToString("0.00");
+                iSumSameQuantityScannedArtikel = getSumQuantitySelectedArtikelById(Convert.ToInt32(selectedArticle.ArtId));
+                quantityInDocument += iSumSameQuantityScannedArtikel;
             }
             bool groothandel = false;
             if (_selectedCustomer != null)
@@ -445,8 +466,26 @@ namespace VerdeSoftApp
 
 
             switch_Staffel(quantityInDocument, ref price);
+            updatePriceScannedArticlesInKassa(cData.scannedSameArtikelsInKassa, Convert.ToDouble(price));
 
             return price;
+        }
+
+        private static void updatePriceScannedArticlesInKassa(IList<eScanned> scannedArtikelsKassa, double price)
+        {
+            if (scannedArtikelsKassa.Count > 0)
+            {
+                foreach (eScanned a in scannedArtikelsKassa)
+                {
+                    a.Price = price;
+                    a.Total = a.Quantity * a.Price;
+                    if (a.Discount > 0)
+                    {
+                        a.Total = Math.Round(a.Total * (1 - (a.Discount / 100)), 2, MidpointRounding.AwayFromZero);
+                    }
+                    cSQLite.SQLiteConn.Update(a);
+                }
+            }
         }
 
         private static void switch_Staffel(double quantityInDocument, ref string price) //105 (voor Juiste Staffel prijs te nemen als er staffel prijzen zijn)
