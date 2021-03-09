@@ -85,6 +85,8 @@ namespace VerdeSoftApp
 
         public bool PaymentScreen { get; set; }
 
+        public bool QuestionNotFound { get; set; }
+
 
     }
 

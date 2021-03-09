@@ -94,6 +94,7 @@
                     <RowDefinition Height="19" />
                     <RowDefinition Height="19" />
                     <RowDefinition Height="19" />
+                    <RowDefinition Height="19" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="18" />
@@ -107,6 +108,8 @@
                 <CheckBox x:Name="CheckBoxKeybAlpha" VerticalOptions="Center" Grid.Row="2" Grid.Column="2" />
                 <Label x:Name="LabelPaymentScreen" FontSize="12" Text="PaymentScreen"  VerticalOptions="Center"  Grid.Row="3" Grid.Column="1"/>
                 <CheckBox x:Name="CheckBoxPaymentScreen" VerticalOptions="Center" Grid.Row="3" Grid.Column="2" />
+                <Label x:Name="LabelQuestionNotFound" FontSize="12" Text="QuestionNotFound"  VerticalOptions="Center"  Grid.Row="4" Grid.Column="1"/>
+                <CheckBox x:Name="CheckBoxQuestionNotFound" VerticalOptions="Center" Grid.Row="4" Grid.Column="2" />
             </Grid>
 
             <!-- grid voor de radiobuttons voor SearchField -->

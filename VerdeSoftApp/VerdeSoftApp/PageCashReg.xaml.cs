@@ -318,16 +318,22 @@ namespace VerdeSoftApp
                 {
                     string entryNotFound = EntryScan.Text;
                     EntryScan.Text = "";
-                    EntryScan.Focus();
                     cSound.beepSound();
-                    //await DisplayAlert("Alert", cData.name + " " + "niet gevonden ", "OK");
-                    bool answer = await DisplayAlert(cTranslate.getValue("Vraag"), cData.name + " " + cTranslate.getValue("Niet gevonden") + ". " + cTranslate.getValue("Doorgaan") + " ?", cTranslate.getValue("Ja"), cTranslate.getValue("Nee"));
-                    if (answer == true)
+                    if (cData.settings.QuestionNotFound == false)
                     {
-                        EntryScan.Text = entryNotFound;
-                        eArticle newArt = cData.createArtNotFound(entryNotFound);
-                        cData.selectedArticle = newArt;
-                        ArticleSelected_Handler();
+                        await DisplayAlert("Alert", cData.name + " " + "niet gevonden ", "OK");
+                        EntryScan.Focus();
+                    }
+                    else 
+                    {
+                        bool answer = await DisplayAlert(cTranslate.getValue("Vraag"), cData.name + " " + cTranslate.getValue("Niet gevonden") + ". " + cTranslate.getValue("Doorgaan") + " ?", cTranslate.getValue("Ja"), cTranslate.getValue("Nee"));
+                        if (answer == true)
+                        {
+                            EntryScan.Text = entryNotFound;
+                            eArticle newArt = cData.createArtNotFound(entryNotFound);
+                            cData.selectedArticle = newArt;
+                            ArticleSelected_Handler();
+                        }
                     }
                 }
             }

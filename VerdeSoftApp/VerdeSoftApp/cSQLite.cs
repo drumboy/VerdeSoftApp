@@ -243,6 +243,7 @@ namespace VerdeSoftApp
             e.KeybAlpha = false;
             e.PaymentScreen = false;
             e.CustomerCard = "";
+            e.QuestionNotFound = false;
             
             SQLiteConn.Insert(e);
         }

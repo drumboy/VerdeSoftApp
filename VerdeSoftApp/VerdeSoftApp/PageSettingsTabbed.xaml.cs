@@ -68,6 +68,7 @@ namespace VerdeSoftApp
             LabelSearchField.Text = cTranslate.getValue("Zoekveld");
             LabelCustomerCard.Text = cTranslate.getValue("CustomerCard");
             LabelPaymentScreen.Text = cTranslate.getValue("PaymentScreen");
+            LabelQuestionNotFound.Text = cTranslate.getValue("QuestionNotFound");
         }
 
         private async void BtnSaveInstellingen_Clicked(object sender, EventArgs e)
@@ -110,6 +111,8 @@ namespace VerdeSoftApp
 
             item.PaymentScreen = CheckBoxPaymentScreen.IsChecked;
 
+            item.QuestionNotFound = CheckBoxQuestionNotFound.IsChecked;
+
             cSQLite.saveSettings(item);
             await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Opslaan gelukt"), "OK");
             cNavigate.openSpecificPage("MainPage");
@@ -133,6 +136,8 @@ namespace VerdeSoftApp
             EntryCustomerCard.Text = item.CustomerCard;
 
             CheckBoxPaymentScreen.IsChecked = item.PaymentScreen;
+            CheckBoxQuestionNotFound.IsChecked = item.QuestionNotFound;
+
         }
 
         //werkt niet met Android v 4.4 (KitKat) //105
