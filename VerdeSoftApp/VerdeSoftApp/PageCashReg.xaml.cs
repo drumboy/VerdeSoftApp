@@ -334,6 +334,16 @@ namespace VerdeSoftApp
                             cData.selectedArticle = newArt;
                             ArticleSelected_Handler();
                         }
+                        else 
+                        {
+                            EntryPrice.Text = "";
+                            EntryDiscount.Text = "";
+                            EntryQuantity.Text = "";
+                            EntryScan.Text = "";
+                            EntryScan.CursorPosition = 0;
+                            EntryScan.SelectionLength = EntryScan.Text.Length;
+                            EntryScan.Focus();
+                        }
                     }
                 }
             }
