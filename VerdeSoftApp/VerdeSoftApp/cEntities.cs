@@ -70,7 +70,7 @@ namespace VerdeSoftApp
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
-        public string ConnString { get; set; }
+        //public string ConnString { get; set; }
         public string MobileService { get; set; }
         public string Identification { get; set; }
         public string CustomerCode { get; set; }

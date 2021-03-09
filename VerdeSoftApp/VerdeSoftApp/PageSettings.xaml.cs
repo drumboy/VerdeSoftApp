@@ -46,7 +46,7 @@ namespace VerdeSoftApp
 
         private void initEntries()
         {
-            EntryConnectionString.Text = item.ConnString;
+            //EntryConnectionString.Text = item.ConnString;
             EntryMobileService.Text = item.MobileService;
             EntryIdentification.Text = item.Identification;
             EntryCustomerCode.Text = item.CustomerCode;
@@ -59,7 +59,7 @@ namespace VerdeSoftApp
         private void BtnSave_Clicked(object sender, EventArgs e)
         {
             item.MobileService = EntryMobileService.Text;
-            item.ConnString = EntryConnectionString.Text;
+            //item.ConnString = EntryConnectionString.Text;
             item.Identification = EntryIdentification.Text;
             item.CustomerCode = EntryCustomerCode.Text;
             item.VerifyBarcode = CheckBoxVerifyBarcode.IsChecked;

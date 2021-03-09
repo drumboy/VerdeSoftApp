@@ -78,7 +78,7 @@ namespace VerdeSoftApp
             if (eList.Count() == 0)
             {
                 eSettings e = new eSettings();
-                e.ConnString = "Userid=root;database=verdesoft;server=192.168.1.111;password=root;CharSet=utf8";
+                //e.ConnString = "Userid=root;database=verdesoft;server=192.168.1.111;password=root;CharSet=utf8";
                 e.MobileService = @"http://192.168.1.116:8000/MobileService";
                 SQLiteConn.Insert(e);
             }
@@ -119,7 +119,7 @@ namespace VerdeSoftApp
                     {
                         e = eList[0];
                         cData.settings = e;
-                        cData.ConnectionString = e.ConnString;
+                        //cData.ConnectionString = e.ConnString;
                         cWCF.MobileServiceStr = e.MobileService;
                     }
                     catch (Exception)
@@ -232,7 +232,7 @@ namespace VerdeSoftApp
             SQLiteConn.CreateTable<eStock>(); //1.0.4 a
 
             eSettings e = new eSettings();
-            e.ConnString = "Userid=root;database=verdesoft;server=192.168.1.111;password=root;CharSet=utf8";
+            //e.ConnString = "Userid=root;database=verdesoft;server=192.168.1.111;password=root;CharSet=utf8";
             e.MobileService = @"http://192.168.1.116:8000/MobileService";
             e.RepeatQuantity = false;
             e.VerifyBarcode = true; //lengte barcode

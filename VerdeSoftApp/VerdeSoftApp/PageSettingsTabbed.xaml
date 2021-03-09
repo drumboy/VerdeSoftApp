@@ -72,7 +72,7 @@
             <Label x:Name="LabelTitleVervolg" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Vervolg</Label>
 
             <!-- grid voorde Connectie string -->
-            <Grid>
+            <!--<Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20" />
                     <RowDefinition Height="40" />
@@ -84,7 +84,7 @@
 
                 <Label x:Name="LabelCNSTR" FontSize="12" Text="ConnectionString" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
                 <Entry x:Name="EntryConnectionString" FontSize="14" Placeholder="Userid=root;database=verdesoft;server=192.168.1.111;password=root;CharSet=utf8" PlaceholderColor="Olive" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="1"></Entry>
-            </Grid>
+            </Grid>-->
 
 
             <!-- grid voor de 3 checkboxen -->

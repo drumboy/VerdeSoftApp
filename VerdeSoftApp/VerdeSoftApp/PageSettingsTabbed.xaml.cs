@@ -52,7 +52,7 @@ namespace VerdeSoftApp
             contentTabVervolg.Title = cTranslate.getValue("Vervolg");
             contentTabInstellingen.Title = cTranslate.getValue("Instellingen");
             LabelTitleInstellingen.Text = cTranslate.getValue("Instellingen");
-            LabelCNSTR.Text = cTranslate.getValue("Connection string");
+            //LabelCNSTR.Text = cTranslate.getValue("Connection string");
             LabelWCF.Text = cTranslate.getValue("WCF Service");
             LabelIdentif.Text = cTranslate.getValue("Identificatie");
             LabelTicket.Text = cTranslate.getValue("Ticket");
@@ -85,7 +85,7 @@ namespace VerdeSoftApp
 
         private async void BtnSaveVervolg_Clicked(object sender, EventArgs e)
         {
-            item.ConnString = EntryConnectionString.Text;
+            //item.ConnString = EntryConnectionString.Text;
             item.VerifyBarcode = CheckBoxVerifyBarcode.IsChecked;
             item.RepeatQuantity = CheckBoxRepeatQuantity.IsChecked;
             item.KeybAlpha = CheckBoxKeybAlpha.IsChecked;
@@ -117,7 +117,7 @@ namespace VerdeSoftApp
 
         private void initEntries()
         {
-            EntryConnectionString.Text = item.ConnString;
+            //EntryConnectionString.Text = item.ConnString;
             EntryMobileService.Text = item.MobileService;
             EntryIdentification.Text = item.Identification;
             EntryCustomerCode.Text = item.CustomerCode;
