@@ -209,6 +209,8 @@ namespace VerdeSoftApp
                         if (cData.settings.RepeatQuantity == true) EntryQuantity.Text = cData.qty; //1.0.4b (repeat quantity)
                         EntryQuantity.Focus();
                         if (cData.DefPricePerc > 0) EntryDiscount.Text = Convert.ToString(cData.DefPricePerc); //1.0.4 na getSelectedPrice
+                        LabelBesteleenheidArtikelcode.Text = "Code: " + cData.selectedArticle.Code; //105 add besteleenheid van artikel
+                        LabelBesteleenheidArtikelcode.Text += "    " + cTranslate.getValue("BestelEenheid") + ": " + cData.selectedArticle.OrderQuantity;
                     }
 
                     return false; // return true to repeat counting, false to stop timer
@@ -321,7 +323,7 @@ namespace VerdeSoftApp
                     cSound.beepSound();
                     if (cData.settings.QuestionNotFound == false)
                     {
-                        await DisplayAlert("Alert", cData.name + " " + "niet gevonden ", "OK");
+                        await DisplayAlert("Alert", cData.name + " " + cTranslate.getValue("Niet gevonden"), "OK");
                         EntryScan.Focus();
                     }
                     else 

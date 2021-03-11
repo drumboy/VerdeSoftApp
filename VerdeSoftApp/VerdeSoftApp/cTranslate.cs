@@ -109,6 +109,7 @@ namespace VerdeSoftApp
             translations.Add(new eTranslate() { Code = "BentUZeker", NL = "Bent u zeker?", FR = "Vous êtes sûr?", EN = "Are you sure?", DE = "" });
             translations.Add(new eTranslate() { Code = "Prijzentabel ontvangen ", NL = "Prijzentabel ontvangen ", FR = "Tableau de prix reçus ", EN = "Received price table ", DE = "" });
             translations.Add(new eTranslate() { Code = "AllesInitialiseren", NL = "Alles initialiseren?", FR = "Initialiser tout?", EN = "Initialize everything?", DE = "" });
+            translations.Add(new eTranslate() { Code = "BestelEenheid", NL = "Besteleenheid", FR = "Unité de commande", EN = "Order unit", DE = "" });
         }
 
         public static string getValue(string Code)

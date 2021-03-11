@@ -39,6 +39,7 @@
             </Grid>
 
             <Label x:Name="LabelArtName" Font ="Bold,16"  Text="" HorizontalTextAlignment= "Center" TextColor="Green"/>
+            <Label x:Name="LabelBesteleenheidArtikelcode" Font ="14"  Text="" HorizontalTextAlignment= "Center" TextColor="Green"/>
             
             <Grid>
                 <Grid.RowDefinitions>
