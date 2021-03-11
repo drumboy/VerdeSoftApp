@@ -138,7 +138,7 @@ namespace VerdeSoftApp
             cWCF.GetDefPrices_WCF(cData.settings.Identification);
             cSQLite.syncDefPrices();
 
-            LabelSync.Text = "Prijzentabel ontvangen : " + cData.defPricesList.Count.ToString();
+            LabelSync.Text = cTranslate.getValue("Prijzentabel ontvangen") + " : " + cData.defPricesList.Count.ToString();
         }
 
         private async void BtnSyncStock_Clicked(object sender, EventArgs e)

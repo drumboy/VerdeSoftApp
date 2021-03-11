@@ -308,6 +308,7 @@ namespace VerdeSoftApp
                     a.QuantityPrice6 = i.QuantityPrice6;
                     a.QuantityPrice7 = i.QuantityPrice7;
                     a.QuantityPrice8 = i.QuantityPrice8;
+                    a.OrderQuantity = i.OrderQuantity;
                     cData.articleList.Add(a);
                 }
             }

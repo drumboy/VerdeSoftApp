@@ -39,6 +39,7 @@ namespace VerdeSoftApp
         public int QuantityPrice7 { get; set; } //v105
         public int QuantityPrice8 { get; set; } //v105
 
+        public double OrderQuantity { get; set; }
 
         public override string ToString()
         {

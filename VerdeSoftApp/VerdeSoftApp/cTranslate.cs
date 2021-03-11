@@ -105,6 +105,10 @@ namespace VerdeSoftApp
             translations.Add(new eTranslate() { Code = "Foute klantenkaart", NL = "Foutieve klantenkaart barcode", FR = "Carte client de barcode incorrecte", EN = "Incorrect barcode customer card", DE = "" });
             translations.Add(new eTranslate() { Code = "PaymentScreen", NL = "Toon betaalscherm", FR = "Afficher l'écran de paiement", EN = "Show Payment screen", DE = "" });
             translations.Add(new eTranslate() { Code = "QuestionNotFound", NL = "Vraag niet gevonden", FR = "Question non trouvée", EN = "Question not found", DE = "" });
+            translations.Add(new eTranslate() { Code = "InitialisatieGeslaagd", NL = "Initialisatie geslaagd!", FR = "Initialisation réussie!", EN = "Initialization successful!", DE = "" });
+            translations.Add(new eTranslate() { Code = "BentUZeker", NL = "Bent u zeker?", FR = "Vous êtes sûr?", EN = "Are you sure?", DE = "" });
+            translations.Add(new eTranslate() { Code = "Prijzentabel ontvangen ", NL = "Prijzentabel ontvangen ", FR = "Tableau de prix reçus ", EN = "Received price table ", DE = "" });
+            translations.Add(new eTranslate() { Code = "AllesInitialiseren", NL = "Alles initialiseren?", FR = "Initialiser tout?", EN = "Initialize everything?", DE = "" });
         }
 
         public static string getValue(string Code)

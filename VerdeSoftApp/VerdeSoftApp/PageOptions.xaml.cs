@@ -36,11 +36,11 @@ namespace VerdeSoftApp
 
         private async void BtnInit_Clicked(object sender, EventArgs e)
         {
-            bool answer = await DisplayAlert("Vraag?", "Alles initialiseren" + Environment.NewLine + "Bent u zeker?", "Ja", "Nee");
+            bool answer = await DisplayAlert(cTranslate.getValue("Vraag"),  cTranslate.getValue("AllesInitialiseren") + Environment.NewLine + cTranslate.getValue("BentUZeker"), cTranslate.getValue("Ja"), cTranslate.getValue("Nee"));
             if (answer == true)
             {
                 cSQLite.initDatabase(true);
-                await DisplayAlert("Bericht", "Initialisatie geslaagd", "OK");
+                await DisplayAlert(cTranslate.getValue("Vraag"), cTranslate.getValue("InitialisatieGeslaagd"), "OK");
             }
         }
 
