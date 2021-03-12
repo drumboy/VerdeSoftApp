@@ -281,12 +281,15 @@ namespace VerdeSoftApp
                     List<eScanned> scannedArticles = cData.Get_ScannedArticles(kind);
                     if (scannedArticles.Count > 0)
                     {
-                        cSound.beepSound();
-                        bool answer = await DisplayAlert(cTranslate.getValue("Vraag"), cTranslate.getValue("Prijzen aanpassen") + " ?", cTranslate.getValue("Ja"), cTranslate.getValue("Nee"));
-                        if (answer == true)
+                        if (cData.selectedCustomer.Price != 1 && cData.selectedCustomer.Price > 1) 
                         {
-                            cData.Set_Customer(kind, customerItem);
-                            cData.bTotalChanged = true;
+                            cSound.beepSound();
+                            bool answer = await DisplayAlert(cTranslate.getValue("Vraag"), cTranslate.getValue("Prijzen aanpassen") + " ?", cTranslate.getValue("Ja"), cTranslate.getValue("Nee"));
+                            if (answer == true)
+                            {
+                                cData.Set_Customer(kind, customerItem);
+                                cData.bTotalChanged = true;
+                            }
                         }
                     }
                     cData.selectedCustomer = customerItem; //hierdoor wordt de klant geset en event CData_hCustomerSelected uitgevoerd. (event is in cEntities gedefinieerd)

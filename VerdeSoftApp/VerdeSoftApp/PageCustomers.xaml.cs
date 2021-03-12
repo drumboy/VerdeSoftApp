@@ -124,12 +124,16 @@ namespace VerdeSoftApp
                 List<eScanned> scannedArticles = cData.Get_ScannedArticles(kind); //v1.0.3
                 if (scannedArticles.Count > 0) //v1.0.3
                 {
-                    cSound.beepSound();
-                    bool answer = await DisplayAlert(cTranslate.getValue("Vraag"), cTranslate.getValue("Prijzen aanpassen")+" ?", cTranslate.getValue("Ja"), cTranslate.getValue("Nee")); //v1.3
-                    if (answer == true) //v1.0.3
+
+                    if (selectedItem.Price != 1 && selectedItem.Price > 1) 
                     {
-                        cData.Set_Customer(kind, selectedItem); //v1.0.3
-                        cData.bTotalChanged = true; //v1.0.3
+                        cSound.beepSound();
+                        bool answer = await DisplayAlert(cTranslate.getValue("Vraag"), cTranslate.getValue("Prijzen aanpassen") + " ?", cTranslate.getValue("Ja"), cTranslate.getValue("Nee")); //v1.3
+                        if (answer == true) //v1.0.3
+                        {
+                            cData.Set_Customer(kind, selectedItem); //v1.0.3
+                            cData.bTotalChanged = true; //v1.0.3
+                        }
                     }
                 }
             }
