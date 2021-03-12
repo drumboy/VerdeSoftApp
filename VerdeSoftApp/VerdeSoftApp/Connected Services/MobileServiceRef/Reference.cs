@@ -32,6 +32,8 @@ namespace MobileServiceRef
         
         private string NameField;
         
+        private double OrderQuantityField;
+        
         private double Price1Field;
         
         private double Price2Field;
@@ -160,6 +162,19 @@ namespace MobileServiceRef
             set
             {
                 this.NameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double OrderQuantity
+        {
+            get
+            {
+                return this.OrderQuantityField;
+            }
+            set
+            {
+                this.OrderQuantityField = value;
             }
         }
         
