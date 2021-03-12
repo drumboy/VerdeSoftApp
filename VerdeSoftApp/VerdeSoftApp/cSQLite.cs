@@ -425,15 +425,15 @@ namespace VerdeSoftApp
                 string searchNoSpaces = pValue.Replace(" ", "%");
                 if (pOperator == enumOperator.Equals)
                 {
-                    cData.articleList = SQLiteConn.Query<eArticle>("select * from eArticle where " + pField + " = ? ", searchNoSpaces);
+                    cData.articleList = SQLiteConn.Query<eArticle>("select * from eArticle where " + pField + " = ? order by " + pField, searchNoSpaces);
                 }
                 else if (pOperator == enumOperator.Like)
                 {
-                    cData.articleList = SQLiteConn.Query<eArticle>("select * from eArticle where " + pField + " like ? ", searchNoSpaces + "%");
+                    cData.articleList = SQLiteConn.Query<eArticle>("select * from eArticle where " + pField + " like ? order by" + pField, searchNoSpaces + "%");
                 }
                 else if (pOperator == enumOperator.Contains)
                 {
-                    cData.articleList = SQLiteConn.Query<eArticle>("select * from eArticle where " + pField + " like ? ", "%" + searchNoSpaces + "%");
+                    cData.articleList = SQLiteConn.Query<eArticle>("select * from eArticle where " + pField + " like ? order by " + pField, "%" + searchNoSpaces + "%");
                 }
             }
             else

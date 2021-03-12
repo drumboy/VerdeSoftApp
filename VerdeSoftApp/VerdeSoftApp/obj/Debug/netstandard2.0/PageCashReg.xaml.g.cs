@@ -35,6 +35,9 @@ namespace VerdeSoftApp {
         private global::Xamarin.Forms.Label LabelArtName;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Label LabelBesteleenheidArtikelcode;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::VerdeSoftApp.NumericEntry EntryQuantity;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -79,6 +82,7 @@ namespace VerdeSoftApp {
             ImgBtnSwitchKeyboard = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "ImgBtnSwitchKeyboard");
             ImgBtnSearch = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "ImgBtnSearch");
             LabelArtName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelArtName");
+            LabelBesteleenheidArtikelcode = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LabelBesteleenheidArtikelcode");
             EntryQuantity = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::VerdeSoftApp.NumericEntry>(this, "EntryQuantity");
             EntryPrice = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::VerdeSoftApp.NumericEntry>(this, "EntryPrice");
             EntryDiscount = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::VerdeSoftApp.NumericEntry>(this, "EntryDiscount");
