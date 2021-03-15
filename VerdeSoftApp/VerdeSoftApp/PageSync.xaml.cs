@@ -38,6 +38,8 @@ namespace VerdeSoftApp
         }
         private async void BtnSyncArt_Clicked(object sender, EventArgs e)
         {
+            BtnSyncArt.BackgroundColor = Color.Red;
+            enableButtonsSync(false);
             string err = "";
             cSQLite.getSettings();
             cSQLite.beforeSyncArticles();
@@ -46,7 +48,6 @@ namespace VerdeSoftApp
 
             Device.BeginInvokeOnMainThread(() =>
             {
-                
                 LabelSync.Text = cTranslate.getValue("ArtikelsOntvangen") + ": " + totalReceived.ToString();
             });
 
@@ -83,10 +84,15 @@ namespace VerdeSoftApp
             {
                 LabelSync.Text = err;
             }
+            
+            enableButtonsSync(true);
+            BtnSyncArt.BackgroundColor = Color.Green;
         }
 
         private async void BtnSyncCust_Clicked(object sender, EventArgs e)
         {
+            BtnSyncCust.BackgroundColor = Color.Red;
+            enableButtonsSync(false);
             cSQLite.getSettings();
             cSQLite.beforeSyncCustomers();
             int totalReceived = 0;
@@ -121,31 +127,45 @@ namespace VerdeSoftApp
             });
 
             LabelSync.Text = cTranslate.getValue("KlantenOntvangen") + ": " + totalReceived.ToString();
+
+            BtnSyncCust.BackgroundColor = Color.Green;
+            enableButtonsSync(true);
         }
 
         private async void BtnSyncUser_Clicked(object sender, EventArgs e)
         {
+            BtnSyncUser.BackgroundColor = Color.Red;
+            enableButtonsSync(false);
             cSQLite.getSettings();
             cSQLite.beforeSyncUsers();
             cWCF.GetUsers_WCF(cData.settings.Identification);
+
             cSQLite.syncUsers();
 
             LabelSync.Text = cTranslate.getValue("GebruikersOntvangen") + ": " + cData.userList.Count.ToString();
+
+            BtnSyncUser.BackgroundColor = Color.Green;
+            enableButtonsSync(true);
         }
 
         private async void BtnSyncDefPrices_Clicked(object sender, EventArgs e)
         {
+            BtnSyncDefPrices.BackgroundColor = Color.Red;
+            enableButtonsSync(false);
             cSQLite.getSettings();
             cSQLite.beforeSyncDefPrices();
             cWCF.GetDefPrices_WCF(cData.settings.Identification);
             cSQLite.syncDefPrices();
 
             LabelSync.Text = cTranslate.getValue("PrijzentabelOntvangen") + ": " + cData.defPricesList.Count.ToString();
+            BtnSyncDefPrices.BackgroundColor = Color.Green;
+            enableButtonsSync(true);
         }
 
         private async void BtnSyncStock_Clicked(object sender, EventArgs e)
         {
-
+            BtnSyncStock.BackgroundColor = Color.Red;
+            enableButtonsSync(false);
             Device.BeginInvokeOnMainThread(() =>
             {
                 LabelSync.Text = cTranslate.getValue("StockOntvangen") + ": ... ";
@@ -160,12 +180,15 @@ namespace VerdeSoftApp
             });
 
             LabelSync.Text = cTranslate.getValue("StockOntvangen") + ": " + cData.stockList.Count.ToString();
+            BtnSyncStock.BackgroundColor = Color.Green;
+            enableButtonsSync(true);
         }
 
 
         private async void BtnSyncBarcodes_Clicked(object sender, EventArgs e) //1.0.4
         {
-
+            BtnSyncBarcodes.BackgroundColor = Color.Red;
+            enableButtonsSync(false);
             Device.BeginInvokeOnMainThread(() =>
             {
                 
@@ -181,6 +204,8 @@ namespace VerdeSoftApp
             });
 
             LabelSync.Text = cTranslate.getValue("BarcodesOntvangen") + ": " + cData.barcodesList.Count.ToString();
+            BtnSyncBarcodes.BackgroundColor = Color.Green;
+            enableButtonsSync(true);
         }
 
         //private async void BtnInit_Clicked(object sender, EventArgs e)
@@ -214,6 +239,17 @@ namespace VerdeSoftApp
         private void BtnClose_Clicked(object sender, EventArgs e)
         {
             cNavigate.openPreviousPage();
+        }
+
+        private void enableButtonsSync(bool bEnable) 
+        {
+            BtnSyncArt.IsEnabled = bEnable;
+            BtnSyncBarcodes.IsEnabled = bEnable;
+            BtnSyncCust.IsEnabled = bEnable;
+            BtnSyncDefPrices.IsEnabled = bEnable;
+            BtnSyncUser.IsEnabled = bEnable;
+            BtnSyncStock.IsEnabled = bEnable;
+            BtnClose.IsEnabled = bEnable;
         }
     }
 }
