@@ -62,6 +62,10 @@ namespace VerdeSoftApp
             LabelTitle.Text = cTranslate.getValue("Resultaat");
             BtnReturn.Text = cTranslate.getValue("Terug");
             BtnChoose.Text = cTranslate.getValue("Kiezen");
+            LabelNaam.Text = cTranslate.getValue("Naam");
+            EntryName.Placeholder = cTranslate.getValue("Naam");
+            LabelCode.Text = cTranslate.getValue("Code");
+            EntryCode.Placeholder = cTranslate.getValue("Code");
         }
 
         public async void EntryName_Completed(object sender, EventArgs e)

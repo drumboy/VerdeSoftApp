@@ -69,6 +69,15 @@ namespace VerdeSoftApp
             LabelCustomerCard.Text = cTranslate.getValue("CustomerCard");
             LabelPaymentScreen.Text = cTranslate.getValue("PaymentScreen");
             LabelQuestionNotFound.Text = cTranslate.getValue("QuestionNotFound");
+
+            
+            EntryIdentification.Placeholder = cTranslate.getValue("Identificatie");
+            EntryTicket.Placeholder = cTranslate.getValue("Ticket");
+            EntryCustomerCode.Placeholder = cTranslate.getValue("Klantcode");
+            EntryLanguage.Placeholder = cTranslate.getValue("Taal");
+            EntryCustomerCard.Placeholder = cTranslate.getValue("CustomerCard");
+
+
         }
 
         private async void BtnSaveInstellingen_Clicked(object sender, EventArgs e)
@@ -80,7 +89,7 @@ namespace VerdeSoftApp
             item.Language = EntryLanguage.Text;
 
             cSQLite.saveSettings(item);
-            await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Opslaan gelukt"), "OK");
+            await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Opslaan gelukt"), cTranslate.getValue("OK"));
             cNavigate.openSpecificPage("MainPage");
         }
 
@@ -114,7 +123,7 @@ namespace VerdeSoftApp
             item.QuestionNotFound = CheckBoxQuestionNotFound.IsChecked;
 
             cSQLite.saveSettings(item);
-            await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Opslaan gelukt"), "OK");
+            await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Opslaan gelukt"), cTranslate.getValue("OK"));
             cNavigate.openSpecificPage("MainPage");
         }
 

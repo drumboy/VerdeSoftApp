@@ -103,6 +103,7 @@ namespace VerdeSoftApp
             DropDownUsers.Title = cTranslate.getValue("Gebruikers");
             BtnDamage.Text = cTranslate.getValue("Breuk");
             BtnControle.Text = cTranslate.getValue("Controle");
+            BtnStock.Text = cTranslate.getValue("Stock");
         }
         
         private void DropDownUsers_SelectedIndexChanged(object sender, EventArgs e)

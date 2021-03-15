@@ -22,11 +22,11 @@
                     <ColumnDefinition Width="10" />
                 </Grid.ColumnDefinitions>
                 
-                <Label FontSize="14" Text="Naam"  Grid.Row="0" Grid.Column="1"  VerticalTextAlignment="Center"/>
+                <Label x:Name="LabelNaam" FontSize="14" Text="Naam"  Grid.Row="0" Grid.Column="1"  VerticalTextAlignment="Center"/>
                 <Entry x:Name="EntryName" FontSize="14" HorizontalTextAlignment="End" Placeholder="Naam" PlaceholderColor="Olive" 
                            Completed="EntryName_Completed" Grid.Row="0" Grid.Column="2"></Entry>
 
-                <Label FontSize="14" Text="Code" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" />
+                <Label x:Name="LabelCode" FontSize="14" Text="Code" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" />
                 <Entry x:Name="EntryCode" FontSize="14" HorizontalTextAlignment="End" Completed="EntryCode_Completed" Grid.Row="1" Grid.Column="2"></Entry>
             </Grid>
 

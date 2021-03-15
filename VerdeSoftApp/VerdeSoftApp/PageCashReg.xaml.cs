@@ -658,11 +658,11 @@ namespace VerdeSoftApp
             }
             if (err == "")
             {
-                await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Lijst verstuurd"), "OK");
+                await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Lijst verstuurd"), cTranslate.getValue("OK"));
             }
             else
             {
-                await DisplayAlert("Error WCF", err, "OK");
+                await DisplayAlert(cTranslate.getValue("ErrorWCF"), err, cTranslate.getValue("OK"));
             }
         }
 
@@ -678,7 +678,7 @@ namespace VerdeSoftApp
 
         private async void BtnStockLocation_Clicked(object sender, EventArgs e)
         {
-            cData.stockLocation = await DisplayPromptAsync("Vraag", "Stockplaats");
+            cData.stockLocation = await DisplayPromptAsync(cTranslate.getValue("Vraag"), cTranslate.getValue("Stockplaats"));
             EntryScan.Focus();
             calculateTotal(); //set label ...
         }

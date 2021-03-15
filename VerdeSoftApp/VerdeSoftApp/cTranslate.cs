@@ -110,6 +110,21 @@ namespace VerdeSoftApp
             translations.Add(new eTranslate() { Code = "Prijzentabel ontvangen ", NL = "Prijzentabel ontvangen ", FR = "Tableau de prix reçus ", EN = "Received price table ", DE = "" });
             translations.Add(new eTranslate() { Code = "AllesInitialiseren", NL = "Alles initialiseren?", FR = "Initialiser tout?", EN = "Initialize everything?", DE = "" });
             translations.Add(new eTranslate() { Code = "BestelEenheid", NL = "Besteleenheid", FR = "Unité de commande", EN = "Order unit", DE = "" });
+
+            translations.Add(new eTranslate() { Code = "ArtikelsOntvangen", NL = "Artikels ontvangen", FR = "Recevoir des articles", EN = "Receive articles", DE = "" });
+            translations.Add(new eTranslate() { Code = "KlantenOntvangen", NL = "Klanten ontvangen", FR = "Recevoir des clients", EN = "Receive clients", DE = "" });
+            translations.Add(new eTranslate() { Code = "GebruikersOntvangen", NL = "Gebruikers ontvangen", FR = "Recevoir des utilisateurs", EN = "Receive users", DE = "" });
+            translations.Add(new eTranslate() { Code = "PrijzentabelOntvangen", NL = "Prijzentabel ontvangen", FR = "Tableau de prix reçu", EN = "Received price table", DE = "" });
+            translations.Add(new eTranslate() { Code = "StockOntvangen", NL = "Stock ontvangen", FR = "Stock reçu", EN = "Stock received", DE = "" });
+            translations.Add(new eTranslate() { Code = "BarcodesOntvangen", NL = "Barcodes ontvangen", FR = "Recevoir des codes-barres", EN = "Receive barcodes", DE = "" });
+            translations.Add(new eTranslate() { Code = "OK", NL = "OK", FR = "D'accord", EN = "OK", DE = "" });
+            translations.Add(new eTranslate() { Code = "Error", NL = "Fout", FR = "Erreur", EN = "Error", DE = "" });
+            translations.Add(new eTranslate() { Code = "Prijzentabel", NL = "Prijzentabel", FR = "Tableau de prix", EN = "Price table", DE = "" });
+            translations.Add(new eTranslate() { Code = "Toevoegen", NL = "Toevoegen", FR = "Ajouter", EN = "Add", DE = "" });
+            translations.Add(new eTranslate() { Code = "Stockplaats", NL = "Stockplaats", FR = "Place de stock", EN = "Stockplace", DE = "" });
+            translations.Add(new eTranslate() { Code = "ErrorWCF", NL = "Fout WCF", FR = "Erreur WCF", EN = "Error WCF", DE = "" });
+            translations.Add(new eTranslate() { Code = "Bericht", NL = "Bericht", FR = "Message", EN = "Alert", DE = "" });
+            translations.Add(new eTranslate() { Code = "ScanBarcode", NL = "Scan barcode", FR = "Scanner le code-barres", EN = "Scan barcode", DE = "" });
         }
 
         public static string getValue(string Code)

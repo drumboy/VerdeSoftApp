@@ -37,11 +37,11 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Label x:Name="LabelIdentif" FontSize="12" Text="Identificatie" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" />
-                    <Entry x:Name="EntryIdentification" FontSize="14" Placeholder="Identification" PlaceholderColor="Olive" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2"></Entry>
+                    <Entry x:Name="EntryIdentification" FontSize="14" Placeholder="" PlaceholderColor="Olive" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2"></Entry>
                     <Label x:Name="LabelTicket" FontSize="12" Text="Ticket"  Grid.Row="1" Grid.Column="1" VerticalOptions="Center"/>
                     <Entry x:Name="EntryTicket" FontSize="14" Placeholder="Ticket" PlaceholderColor="Olive" HorizontalTextAlignment="Start" Grid.Row="1" Grid.Column="2"></Entry>
                     <Label x:Name="LabelCustomerCode" FontSize="12" Text="Klantcode" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" />
-                    <Entry x:Name="EntryCustomerCode" FontSize="14" Placeholder="CustomerCode" PlaceholderColor="Olive" HorizontalTextAlignment="Start" Grid.Row="2" Grid.Column="2"></Entry>
+                    <Entry x:Name="EntryCustomerCode" FontSize="14" Placeholder="" PlaceholderColor="Olive" HorizontalTextAlignment="Start" Grid.Row="2" Grid.Column="2"></Entry>
                     <Label x:Name="LabelLanguage" FontSize="12" Text="Taal" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" />
                     <Entry x:Name="EntryLanguage" FontSize="14" Placeholder="Language" PlaceholderColor="Olive" HorizontalTextAlignment="Start" Grid.Row="3" Grid.Column="2"></Entry>
                 </Grid>

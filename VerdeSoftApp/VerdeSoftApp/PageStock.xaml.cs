@@ -63,6 +63,7 @@ namespace VerdeSoftApp
             LabelTitle.Text = cTranslate.getValue("Stock");
             BtnList.Text = cTranslate.getValue("Lijst");
             BtnReturn.Text = cTranslate.getValue("Terug");
+            EntryScan.Placeholder = cTranslate.getValue("ScanBarcode");
         }
 
         protected override void OnAppearing()
@@ -113,7 +114,7 @@ namespace VerdeSoftApp
                 eStockMutation m = cData.Prepare_eStockMutation(selectedItem, "DEL", cData.selectedArticle);
                 //cData.Insert_StockMutation_Delete(selectedItem, cData.selectedArticle);
                 cData.Insert_StockMutation(m);
-                await DisplayAlert("Alert", "Wissen" + " " + selectedItem.Place, "OK");
+                await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Verwijderen") + " " + selectedItem.Place, cTranslate.getValue("OK"));
             }
         }
 
@@ -175,7 +176,7 @@ namespace VerdeSoftApp
                 EntryScan.Text = "";
                 EntryScan.Focus();
                 cSound.beepSound();
-                await DisplayAlert("Alert", cData.name + " " + "niet gevonden ", "OK");
+                await DisplayAlert(cTranslate.getValue("Bericht"), cData.name + " " + cTranslate.getValue("Niet gevonden"), cTranslate.getValue("OK"));
             }
         }
 

@@ -34,6 +34,7 @@ namespace VerdeSoftApp
             BtnSyncUser.Text = cTranslate.getValue("Gebruikers");
             //BtnInit.Text = cTranslate.getValue("Initialiseer");
             BtnClose.Text = cTranslate.getValue("Terug");
+            BtnSyncDefPrices.Text = cTranslate.getValue("Prijzentabel");
         }
         private async void BtnSyncArt_Clicked(object sender, EventArgs e)
         {
@@ -45,7 +46,8 @@ namespace VerdeSoftApp
 
             Device.BeginInvokeOnMainThread(() =>
             {
-                LabelSync.Text = "Artikels ontvangen: " + totalReceived.ToString();
+                
+                LabelSync.Text = cTranslate.getValue("ArtikelsOntvangen") + ": " + totalReceived.ToString();
             });
 
             await Task.Run(() =>
@@ -58,7 +60,7 @@ namespace VerdeSoftApp
                     cSQLite.syncArticles();
                     Device.BeginInvokeOnMainThread(() =>
                     {
-                        LabelSync.Text = "Artikels ontvangen: " + totalReceived.ToString();
+                        LabelSync.Text = cTranslate.getValue("ArtikelsOntvangen") + ": " + totalReceived.ToString();
                     });
 
 
@@ -69,13 +71,13 @@ namespace VerdeSoftApp
                         cSQLite.syncArticles();
                         Device.BeginInvokeOnMainThread(() =>
                         {
-                            LabelSync.Text = "Artikels ontvangen: " + totalReceived.ToString();
+                            LabelSync.Text = cTranslate.getValue("ArtikelsOntvangen") + ": " + totalReceived.ToString();
                         });
                     }
                 }
             });
 
-            LabelSync.Text = "Artikels ontvangen: " + totalReceived.ToString();
+            LabelSync.Text = cTranslate.getValue("ArtikelsOntvangen") + ": " + totalReceived.ToString();
 
             if (err != "")
             {
@@ -92,7 +94,7 @@ namespace VerdeSoftApp
 
             Device.BeginInvokeOnMainThread(() =>
             {
-                LabelSync.Text = "Klanten ontvangen: " + totalReceived.ToString();
+                LabelSync.Text = cTranslate.getValue("KlantenOntvangen") + ": " + totalReceived.ToString();
             });
 
             await Task.Run(() =>
@@ -102,7 +104,7 @@ namespace VerdeSoftApp
                 cSQLite.syncCustomers();
                 Device.BeginInvokeOnMainThread(() =>
                 {
-                    LabelSync.Text = "Klanten ontvangen: " + totalReceived.ToString();
+                    LabelSync.Text = cTranslate.getValue("KlantenOntvangen") + ": " + totalReceived.ToString();
                 });
 
 
@@ -113,12 +115,12 @@ namespace VerdeSoftApp
                     cSQLite.syncCustomers();
                     Device.BeginInvokeOnMainThread(() =>
                     {
-                        LabelSync.Text = "Klanten ontvangen: " + totalReceived.ToString();
+                        LabelSync.Text = cTranslate.getValue("KlantenOntvangen") + ": " + totalReceived.ToString();
                     });
                 }
             });
 
-            LabelSync.Text = "Klanten ontvangen: " + totalReceived.ToString();
+            LabelSync.Text = cTranslate.getValue("KlantenOntvangen") + ": " + totalReceived.ToString();
         }
 
         private async void BtnSyncUser_Clicked(object sender, EventArgs e)
@@ -128,7 +130,7 @@ namespace VerdeSoftApp
             cWCF.GetUsers_WCF(cData.settings.Identification);
             cSQLite.syncUsers();
 
-            LabelSync.Text = "Gebruikers ontvangen : "+cData.userList.Count.ToString();
+            LabelSync.Text = cTranslate.getValue("GebruikersOntvangen") + ": " + cData.userList.Count.ToString();
         }
 
         private async void BtnSyncDefPrices_Clicked(object sender, EventArgs e)
@@ -138,7 +140,7 @@ namespace VerdeSoftApp
             cWCF.GetDefPrices_WCF(cData.settings.Identification);
             cSQLite.syncDefPrices();
 
-            LabelSync.Text = cTranslate.getValue("Prijzentabel ontvangen") + " : " + cData.defPricesList.Count.ToString();
+            LabelSync.Text = cTranslate.getValue("PrijzentabelOntvangen") + ": " + cData.defPricesList.Count.ToString();
         }
 
         private async void BtnSyncStock_Clicked(object sender, EventArgs e)
@@ -146,7 +148,7 @@ namespace VerdeSoftApp
 
             Device.BeginInvokeOnMainThread(() =>
             {
-                LabelSync.Text = "Stock ontvangen : ... ";
+                LabelSync.Text = cTranslate.getValue("StockOntvangen") + ": ... ";
             });
 
             await Task.Run(() =>
@@ -157,7 +159,7 @@ namespace VerdeSoftApp
                 cSQLite.syncStock();
             });
 
-            LabelSync.Text = "Stock ontvangen : " + cData.stockList.Count.ToString();
+            LabelSync.Text = cTranslate.getValue("StockOntvangen") + ": " + cData.stockList.Count.ToString();
         }
 
 
@@ -166,7 +168,8 @@ namespace VerdeSoftApp
 
             Device.BeginInvokeOnMainThread(() =>
             {
-                LabelSync.Text = "Barcodes ontvangen : ... ";
+                
+                LabelSync.Text = cTranslate.getValue("BarcodesOntvangen") + " : ... ";
             });
 
             await Task.Run(() =>
@@ -177,7 +180,7 @@ namespace VerdeSoftApp
                 cSQLite.syncBarcodes();
             });
 
-            LabelSync.Text = "Barcodes ontvangen : " + cData.barcodesList.Count.ToString();
+            LabelSync.Text = cTranslate.getValue("BarcodesOntvangen") + ": " + cData.barcodesList.Count.ToString();
         }
 
         //private async void BtnInit_Clicked(object sender, EventArgs e)
@@ -200,11 +203,11 @@ namespace VerdeSoftApp
             bool ok = cTools.PingHost(ip);
             if (ok == true)
             {
-                await DisplayAlert("Ping", ip+" = OK", "OK");
+                await DisplayAlert("Ping", ip+" = " + cTranslate.getValue("OK"), cTranslate.getValue("OK"));
             }
             else
             {
-                await DisplayAlert("Ping", ip +" = ERROR", "OK");
+                await DisplayAlert("Ping", ip +" = " + cTranslate.getValue("Error"), cTranslate.getValue("Error"));
             }
         }
 
