@@ -170,6 +170,7 @@ namespace VerdeSoftApp
             {
                 LabelTitle.Text = cTranslate.getValue("Inventaris");
                 BtnPay.Text = cTranslate.getValue("Versturen");
+                BtnStockLocation.Text = cTranslate.getValue("Stockplaats");
             }
             else if (kind == "C")
             {
@@ -678,7 +679,7 @@ namespace VerdeSoftApp
 
         private async void BtnStockLocation_Clicked(object sender, EventArgs e)
         {
-            cData.stockLocation = await DisplayPromptAsync(cTranslate.getValue("Vraag"), cTranslate.getValue("Stockplaats"));
+            cData.stockLocation = await DisplayPromptAsync(cTranslate.getValue("Vraag"), cTranslate.getValue("Stockplaats"), cTranslate.getValue("OK"), cTranslate.getValue("Annuleer"));
             EntryScan.Focus();
             calculateTotal(); //set label ...
         }

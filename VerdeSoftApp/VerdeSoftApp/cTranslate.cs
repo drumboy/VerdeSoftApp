@@ -124,7 +124,8 @@ namespace VerdeSoftApp
             translations.Add(new eTranslate() { Code = "Stockplaats", NL = "Stockplaats", FR = "Place de stock", EN = "Stockplace", DE = "" });
             translations.Add(new eTranslate() { Code = "ErrorWCF", NL = "Fout WCF", FR = "Erreur WCF", EN = "Error WCF", DE = "" });
             translations.Add(new eTranslate() { Code = "Bericht", NL = "Bericht", FR = "Message", EN = "Alert", DE = "" });
-            translations.Add(new eTranslate() { Code = "ScanBarcode", NL = "Scan barcode", FR = "Scanner le code-barres", EN = "Scan barcode", DE = "" });
+            translations.Add(new eTranslate() { Code = "ScanBarcode", NL = "Barcode", FR = "Code barre", EN = "Barcode", DE = "" });
+            translations.Add(new eTranslate() { Code = "Annuleer", NL = "Annuleer", FR = "Annuler", EN = "Cancel", DE = "" });
         }
 
         public static string getValue(string Code)
@@ -142,6 +143,10 @@ namespace VerdeSoftApp
                         if (cData.settings.Language == "F") return e.FR;
                         if (cData.settings.Language == "E") return e.EN;
                         if (cData.settings.Language == "D") return e.DE;
+                    }
+                    else 
+                    {
+                        return e.NL;
                     }
                 }
             }
