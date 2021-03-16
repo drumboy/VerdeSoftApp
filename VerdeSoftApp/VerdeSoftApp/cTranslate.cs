@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace VerdeSoftApp
@@ -7,6 +8,8 @@ namespace VerdeSoftApp
     public static class cTranslate
     {
         private static List<eTranslate> translations = null;
+
+        private static CultureInfo c1;
         private static void initTranslations()
         {
             translations = new List<eTranslate>();
@@ -130,6 +133,10 @@ namespace VerdeSoftApp
 
         public static string getValue(string Code)
         {
+            c1 = CultureInfo.InstalledUICulture;
+            string sName = c1.Name;
+
+
             if (translations == null) initTranslations();
             
             foreach(eTranslate e in translations)
@@ -146,7 +153,17 @@ namespace VerdeSoftApp
                     }
                     else 
                     {
-                        return e.NL;
+                        //If no Settings language is set then get language of the Phone //105
+                        if (sName.Equals("de-DE"))
+                            return e.DE;
+                        else if (sName.Equals("nl-BE"))
+                            return e.NL;
+                        else if (sName.Equals("nl-NL"))
+                            return e.NL;
+                        else if (sName.Equals("en-US"))
+                            return e.EN;
+                        else if (sName.Equals("en-UK"))
+                            return e.EN;
                     }
                 }
             }
