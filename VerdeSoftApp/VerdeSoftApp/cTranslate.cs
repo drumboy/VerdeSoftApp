@@ -156,6 +156,8 @@ namespace VerdeSoftApp
                         //If no Settings language is set then get language of the Phone //105
                         if (sName.Equals("de-DE"))
                             return e.DE;
+                        else if (sName.Equals("de-BE"))
+                            return e.DE;
                         else if (sName.Equals("nl-BE"))
                             return e.NL;
                         else if (sName.Equals("nl-NL"))
@@ -164,6 +166,10 @@ namespace VerdeSoftApp
                             return e.EN;
                         else if (sName.Equals("en-UK"))
                             return e.EN;
+                        else if (sName.Equals("fr-BE"))
+                            return e.FR;
+                        else if (sName.Equals("fr-FR"))
+                            return e.FR;
                     }
                 }
             }
