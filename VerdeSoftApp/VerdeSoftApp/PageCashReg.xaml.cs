@@ -242,6 +242,7 @@ namespace VerdeSoftApp
                 EntryQuantity.Text = cData.qty; //1.0.4b (repeat quantity)
             EntryDiscount.Text = "0";
             LabelArtName.Text = "";
+            LabelBesteleenheidArtikelcode.Text = "";
             if (kind != "I") //inventory
             {
                 BtnStockLocation.IsVisible = false;
