@@ -28,7 +28,7 @@ namespace VerdeSoftApp
 
         private void translatePage()
         {
-            LabelTitle.Text = cTranslate.getValue("Instellingen");
+            LabelTitle.Text = cTranslate.getValue("Synchroniseer");
             BtnSyncArt.Text = cTranslate.getValue("Artikels");
             BtnSyncCust.Text = cTranslate.getValue("Klanten");
             BtnSyncUser.Text = cTranslate.getValue("Gebruikers");
