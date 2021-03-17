@@ -54,7 +54,7 @@ namespace VerdeSoftApp
             DropDownUsers.SelectedIndexChanged += DropDownUsers_SelectedIndexChanged;
 
             cSQLite.getDefPrices();
-            cSQLite.getSettings();
+            //cSQLite.getSettings();
 
             BindingContext = this;
 
@@ -84,13 +84,13 @@ namespace VerdeSoftApp
         {
             base.OnAppearing();
 
+            enableDisableControls(); //105
+
             translatePage();
 
             cData.deviceId = CrossDeviceInfo.Current.Id;
             //string enc = cTools.EncodeToAsciiSum(cData.deviceId);
             //string enc2 = enc;
-
-            enableDisableControls(); //105
         }
 
         private void translatePage()

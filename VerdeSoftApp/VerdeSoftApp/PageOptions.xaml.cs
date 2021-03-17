@@ -15,8 +15,8 @@ namespace VerdeSoftApp
         public PageOptions()
         {
             InitializeComponent();
-            translatePage();
             enableDisableControls(); //105
+            translatePage();
         }
 
         protected override bool OnBackButtonPressed()
