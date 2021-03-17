@@ -54,6 +54,7 @@ namespace VerdeSoftApp
             DropDownUsers.SelectedIndexChanged += DropDownUsers_SelectedIndexChanged;
 
             cSQLite.getDefPrices();
+            cSQLite.getSettings();
 
             BindingContext = this;
 
@@ -83,12 +84,13 @@ namespace VerdeSoftApp
         {
             base.OnAppearing();
 
-            cSQLite.getSettings();
             translatePage();
 
             cData.deviceId = CrossDeviceInfo.Current.Id;
             //string enc = cTools.EncodeToAsciiSum(cData.deviceId);
             //string enc2 = enc;
+
+            enableDisableControls(); //105
         }
 
         private void translatePage()
@@ -195,6 +197,22 @@ namespace VerdeSoftApp
         {
             cSQLite.getSettings();
             cNavigate.openPage(new PageCashReg("D"));
+        }
+
+
+        private void enableDisableControls() //105
+        {
+            if (cData.settings == null) cSQLite.getSettings();
+            bool bEnable = cData.settings != null;
+            BtnCashRegister.IsEnabled = bEnable;
+            DropDownUsers.IsEnabled = bEnable;
+            BtnStock.IsEnabled = bEnable;
+            BtnLabel.IsEnabled = bEnable;
+            BtnOrder.IsEnabled = bEnable;
+            BtnInventory.IsEnabled = bEnable;
+            BtnDamage.IsEnabled = bEnable;
+            BtnControle.IsEnabled = bEnable;
+            BtnSync.IsEnabled = bEnable;
         }
 
     }

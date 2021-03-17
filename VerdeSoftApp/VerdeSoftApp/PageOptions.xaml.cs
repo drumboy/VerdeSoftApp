@@ -16,6 +16,7 @@ namespace VerdeSoftApp
         {
             InitializeComponent();
             translatePage();
+            enableDisableControls(); //105
         }
 
         protected override bool OnBackButtonPressed()
@@ -27,7 +28,7 @@ namespace VerdeSoftApp
 
         private void translatePage()
         {
-            LabelTitle.Text = cTranslate.getValue("Instellingen"); //change title Betalingen to Instellingen - Laurens
+            LabelTitle.Text = cTranslate.getValue("Instellingen"); //change title Betalingen to Instellingen - Laurens //105
 
             BtnReturn.Text = cTranslate.getValue("Terug");
             BtnInit.Text = cTranslate.getValue("Initialiseer");
@@ -40,7 +41,8 @@ namespace VerdeSoftApp
             if (answer == true)
             {
                 cSQLite.initDatabase(true);
-                await DisplayAlert(cTranslate.getValue("Vraag"), cTranslate.getValue("InitialisatieGeslaagd"), "OK");
+                await DisplayAlert(cTranslate.getValue("Vraag"), cTranslate.getValue("InitialisatieGeslaagd"), cTranslate.getValue("OK"));
+                enableDisableControls();
             }
         }
 
@@ -54,6 +56,13 @@ namespace VerdeSoftApp
         private void BtnReturn_Clicked(object sender, EventArgs e)
         {
             cNavigate.openPreviousPage();
+        }
+
+        private void enableDisableControls() //105
+        {
+            if (cData.settings == null) cSQLite.getSettings();
+            bool bEnable = cData.settings != null;
+            BtnSettings.IsEnabled = bEnable;
         }
 
         

@@ -129,6 +129,7 @@ namespace VerdeSoftApp
             translations.Add(new eTranslate() { Code = "Bericht", NL = "Bericht", FR = "Message", EN = "Alert", DE = "" });
             translations.Add(new eTranslate() { Code = "ScanBarcode", NL = "Barcode", FR = "Code barre", EN = "Barcode", DE = "" });
             translations.Add(new eTranslate() { Code = "Annuleer", NL = "Annuleer", FR = "Annuler", EN = "Cancel", DE = "" });
+            translations.Add(new eTranslate() { Code = "ErrorConnectieWCF", NL = "De mobile service op adres: " + Environment.NewLine + "{0}" + Environment.NewLine + " is niet bereikbaar!", FR = "Le service mobile avec adresse:" + Environment.NewLine + "{ 0 }" + Environment.NewLine + "n'est pas disponible.!", EN = "The mobile service on address: " + Environment.NewLine + "{0}" + Environment.NewLine + "is not available!", DE = "" });
         }
 
         public static string getValue(string Code)
@@ -136,6 +137,10 @@ namespace VerdeSoftApp
             c1 = CultureInfo.InstalledUICulture;
             string sName = c1.Name;
 
+            //if (cData.settings == null)
+            //{
+            //    cSQLite.getSettings();
+            //}
 
             if (translations == null) initTranslations();
             
