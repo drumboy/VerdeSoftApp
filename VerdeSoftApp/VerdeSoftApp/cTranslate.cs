@@ -155,21 +155,45 @@ namespace VerdeSoftApp
                     {
                         //If no Settings language is set then get language of the Phone //105
                         if (sName.Equals("de-DE"))
+                        {
+                            cData.sInitLanguage = "D";
                             return e.DE;
-                        else if (sName.Equals("de-BE"))
+                        }
+                        else if (sName.Equals("de-BE")) 
+                        {
+                            cData.sInitLanguage = "D";
                             return e.DE;
-                        else if (sName.Equals("nl-BE"))
+                        }
+                        else if (sName.Equals("nl-BE")) 
+                        {
+                            cData.sInitLanguage = "N";
                             return e.NL;
-                        else if (sName.Equals("nl-NL"))
+                        }
+                        else if (sName.Equals("nl-NL")) 
+                        {
+                            cData.sInitLanguage = "N";
                             return e.NL;
-                        else if (sName.Equals("en-US"))
+                        }
+                        else if (sName.Equals("en-US")) 
+                        {
+                            cData.sInitLanguage = "E";
                             return e.EN;
-                        else if (sName.Equals("en-UK"))
+                        }
+                        else if (sName.Equals("en-UK")) 
+                        {
+                            cData.sInitLanguage = "E";
                             return e.EN;
-                        else if (sName.Equals("fr-BE"))
+                        } 
+                        else if (sName.Equals("fr-BE")) 
+                        {
+                            cData.sInitLanguage = "F";
                             return e.FR;
-                        else if (sName.Equals("fr-FR"))
+                        }
+                        else if (sName.Equals("fr-FR")) 
+                        {
+                            cData.sInitLanguage = "F";
                             return e.FR;
+                        }
                     }
                 }
             }

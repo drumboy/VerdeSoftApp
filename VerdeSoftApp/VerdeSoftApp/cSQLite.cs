@@ -238,12 +238,15 @@ namespace VerdeSoftApp
             e.VerifyBarcode = true; //lengte barcode
             e.Ticket = 1;
             e.CustomerCode = "";
-            e.Language = "N";
-            e.SearchField = "Code"; //0: Code, //1: Name
-            e.KeybAlpha = false;
-            e.PaymentScreen = false;
+
+            //by init set default language to language off the phone !!
+            if(cData.sInitLanguage != "") e.Language = cData.sInitLanguage;
+
+            e.SearchField = "Code"; //0: Code, //1: Name //105
+            e.KeybAlpha = false; //105
+            e.PaymentScreen = false; //105
             e.CustomerCard = "";
-            e.QuestionNotFound = false;
+            e.QuestionNotFound = false; //105
             
             SQLiteConn.Insert(e);
         }
