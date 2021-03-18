@@ -38,6 +38,8 @@ namespace VerdeSoftApp
         {
             InitializeComponent();
 
+            cSQLite.getSettings();
+
             backgroundImage.Source = ImageSource.FromResource("VerdeSoftApp.Verdesoft-02.png");
 
             //Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);

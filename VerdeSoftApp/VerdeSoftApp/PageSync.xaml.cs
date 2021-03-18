@@ -16,6 +16,10 @@ namespace VerdeSoftApp
         public PageSync()
         {
             InitializeComponent();
+
+            clearCache();
+
+            cSQLite.getSettings();
             translatePage();
         }
 
@@ -346,6 +350,23 @@ namespace VerdeSoftApp
                 }
             }
             return sError;
+        }
+
+        private void clearCache() //105
+        {
+            try
+            {
+                var cachePath = System.IO.Path.GetTempPath();
+
+                // If exist, delete the cache directory and everything in it recursivly
+                if (System.IO.Directory.Exists(cachePath))
+                    System.IO.Directory.Delete(cachePath, true);
+
+                // If not exist, restore just the directory that was deleted
+                if (!System.IO.Directory.Exists(cachePath))
+                    System.IO.Directory.CreateDirectory(cachePath);
+            }
+            catch (Exception) { }
         }
     }
 }
