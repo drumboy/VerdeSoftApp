@@ -90,6 +90,7 @@ namespace VerdeSoftApp
 
             cSQLite.saveSettings(item);
             await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Opslaan gelukt"), cTranslate.getValue("OK"));
+            cSQLite.getSettings();
             cNavigate.openSpecificPage("MainPage");
         }
 
@@ -124,6 +125,7 @@ namespace VerdeSoftApp
 
             cSQLite.saveSettings(item);
             await DisplayAlert(cTranslate.getValue("Bericht"), cTranslate.getValue("Opslaan gelukt"), cTranslate.getValue("OK"));
+            cSQLite.getSettings();
             cNavigate.openSpecificPage("MainPage");
         }
 
