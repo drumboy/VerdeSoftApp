@@ -21,12 +21,25 @@ namespace VerdeSoftApp
         public PageArticles()
         {
             InitializeComponent();
-            
+
+            //setImageArticles(cData.articleList);
             Articles = cData.articleList;
 
             BindingContext = this;
 
             this.Title = "PageArticles";
+        }
+
+        private void setImageArticles(IList<eArticle> articleList)
+        {
+            if (articleList.Count > 0) 
+            {
+                foreach (var itemImageArticle in articleList)
+                {
+                    
+                }
+            }
+            
         }
 
         public PageArticles(string pReturnPageName)
@@ -56,6 +69,7 @@ namespace VerdeSoftApp
             LabelTitle.Text = cTranslate.getValue("Resultaat");
             BtnReturn.Text = cTranslate.getValue("Terug");
             BtnChoose.Text = cTranslate.getValue("Kiezen");
+            
         }
 
         private void BtnReturn_Clicked(object sender, EventArgs e)
@@ -65,6 +79,8 @@ namespace VerdeSoftApp
 
         private void BtnChoose_Clicked(object sender, EventArgs e)
         {
+            cData.selectedArticle = selectedItem; //koppel het geselecteerde artikel aan selectedArticle in cData
+
             if (returnPageName == "")
             {
                 cNavigate.openPreviousPage();
@@ -77,7 +93,15 @@ namespace VerdeSoftApp
             {
                 cNavigate.openSpecificPage("PageStock");
             }
-            cData.selectedArticle = selectedItem;
+            else if (returnPageName == "PageImage") //105 nieuwe module Foto Artikel
+            {
+                //check if knop Koppel Article is clicked, then insert image
+                if (cData.isClickedKoppelArtikel) 
+                {
+                    cSQLite.insertImage();
+                    cNavigate.openSpecificPage("PageImage");
+                }
+            }
         }
 
         void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)

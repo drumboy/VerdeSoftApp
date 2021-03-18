@@ -130,6 +130,11 @@ namespace VerdeSoftApp
             translations.Add(new eTranslate() { Code = "ScanBarcode", NL = "Barcode", FR = "Code barre", EN = "Barcode", DE = "" });
             translations.Add(new eTranslate() { Code = "Annuleer", NL = "Annuleer", FR = "Annuler", EN = "Cancel", DE = "" });
             translations.Add(new eTranslate() { Code = "ErrorConnectieWCF", NL = "De mobile service op adres: " + Environment.NewLine + "{0}" + Environment.NewLine + " is niet bereikbaar!", FR = "Le service mobile avec adresse:" + Environment.NewLine + "{ 0 }" + Environment.NewLine + "n'est pas disponible.!", EN = "The mobile service on address: " + Environment.NewLine + "{0}" + Environment.NewLine + "is not available!", DE = "" });
+
+            translations.Add(new eTranslate() { Code = "Images", NL = "Afbeeldingen", FR = "Des photos", EN = "Images", DE = "" }); //105 Nieuwe module Images (for articles)
+            translations.Add(new eTranslate() { Code = "NeemFoto", NL = "Neem foto", FR = "Prendre une photo", EN = "Take photo", DE = "" }); //105 Nieuwe module Images (for articles)
+            translations.Add(new eTranslate() { Code = "KoppelArtikelMetFoto", NL = "Koppel artikel", FR = "Lien article", EN = "Link article", DE = "" }); //105 Nieuwe module Images (for articles)
+            translations.Add(new eTranslate() { Code = "VerstuurPhotosWCF", NL = "Verstuur naar WCF", FR = "Envoyer de WCF", EN = "Send to WCF", DE = "" }); //105 Nieuwe module Images (for articles)
         }
 
         public static string getValue(string Code)

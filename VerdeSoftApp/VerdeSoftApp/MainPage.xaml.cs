@@ -107,6 +107,7 @@ namespace VerdeSoftApp
             BtnDamage.Text = cTranslate.getValue("Breuk");
             BtnControle.Text = cTranslate.getValue("Controle");
             BtnStock.Text = cTranslate.getValue("Stock");
+            //BtnTakePhoto.Text = cTranslate.getValue("NeemFoto"); //105 nieuwe module Foto Artikels
         }
         
         private void DropDownUsers_SelectedIndexChanged(object sender, EventArgs e)
@@ -155,10 +156,6 @@ namespace VerdeSoftApp
             cNavigate.openPage(new PageSync());
         }
 
-        private void ImageButton_Clicked(object sender, EventArgs e)
-        {
-
-        }
         private void BtnInitDatabase_Clicked(object sender, EventArgs e)
         {
             
@@ -214,7 +211,13 @@ namespace VerdeSoftApp
             BtnDamage.IsEnabled = bEnable;
             BtnControle.IsEnabled = bEnable;
             BtnSync.IsEnabled = bEnable;
+            //BtnTakePhoto.IsEnabled = bEnable;
         }
 
+        private void BtnTakePhoto_Clicked(object sender, EventArgs e)
+        {
+            cSQLite.getSettings();
+            cNavigate.openPage(new PageImage());
+        }
     }
 }

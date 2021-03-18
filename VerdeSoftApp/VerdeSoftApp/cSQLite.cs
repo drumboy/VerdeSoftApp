@@ -246,6 +246,11 @@ namespace VerdeSoftApp
             e.QuestionNotFound = false; //105
             
             SQLiteConn.Insert(e);
+
+            //105 //nieuwe module images artikels
+            exist = TableExists("eImages", SQLiteConn);
+            if (exist == false) SQLiteConn.DropTable<eImages>();
+            SQLiteConn.CreateTable<eImages>();
         }
 
         public static void beforeSyncArticles()
@@ -497,5 +502,55 @@ namespace VerdeSoftApp
         {
             SQLiteConn.DeleteAll<eStockMutation>();
         }
+
+
+        //105
+        #region 'Fotos artikels (nieuwe module)'
+        public static void insertImage()
+        {
+            if (TableExists("eImages", SQLiteConn))
+            {
+                if (cData.selectedArticle != null)
+                {
+                    if (cData.eImage != null)
+                    {
+                        cData.eImage.ArtId = cData.selectedArticle.ArtId;
+                        SQLiteConn.Insert(cData.eImage);
+                        cData.selectedArticle.ImageFound = true;
+                        SQLiteConn.Update(cData.selectedArticle);
+                    }
+                }
+            }
+        }
+
+        public static List<eImages> getAllImagesArtikels()
+        {
+            return SQLiteConn.Query<eImages>("select * from eImages");
+        }
+
+        public static List<eArticle> getAllArtikels()
+        {
+            return SQLiteConn.Query<eArticle>("select * from eArticle");
+        }
+
+        //public static void updateSearchedArticlesFromImagesArticles(List<eArticle> searchedArticles) 
+        //{
+        //    List<eImages> lstAllImages = SQLiteConn.Query<eImages>("select * from eImages");
+        //    foreach (eArticle srchArt in searchedArticles) 
+        //    {
+        //        foreach (eImages eImg in lstAllImages) 
+        //        {
+        //            if (srchArt.ID == eImg.ArtId) 
+        //            {
+        //                srchArt.IMGCount += 1;
+        //                SQLiteConn.Update(srchArt);
+        //            }
+        //        }
+        //    }
+        //    SQLiteConn.Commit();
+        //}
+
+        #endregion
+
     }
 }

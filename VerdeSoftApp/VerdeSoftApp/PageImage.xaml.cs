@@ -14,9 +14,60 @@ namespace VerdeSoftApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageImage : ContentPage
     {
+
         public PageImage()
         {
             InitializeComponent();
+
+            this.Title = "PageImage";
+
+            initEntries();
+
+            //if (cSQLite.getAllImagesArtikels().Count > 0)
+            //{
+            //    foreach (eImages imgArtikel in cSQLite.getAllImagesArtikels())
+            //    {
+            //        if (imgArtikel.ArtId != 0)
+            //        {
+            //            Console.WriteLine(imgArtikel.ID + ", " + imgArtikel.ArtId + ", " + imgArtikel.URL);
+            //        }
+            //    }
+            //}
+
+            //if (cSQLite.getAllArtikels().Count > 0)
+            //{
+            //    foreach (eArticle eArt in cSQLite.getAllArtikels())
+            //    {
+            //        if (eArt.ImageFound == true)
+            //        {
+            //            Console.WriteLine(eArt.ID + ", " + eArt.ArtId + ", " + eArt.ImageFound.ToString());
+            //        }
+
+            //    }
+            //}
+
+        }
+
+        private void initEntries()
+        {
+            LabelTitle.Text = cTranslate.getValue("Images");
+            BtnTakePhoto.Text = cTranslate.getValue("NeemFoto");
+            BtnKoppelArtikel.Text = cTranslate.getValue("KoppelArtikelMetFoto");
+            BtnVerstuurWCF.Text = cTranslate.getValue("VerstuurPhotosWCF");
+            BtnReturn.Text = cTranslate.getValue("Terug");
+
+            if (cData.eImage != null)
+            {
+                LabelImageURL.Text = cData.eImage.URL;
+                MyImage.Source = ImageSource.FromUri(new Uri(cData.eImage.URL)); 
+                BtnKoppelArtikel.IsEnabled = true;
+            }
+            else
+            {
+                LabelImageURL.Text = "";
+                MyImage.Source = null;
+                BtnKoppelArtikel.IsEnabled = false;
+            }
         }
 
         private void BtnReturn_Clicked(object sender, EventArgs a)
@@ -48,7 +99,7 @@ namespace VerdeSoftApp
                 //Directory = "Sample",
                 //Name = "test.jpg"
                 Directory = "VerdeSoft",
-                SaveToAlbum = true     
+                SaveToAlbum = true
             });
 
             //Get the public album path:  var aPpath = file.AlbumPath;
@@ -58,6 +109,24 @@ namespace VerdeSoftApp
                 return;
 
             await DisplayAlert("File Location", file.AlbumPath, "OK");
+            if (file.AlbumPath != null)
+            {
+                LabelImageURL.Text = file.AlbumPath;
+                if (LabelImageURL.Text != "")
+                {
+                    BtnKoppelArtikel.IsEnabled = true;
+                }
+                else
+                {
+                    BtnKoppelArtikel.IsEnabled = false;
+                }
+
+                cData.eImage = new eImages(); //nieuw object van eImages aanmaken 
+                cData.eImage.URL = LabelImageURL.Text;
+                cData.eImage.WCF = false;
+                cData.eImage.B1 = false;
+                cData.eImage.C1 = "";
+            }
 
             MyImage.Source = ImageSource.FromStream(() =>
             {
@@ -66,11 +135,26 @@ namespace VerdeSoftApp
                 return stream;
             });
 
-            
+
 
             //var webImage = new Image { Aspect = Aspect.AspectFit };
             //webImage.Source = ImageSource.FromUri(new Uri("https://xamarin.com/content/images/pages/forms/example-app.png"));
         }
+
+
+        private void BtnKoppelArtikel_Clicked(Object sender, EventArgs a)
+        {
+            cData.isClickedKoppelArtikel = true;
+
+            cNavigate.openPage(new PageSearchArt("PageImage")); //Ga naar pagina Search Artikelen en return page PageImage
+        }
+
+        private void BtnVerstuurWCF_Clicked(Object sender, EventArgs a)
+        {
+
+        }
+
+
 
         //private byte[] ConvertStreamToByteArray(System.IO.Stream stream)
         //{

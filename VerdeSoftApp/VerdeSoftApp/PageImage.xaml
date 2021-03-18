@@ -7,9 +7,24 @@
              x:Class="VerdeSoftApp.PageImage">
     <ContentPage.Content>
         <StackLayout>
-            <Button x:Name="BtnReturn" Text ="Terug" BackgroundColor="Green" TextColor="White" Clicked="BtnReturn_Clicked" Grid.Row="1" Grid.Column="1"></Button>
-            <Button x:Name="BtnTakePhoto" HorizontalOptions="Center" Text ="Klanten"  BackgroundColor="Green" TextColor="White" Clicked="BtnTakePhoto_Clicked" Grid.Row="1" Grid.Column="1"></Button>
-            <Image x:Name="MyImage" />
+            <Label x:Name="LabelTitle" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green"></Label>
+            <Image x:Name="MyImage" WidthRequest="250" HeightRequest="160" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="LabelImageURL" Font ="Bold,16"  Text="" HorizontalTextAlignment= "Center" TextColor="Green"/>
+
+            <Grid Margin="8">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="51" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BtnTakePhoto" BorderColor="Black" BorderWidth="1" Text="Photo"  Clicked="BtnTakePhoto_Clicked" Grid.Row="0" Grid.Column="1" />
+                <Button x:Name="BtnKoppelArtikel" BorderColor="Black" BorderWidth="1" Text="Koppel Artikel"  Clicked="BtnKoppelArtikel_Clicked" IsEnabled="False" Grid.Row="0" Grid.Column="2" />
+                <Button x:Name="BtnVerstuurWCF" BorderColor="Black" BorderWidth="1" Text="Verstuur WCF"  Clicked="BtnVerstuurWCF_Clicked" IsEnabled="false" Grid.Row="0" Grid.Column="3" />
+            </Grid>
+            <Button x:Name="BtnReturn" Text ="Terug" BackgroundColor="Green" TextColor="White" Clicked="BtnReturn_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

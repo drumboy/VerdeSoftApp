@@ -9,7 +9,7 @@
     <StackLayout>
         <!-- Place new controls here -->
 
-        <Label x:Name="Titel" HorizontalTextAlignment="Center" BackgroundColor="Green" TextColor="White">VerdeSoft 1.0.0.35 - v 1.0.5</Label>
+        <Label x:Name="Titel" HorizontalTextAlignment="Center" BackgroundColor="Green" TextColor="White">VerdeSoft 1.0.0.35 - v 1.0.5 (TEST)</Label>
 
         <!--<Image x:Name="backgroundImage" Source="https://www.verdesoft.be/images/Verdesoft-02.png" 
                HeightRequest="80" WidthRequest="30"></Image>-->
@@ -89,6 +89,19 @@
             <Button x:Name="BtnSync" BackgroundColor="#1690F4" TextColor="White" Text="Synchroniseer"  Clicked="BtnSync_Clicked" Grid.Row="0" Grid.Column="1"/>
             <Button x:Name= "BtnSettings" BackgroundColor="Orange" TextColor="White" Text="Instellingen"  Clicked="BtnSettings_Clicked"  Grid.Row="0" Grid.Column="2" />
         </Grid>
+
+        <!-- 105 - Neem Foto: Nieuwe module Foto Artikels -->
+        <!--<Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BtnTakePhoto" IsVisible="False" BackgroundColor="Green" TextColor="White" Text="Afsluiten"  Clicked="BtnTakePhoto_Clicked" Grid.Row="0" Grid.Column="1" />
+        </Grid>-->
 
         <Grid>
             <Grid.RowDefinitions>

@@ -17,7 +17,7 @@ namespace VerdeSoftApp
         {
             InitializeComponent();
 
-            clearCache();
+            clearCache(); //105 clear cache
 
             cSQLite.getSettings();
             translatePage();

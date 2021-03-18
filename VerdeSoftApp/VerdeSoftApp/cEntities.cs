@@ -41,10 +41,35 @@ namespace VerdeSoftApp
 
         public double OrderQuantity { get; set; }
 
+        public bool ImageFound { get; set; } //v105 nieuwe module Foto artikels
+
+        public string isFotoArticle() 
+        {
+            if (ImageFound)
+            {
+                return "Foto";
+            }
+            else 
+            {
+                return "";
+            }
+        }
+
         public override string ToString()
         {
             return Name;
         }
+    }
+
+    public class eImages //v105 nieuwe module Foto artikels
+    {
+        [PrimaryKey, AutoIncrement]
+        public int ID { get; set; }
+        public long ArtId { get; set; }
+        public string URL { get; set; }
+        public bool WCF { get; set; }
+        public bool B1 { get; set; }
+        public string C1 { get; set; }
     }
 
     public class eCustomer

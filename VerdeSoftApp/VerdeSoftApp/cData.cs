@@ -52,7 +52,8 @@ namespace VerdeSoftApp
         public static IList<eScanned> scannedSameArtikelsInKassa = new List<eScanned>();
 
         //public static byte[] takedPhotoByteArray; //105
-
+        public static eImages eImage = null; //105 nieuwe module Foto artikels
+        public static bool isClickedKoppelArtikel = false; //105 nieuwe module Foto artikels
 
         private static eArticle _selectedArticle = null;
         public static eArticle selectedArticle
