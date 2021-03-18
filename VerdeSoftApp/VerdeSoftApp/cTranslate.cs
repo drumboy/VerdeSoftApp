@@ -134,13 +134,6 @@ namespace VerdeSoftApp
 
         public static string getValue(string Code)
         {
-            c1 = CultureInfo.InstalledUICulture;
-            string sName = c1.Name;
-
-            //if (cData.settings == null)
-            //{
-            //    cSQLite.getSettings();
-            //}
 
             if (translations == null) initTranslations();
             
@@ -158,47 +151,7 @@ namespace VerdeSoftApp
                     }
                     else 
                     {
-                        //If no Settings language is set then get language of the Phone //105
-                        if (sName.Equals("de-DE"))
-                        {
-                            cData.sInitLanguage = "D";
-                            return e.DE;
-                        }
-                        else if (sName.Equals("de-BE")) 
-                        {
-                            cData.sInitLanguage = "D";
-                            return e.DE;
-                        }
-                        else if (sName.Equals("nl-BE")) 
-                        {
-                            cData.sInitLanguage = "N";
-                            return e.NL;
-                        }
-                        else if (sName.Equals("nl-NL")) 
-                        {
-                            cData.sInitLanguage = "N";
-                            return e.NL;
-                        }
-                        else if (sName.Equals("en-US")) 
-                        {
-                            cData.sInitLanguage = "E";
-                            return e.EN;
-                        }
-                        else if (sName.Equals("en-UK")) 
-                        {
-                            cData.sInitLanguage = "E";
-                            return e.EN;
-                        } 
-                        else if (sName.Equals("fr-BE")) 
-                        {
-                            cData.sInitLanguage = "F";
-                            return e.FR;
-                        }
-                        else if (sName.Equals("fr-FR")) 
-                        {
-                            cData.sInitLanguage = "F";
-                            return e.FR;
-                        }
+                        return e.NL; //105 default Nederlands
                     }
                 }
             }

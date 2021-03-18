@@ -54,7 +54,6 @@ namespace VerdeSoftApp
             DropDownUsers.SelectedIndexChanged += DropDownUsers_SelectedIndexChanged;
 
             cSQLite.getDefPrices();
-            //cSQLite.getSettings();
 
             BindingContext = this;
 

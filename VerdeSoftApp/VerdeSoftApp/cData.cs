@@ -52,7 +52,6 @@ namespace VerdeSoftApp
         public static IList<eScanned> scannedSameArtikelsInKassa = new List<eScanned>();
 
         //public static byte[] takedPhotoByteArray; //105
-        public static string sInitLanguage = ""; //105
 
 
         private static eArticle _selectedArticle = null;

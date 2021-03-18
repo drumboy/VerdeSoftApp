@@ -300,6 +300,7 @@ namespace VerdeSoftApp
 
         private async void BtnPing_Clicked(object sender, EventArgs e)
         {
+            LabelSync.Text = "";
             LabelSync.TextColor = Color.Blue;
             string ms = cData.settings.MobileService;
             ms = ms.Replace(@"http://","");
@@ -337,9 +338,12 @@ namespace VerdeSoftApp
         {
             string sError = "";
 
-            if ((sErrorInput.Contains("No route to host")) || (sErrorInput.Contains("The operation has timed out")))
+            if ((sErrorInput.Contains("No route to host")) || (sErrorInput.Contains("The operation has timed out")) || (sErrorInput.Contains("ConnectFailure")))
             {
-                sError = String.Format(cTranslate.getValue("ErrorConnectieWCF"), cData.settings.MobileService);
+                if (cData.settings.MobileService != "") 
+                {
+                    sError = String.Format(cTranslate.getValue("ErrorConnectieWCF"), cData.settings.MobileService);
+                }
             }
             return sError;
         }

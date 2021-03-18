@@ -238,10 +238,7 @@ namespace VerdeSoftApp
             e.VerifyBarcode = true; //lengte barcode
             e.Ticket = 1;
             e.CustomerCode = "";
-
-            //by init set default language to language off the phone !!
-            if(cData.sInitLanguage != "") e.Language = cData.sInitLanguage;
-
+            e.Language = "N";
             e.SearchField = "Code"; //0: Code, //1: Name //105
             e.KeybAlpha = false; //105
             e.PaymentScreen = false; //105
