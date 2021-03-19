@@ -1,7 +1,9 @@
 ﻿using SQLite;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using Xamarin.Forms;
 
 namespace VerdeSoftApp
 {
@@ -43,21 +45,30 @@ namespace VerdeSoftApp
 
         public bool ImageFound { get; set; } //v105 nieuwe module Foto artikels
 
-        public string isFotoArticle() 
+        [NotMapped]
+        public string IsPhotoAvailable 
         {
-            if (ImageFound)
+            get 
             {
-                return "Foto";
-            }
-            else 
-            {
-                return "";
+                if (ImageFound == true)
+                {
+                    return "FOTO";
+                }
+                else 
+                {
+                    return "";
+                }
             }
         }
 
         public override string ToString()
         {
             return Name;
+        }
+
+        public static explicit operator eArticle(ClickedEventArgs v)
+        {
+            throw new NotImplementedException();
         }
     }
 

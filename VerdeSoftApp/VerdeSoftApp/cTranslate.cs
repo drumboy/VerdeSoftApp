@@ -135,6 +135,7 @@ namespace VerdeSoftApp
             translations.Add(new eTranslate() { Code = "NeemFoto", NL = "Neem foto", FR = "Prendre une photo", EN = "Take photo", DE = "" }); //105 Nieuwe module Images (for articles)
             translations.Add(new eTranslate() { Code = "KoppelArtikelMetFoto", NL = "Koppel artikel", FR = "Lien article", EN = "Link article", DE = "" }); //105 Nieuwe module Images (for articles)
             translations.Add(new eTranslate() { Code = "VerstuurPhotosWCF", NL = "Verstuur naar WCF", FR = "Envoyer de WCF", EN = "Send to WCF", DE = "" }); //105 Nieuwe module Images (for articles)
+            translations.Add(new eTranslate() { Code = "MessageNoArticles", NL = "Gelieve eerst de artikels te synchroniseren!", FR = "Veuillez d'abord synchroniser les articles!", EN = "Please synchronize the articles first!", DE = "" }); //105 Nieuwe module Images (for articles)
         }
 
         public static string getValue(string Code)

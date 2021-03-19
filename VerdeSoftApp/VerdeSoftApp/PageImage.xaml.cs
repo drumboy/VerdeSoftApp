@@ -23,6 +23,8 @@ namespace VerdeSoftApp
 
             initEntries();
 
+            cData.lstAllArticles = cSQLite.getAllArtikels();
+
             //if (cSQLite.getAllImagesArtikels().Count > 0)
             //{
             //    foreach (eImages imgArtikel in cSQLite.getAllImagesArtikels())
@@ -34,17 +36,17 @@ namespace VerdeSoftApp
             //    }
             //}
 
-            //if (cSQLite.getAllArtikels().Count > 0)
-            //{
-            //    foreach (eArticle eArt in cSQLite.getAllArtikels())
-            //    {
-            //        if (eArt.ImageFound == true)
-            //        {
-            //            Console.WriteLine(eArt.ID + ", " + eArt.ArtId + ", " + eArt.ImageFound.ToString());
-            //        }
+            if (cSQLite.getAllArtikels().Count > 0)
+            {
+                foreach (eArticle eArt in cSQLite.getAllArtikels())
+                {
+                    if (eArt.ImageFound == true)
+                    {
+                        Console.WriteLine(eArt.ID + ", " + eArt.ArtId + ", " + eArt.ImageFound.ToString());
+                    }
 
-            //    }
-            //}
+                }
+            }
 
         }
 
@@ -56,7 +58,7 @@ namespace VerdeSoftApp
             BtnVerstuurWCF.Text = cTranslate.getValue("VerstuurPhotosWCF");
             BtnReturn.Text = cTranslate.getValue("Terug");
 
-            if (cData.eImage != null)
+            if (cData.eImage != null && cData.lstAllArticles.Count > 0)
             {
                 LabelImageURL.Text = cData.eImage.URL;
                 MyImage.Source = ImageSource.FromUri(new Uri(cData.eImage.URL)); 
@@ -112,20 +114,24 @@ namespace VerdeSoftApp
             if (file.AlbumPath != null)
             {
                 LabelImageURL.Text = file.AlbumPath;
-                if (LabelImageURL.Text != "")
+                if (LabelImageURL.Text != "" && cData.lstAllArticles.Count > 0)
                 {
                     BtnKoppelArtikel.IsEnabled = true;
                 }
                 else
                 {
+                    await DisplayAlert(cTranslate.getValue("KoppelArtikelMetFoto"), cTranslate.getValue("MessageNoArticles"), cTranslate.getValue("OK"));
                     BtnKoppelArtikel.IsEnabled = false;
                 }
 
-                cData.eImage = new eImages(); //nieuw object van eImages aanmaken 
-                cData.eImage.URL = LabelImageURL.Text;
-                cData.eImage.WCF = false;
-                cData.eImage.B1 = false;
-                cData.eImage.C1 = "";
+                if (BtnKoppelArtikel.IsEnabled == true) 
+                {
+                    cData.eImage = new eImages(); //nieuw object van eImages aanmaken 
+                    cData.eImage.URL = LabelImageURL.Text;
+                    cData.eImage.WCF = false;
+                    cData.eImage.B1 = false;
+                    cData.eImage.C1 = "";
+                }
             }
 
             MyImage.Source = ImageSource.FromStream(() =>

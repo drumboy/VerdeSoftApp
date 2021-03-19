@@ -25,16 +25,18 @@
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
                                 <Label Grid.Column="1" Text="{Binding Name}" FontAttributes="Bold" />
-                                <Label Grid.Row="0" Grid.Column="2" Text="{Binding ImageFound}" FontAttributes="Bold" HorizontalOptions="End">
-                                    <Label.Triggers>
+                                <!--<Label x:Name="lblPhotoArticle" Grid.Row="0" Grid.Column="2" Text="{Binding IsPhotoAvailable}" FontAttributes="Bold" HorizontalOptions="End" />-->
+                                <Button x:Name="btnPhotoArticle" Grid.Row="0" Grid.Column="2" Text="{Binding IsPhotoAvailable}" IsVisible="{Binding ImageFound}" FontAttributes="Bold" HorizontalOptions="End" Clicked="btnPhotoArticle_Clicked" />
+                                <!--<Label Grid.Row="0" Grid.Column="2" Text="{Binding IsPhotoAvailable}" FontAttributes="Bold" HorizontalOptions="End">
+                                    --><!--<Label.Triggers>
                                         <MultiTrigger TargetType="Label">
                                             <MultiTrigger.Conditions>
                                                 <BindingCondition Binding="{Binding ImageFound}" Value="true"/>
                                             </MultiTrigger.Conditions>
                                             <Setter Property="Text" Value="Foto"/>
                                         </MultiTrigger>
-                                    </Label.Triggers>
-                                </Label>
+                                    </Label.Triggers>--><!--
+                                </Label>-->
                                 <!--<Image x:Name="ImageArticle" Source="" HorizontalOptions="End"  HeightRequest="20" WidthRequest="20" Grid.Row="0" Grid.Column="2">
                                     <Image.Triggers>
                                         <DataTrigger TargetType="Image" Binding="{Binding ImageFound}" Value="True">

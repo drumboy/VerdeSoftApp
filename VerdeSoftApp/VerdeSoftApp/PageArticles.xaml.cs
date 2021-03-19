@@ -22,24 +22,12 @@ namespace VerdeSoftApp
         {
             InitializeComponent();
 
-            //setImageArticles(cData.articleList);
+
             Articles = cData.articleList;
 
             BindingContext = this;
 
             this.Title = "PageArticles";
-        }
-
-        private void setImageArticles(IList<eArticle> articleList)
-        {
-            if (articleList.Count > 0) 
-            {
-                foreach (var itemImageArticle in articleList)
-                {
-                    
-                }
-            }
-            
         }
 
         public PageArticles(string pReturnPageName)
@@ -69,7 +57,6 @@ namespace VerdeSoftApp
             LabelTitle.Text = cTranslate.getValue("Resultaat");
             BtnReturn.Text = cTranslate.getValue("Terug");
             BtnChoose.Text = cTranslate.getValue("Kiezen");
-            
         }
 
         private void BtnReturn_Clicked(object sender, EventArgs e)
@@ -107,11 +94,25 @@ namespace VerdeSoftApp
         void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             selectedItem = e.SelectedItem as eArticle;
+            cData.selectedArticle = selectedItem; //koppel het geselecteerde artikel aan selectedArticle in cData
         }
 
         void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
         {
             tappedItem = e.Item as eArticle;
+            cData.selectedArticle = tappedItem; //koppel het geselecteerde artikel aan selectedArticle in cData
+        }
+
+        private async void btnPhotoArticle_Clicked(object sender, EventArgs e)
+        {
+            if (cData.selectedArticle == null)
+            {
+                await DisplayAlert("Foto Artikel", "Gelieve eerst het artikel te selecteren", "OK");
+            }
+            else 
+            {
+                await DisplayAlert("Foto Artikel", cData.selectedArticle.Name + ", ID: " + cData.selectedArticle.ID, "OK");
+            }
         }
     }
 }

@@ -89,7 +89,7 @@
         </Grid>
 
         <!-- 105 - Neem Foto: Nieuwe module Foto Artikels -->
-        <!--<Grid>
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="45" />
             </Grid.RowDefinitions>
@@ -98,8 +98,8 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="10" />
             </Grid.ColumnDefinitions>
-            <Button x:Name="BtnTakePhoto" IsVisible="False" BackgroundColor="Green" TextColor="White" Text="Afsluiten"  Clicked="BtnTakePhoto_Clicked" Grid.Row="0" Grid.Column="1" />
-        </Grid>-->
+            <Button x:Name="BtnTakePhoto" IsVisible="true" BackgroundColor="Green" TextColor="White" Text=""  Clicked="BtnTakePhoto_Clicked" Grid.Row="0" Grid.Column="1" />
+        </Grid>
 
         <Grid>
             <Grid.RowDefinitions>
