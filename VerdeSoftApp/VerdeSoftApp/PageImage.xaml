@@ -24,6 +24,19 @@
                 <Button x:Name="BtnKoppelArtikel" BorderColor="Black" BorderWidth="1" Text="Koppel Artikel"  Clicked="BtnKoppelArtikel_Clicked" IsEnabled="False" Grid.Row="0" Grid.Column="2" />
                 <Button x:Name="BtnVerstuurWCF" BorderColor="Black" BorderWidth="1" Text="Verstuur WCF"  Clicked="BtnVerstuurWCF_Clicked" IsEnabled="false" Grid.Row="0" Grid.Column="3" />
             </Grid>
+
+            <!-- test Image -->
+            <Grid Margin="8">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="0" Grid.Column="1" x:Name="imgTest" WidthRequest="150" HeightRequest="150" IsVisible="true" Source="" />
+            </Grid>
+            <!-- END test Image -->
+
             <Button x:Name="BtnReturn" Text ="Terug" BackgroundColor="Green" TextColor="White" Clicked="BtnReturn_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>

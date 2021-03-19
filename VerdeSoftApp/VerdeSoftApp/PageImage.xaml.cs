@@ -23,30 +23,10 @@ namespace VerdeSoftApp
 
             initEntries();
 
-            cData.lstAllArticles = cSQLite.getAllArtikels();
+            cData.lstAllArticles = cSQLite.getAllArtikels(); //haal alle artikels op
 
-            //if (cSQLite.getAllImagesArtikels().Count > 0)
-            //{
-            //    foreach (eImages imgArtikel in cSQLite.getAllImagesArtikels())
-            //    {
-            //        if (imgArtikel.ArtId != 0)
-            //        {
-            //            Console.WriteLine(imgArtikel.ID + ", " + imgArtikel.ArtId + ", " + imgArtikel.URL);
-            //        }
-            //    }
-            //}
-
-            if (cSQLite.getAllArtikels().Count > 0)
-            {
-                foreach (eArticle eArt in cSQLite.getAllArtikels())
-                {
-                    if (eArt.ImageFound == true)
-                    {
-                        Console.WriteLine(eArt.ID + ", " + eArt.ArtId + ", " + eArt.ImageFound.ToString());
-                    }
-
-                }
-            }
+            cSQLite.getAllNotSendedImagesArticlesToWCF(); //haal alle niet verzonden afbeeldingen op
+            enableDisableVerstuurWCF();
 
         }
 
@@ -70,6 +50,20 @@ namespace VerdeSoftApp
                 MyImage.Source = null;
                 BtnKoppelArtikel.IsEnabled = false;
             }
+
+            enableDisableVerstuurWCF();
+        }
+
+        private void enableDisableVerstuurWCF() //105 nieuwe module Foto Artikels
+        {
+            if (cData.lstImagesArticlesNotSended.Count > 0)
+            {
+                BtnVerstuurWCF.IsEnabled = true;
+            }
+            else
+            {
+                BtnVerstuurWCF.IsEnabled = false;
+            }
         }
 
         private void BtnReturn_Clicked(object sender, EventArgs a)
@@ -79,14 +73,6 @@ namespace VerdeSoftApp
 
         private async void BtnTakePhoto_Clicked(object sender, EventArgs e)
         {
-
-            //if (cData.takedPhotoByteArray != null)
-            //{
-
-            //    Stream stream = new MemoryStream(cData.takedPhotoByteArray);
-            //    var imageSource = ImageSource.FromStream(() => stream);
-            //    TestTakedPhoto.Source = imageSource;
-            //}
 
             await CrossMedia.Current.Initialize();
 
@@ -113,6 +99,7 @@ namespace VerdeSoftApp
             await DisplayAlert("File Location", file.AlbumPath, "OK");
             if (file.AlbumPath != null)
             {
+
                 LabelImageURL.Text = file.AlbumPath;
                 if (LabelImageURL.Text != "" && cData.lstAllArticles.Count > 0)
                 {
@@ -132,12 +119,13 @@ namespace VerdeSoftApp
                     cData.eImage.B1 = false;
                     cData.eImage.C1 = "";
                 }
+
+                enableDisableVerstuurWCF();
             }
 
             MyImage.Source = ImageSource.FromStream(() =>
             {
                 var stream = file.GetStream();
-                //cData.takedPhotoByteArray = ConvertStreamToByteArray(stream);
                 return stream;
             });
 
@@ -157,61 +145,15 @@ namespace VerdeSoftApp
 
         private void BtnVerstuurWCF_Clicked(Object sender, EventArgs a)
         {
-
+            //if (sTestBase64 != "") 
+            //{
+            //    byte[] imageByte = Convert.FromBase64String(sTestBase64);
+            //    imgTest.Source = ImageSource.FromStream(() =>
+            //    {
+            //        var stream = new MemoryStream(imageByte);
+            //        return stream;
+            //    });
+            //}
         }
-
-
-
-        //private byte[] ConvertStreamToByteArray(System.IO.Stream stream)
-        //{
-        //    long originalPosition = 0;
-
-        //    if (stream.CanSeek)
-        //    {
-        //        originalPosition = stream.Position;
-        //        stream.Position = 0;
-        //    }
-
-        //    try
-        //    {
-        //        byte[] readBuffer = new byte[stream.Length];
-
-        //        int totalBytesRead = 0;
-        //        int bytesRead;
-
-        //        while ((bytesRead = stream.Read(readBuffer, totalBytesRead, readBuffer.Length - totalBytesRead)) > 0)
-        //        {
-        //            totalBytesRead += bytesRead;
-
-        //            if (totalBytesRead == readBuffer.Length)
-        //            {
-        //                int nextByte = stream.ReadByte();
-        //                if (nextByte != -1)
-        //                {
-        //                    byte[] temp = new byte[readBuffer.Length * 2];
-        //                    Buffer.BlockCopy(readBuffer, 0, temp, 0, readBuffer.Length);
-        //                    Buffer.SetByte(temp, totalBytesRead, (byte)nextByte);
-        //                    readBuffer = temp;
-        //                    totalBytesRead++;
-        //                }
-        //            }
-        //        }
-
-        //        byte[] buffer = readBuffer;
-        //        if (readBuffer.Length != totalBytesRead)
-        //        {
-        //            buffer = new byte[totalBytesRead];
-        //            Buffer.BlockCopy(readBuffer, 0, buffer, 0, totalBytesRead);
-        //        }
-        //        return buffer;
-        //    }
-        //    finally
-        //    {
-        //        if (stream.CanSeek)
-        //        {
-        //            stream.Position = originalPosition;
-        //        }
-        //    }
-        //}
     }
 }

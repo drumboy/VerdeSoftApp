@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.IO;
 using System.Linq;
 using System.Net.NetworkInformation;
+using Xamarin.Forms;
 
 namespace VerdeSoftApp
 {
@@ -101,6 +102,35 @@ namespace VerdeSoftApp
             return pingable;
         }
 
+        public static string ConvertImageToBase64(string sPath) //105 nieuwe module Foto Artikels
+        {
+            string sBase64Image = "";
+            try
+            {
+                byte[] imageArray = System.IO.File.ReadAllBytes(@sPath);
+                sBase64Image = Convert.ToBase64String(imageArray);
+            }
+            catch (Exception)
+            {
+            }
+            return sBase64Image;
+        }
+
+        //105 nieuwe module Foto Artikels
+        //public static byte[] imageToByteArray(Image imageIn)
+        //{
+        //    MemoryStream ms = new MemoryStream();
+        //    object p = imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+        //    return ms.ToArray();
+        //}
+
+        //105 nieuwe module Foto Artikels
+        //public static Image byteArrayToImage(byte[] byteArrayIn)
+        //{
+        //    MemoryStream ms = new MemoryStream(byteArrayIn);
+        //    Image returnImage = Image.FromStream(ms);
+        //    return returnImage;
+        //}
     }
 
     public static class cEncryption
@@ -224,4 +254,7 @@ namespace VerdeSoftApp
             return Encoding.Unicode.GetString(outputBuffer);
         }
     }
+
+
+   
 }

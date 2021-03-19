@@ -131,6 +131,19 @@ namespace VerdeSoftApp
             return e;
         }
 
+        public static List<eImages> getAllNotSendedImagesArticlesToWCF() 
+        {
+            List<eImages> lstImagesNotSended = new List<eImages>();
+            connectSQLite();
+
+            if (TableExists("eImages", SQLiteConn)) 
+            { 
+                lstImagesNotSended = SQLiteConn.Query<eImages>("select * from eImages where WCF = 0");
+                cData.lstImagesArticlesNotSended = lstImagesNotSended;
+            }
+            return lstImagesNotSended;
+        }
+
         public static List<string> getUsers()
         {
             cData.userList = new List<eUser>();
