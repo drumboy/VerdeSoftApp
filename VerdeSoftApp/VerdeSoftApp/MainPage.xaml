@@ -13,9 +13,7 @@
 
         <!--<Image x:Name="backgroundImage" Source="https://www.verdesoft.be/images/Verdesoft-02.png" 
                HeightRequest="80" WidthRequest="30"></Image>-->
-        <Image x:Name="backgroundImage" Source="" 
-               HeightRequest="80" WidthRequest="30"></Image>
-
+        <Image x:Name="backgroundImage" Source="" HeightRequest="80" WidthRequest="30"></Image>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="45" />
