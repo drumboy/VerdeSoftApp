@@ -1,0 +1,14 @@
+String downloadPath = "/storage/sdcard0/Download/";
+
+            cSQLite.getSettings();
+
+            var time = DateTime.Today.ToString("YYYYMMDD") + "_" + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Millisecond.ToString();
+
+            var filePath = System.IO.Path.Combine(downloadPath, "settings_" + time + ".txt");
+            if (!System.IO.File.Exists(filePath))
+            {
+                using (System.IO.StreamWriter write = new System.IO.StreamWriter(filePath, true))
+                {
+                    write.Write(cData.settings.MobileService.ToString());
+                }
+            }
