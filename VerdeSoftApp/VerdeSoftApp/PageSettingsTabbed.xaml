@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VerdeSoftApp.PageSettingsTabbed" BarBackgroundColor="#16A359" BarTextColor="White">
+  <!--Pages can be added as references or inline-->
+    <ContentPage x:Name="contentTabInstellingen" Title="Intstellingen">
+        <ContentPage.Content>
+            <StackLayout>
+
+                <Label x:Name="LabelTitleInstellingen" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Instellingen</Label>
+
+                <!-- grid voor de WCF Service -->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="40" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="LabelWCF" FontSize="12" Text="WCF Service" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
+                    <Entry x:Name="EntryMobileService" FontSize="14" Placeholder="http://192.168.1.116:8000/MobileService" PlaceholderColor="Olive" HorizontalTextAlignment="Start" Grid.Row="1" Grid.Column="1"></Entry>
+                </Grid>
+
+                <!-- grid voor de tekstboxen Identificatie, Ticket, Customercode en Language -->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="LabelIdentif" FontSize="12" Text="Identificatie" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" />
+                    <Entry x:Name="EntryIdentification" FontSize="14" Placeholder="" PlaceholderColor="Olive" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2"></Entry>
+                    <Label x:Name="LabelTicket" FontSize="12" Text="Ticket"  Grid.Row="1" Grid.Column="1" VerticalOptions="Center"/>
+                    <Entry x:Name="EntryTicket" FontSize="14" Placeholder="Ticket" PlaceholderColor="Olive" HorizontalTextAlignment="Start" Grid.Row="1" Grid.Column="2"></Entry>
+                    <Label x:Name="LabelCustomerCode" FontSize="12" Text="Klantcode" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" />
+                    <Entry x:Name="EntryCustomerCode" FontSize="14" Placeholder="" PlaceholderColor="Olive" HorizontalTextAlignment="Start" Grid.Row="2" Grid.Column="2"></Entry>
+                    <Label x:Name="LabelLanguage" FontSize="12" Text="Taal" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" />
+                    <Entry x:Name="EntryLanguage" FontSize="14" Placeholder="Language" PlaceholderColor="Olive" HorizontalTextAlignment="Start" Grid.Row="3" Grid.Column="2"></Entry>
+                </Grid>
+
+                <!-- grid voor knoppen Save en Terug -->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="55" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="BtnSave" Text ="Opslaan"  BackgroundColor="Green" TextColor="White" Clicked="BtnSaveInstellingen_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+                    <Button x:Name="BtnReturn" Text ="Terug"  BackgroundColor="Green" TextColor="White" Clicked= "BtnReturn_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+                </Grid>
+            </StackLayout>
+        </ContentPage.Content>
+
+    </ContentPage>
+
+    <ContentPage x:Name="contentTabVervolg" Title="Vervolg">
+
+        <StackLayout>
+            <Label x:Name="LabelTitleVervolg" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Vervolg</Label>
+
+            <!-- grid voorde Connectie string -->
+            <!--<Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="LabelCNSTR" FontSize="12" Text="ConnectionString" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
+                <Entry x:Name="EntryConnectionString" FontSize="14" Placeholder="Userid=root;database=verdesoft;server=192.168.1.111;password=root;CharSet=utf8" PlaceholderColor="Olive" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="1"></Entry>
+            </Grid>-->
+
+
+            <!-- grid voor de 4 checkboxen -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="19" />
+                    <RowDefinition Height="19" />
+                    <RowDefinition Height="19" />
+                    <RowDefinition Height="19" />
+                    <RowDefinition Height="19" />
+                    <RowDefinition Height="19" />
+                    <RowDefinition Height="19" />
+                    <RowDefinition Height="19" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="18" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="LabelVerifyBarcode" FontSize="12" Text="Verify Barcode"  VerticalOptions="Center" Grid.Row="0" Grid.Column="1"/>
+                <CheckBox x:Name="CheckBoxVerifyBarcode" VerticalOptions="Center" Grid.Row="0" Grid.Column="2" />
+                <Label x:Name="LabelRepeatQuantity" FontSize="12" Text="Herhaal aantal" VerticalOptions="Center" Grid.Row="1" Grid.Column="1"/>
+                <CheckBox x:Name="CheckBoxRepeatQuantity" VerticalOptions="Center" Grid.Row="1" Grid.Column="2" />
+
+                <!-- //105 -->
+                <Label x:Name="LabelKeybAlpha" FontSize="12" Text="KeybAlpha" VerticalOptions="Center" Grid.Row="2" Grid.Column="1"/>
+                <CheckBox x:Name="CheckBoxKeybAlpha" VerticalOptions="Center" Grid.Row="2" Grid.Column="2" />
+                <Label x:Name="LabelPaymentScreen" FontSize="12" Text="PaymentScreen"  VerticalOptions="Center"  Grid.Row="3" Grid.Column="1"/>
+                <CheckBox x:Name="CheckBoxPaymentScreen" VerticalOptions="Center" Grid.Row="3" Grid.Column="2" />
+                <Label x:Name="LabelQuestionNotFound" FontSize="12" Text="QuestionNotFound"  VerticalOptions="Center"  Grid.Row="4" Grid.Column="1"/>
+                <CheckBox x:Name="CheckBoxQuestionNotFound" VerticalOptions="Center" Grid.Row="4" Grid.Column="2" />
+                <Label x:Name="LabelIsCataloogArticle" FontSize="12" Text="IsCataloogArticle"  VerticalOptions="Center"  Grid.Row="5" Grid.Column="1"/>
+                <CheckBox x:Name="CheckBoxIsCataloogArticle" VerticalOptions="Center" Grid.Row="5" Grid.Column="2" />
+                <Label x:Name="LabelStaffels" FontSize="12" Text="Staffels"  VerticalOptions="Center"  Grid.Row="6" Grid.Column="1"/>
+                <CheckBox x:Name="CheckBoxStaffels" VerticalOptions="Center" Grid.Row="6" Grid.Column="2" />
+                <Label x:Name="LabelNoConfirmationSended" FontSize="12" Text="NoConfirmationSended"  VerticalOptions="Center"  Grid.Row="7" Grid.Column="1"/>
+                <CheckBox x:Name="CheckBoxNoConfirmationSended" VerticalOptions="Center" Grid.Row="7" Grid.Column="2" />
+            </Grid>
+
+            <!-- grid voor de radiobuttons voor SearchField -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="18" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="LabelSearchField" FontSize="12" Text="SearchField"  VerticalOptions="Center"  Grid.Row="0" Grid.Column="1"/>
+
+                <!--<RadioButton   // werkt niet met Android v 4.4 (Kitkat) //v105
+                   GroupName="SearchField"   
+                   Text="Name"
+                   Grid.Row="0" Grid.Column="3"
+                   HorizontalOptions="Start" x:Name="RbtSearchFieldName" CheckedChanged="RadioButton_CheckedChanged" />
+
+                <RadioButton   
+                   GroupName="SearchField"    
+                   Text="Code"
+                   Grid.Row="0" Grid.Column="4"
+                   HorizontalOptions="Start" x:Name="RbtSearchFieldCode" CheckedChanged="RadioButton_CheckedChanged" />-->
+
+                <Frame  BorderColor="Gray" CornerRadius="5" Padding="1" Grid.Row="0" Grid.Column="3">
+                    <Picker x:Name="DropDownSearchField" FontSize="Small" Title="Selecteer zoekveld" ItemsSource="{Binding SearchFieldList}" SelectedItem="{Binding SelectedColorName, Mode=TwoWay}" BackgroundColor="Beige"  />
+                </Frame>
+            </Grid>
+            
+            
+
+            <!-- grid voor de Customer Card -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="33" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="18" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="LabelCustomerCard" FontSize="12" Text="CustomerCard"  VerticalOptions="Center"  Grid.Row="0" Grid.Column="1"/>
+                <Entry x:Name="EntryCustomerCard" FontSize="14" Placeholder="" PlaceholderColor="Olive" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2"></Entry>
+            </Grid>
+
+            
+
+
+            <!-- grid voor knoppen Save en Terug -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BtnSaveVervolg" Text ="Opslaan"  BackgroundColor="Green" TextColor="White" Clicked="BtnSaveVervolg_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+                <Button x:Name="BtnReturnVervolg" Text ="Terug"  BackgroundColor="Green" TextColor="White" Clicked= "BtnReturn_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

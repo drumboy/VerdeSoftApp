@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:VerdeSoftApp"
+             mc:Ignorable="d"
+             x:Class="VerdeSoftApp.PagePay">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="LabelTitle" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Betalen</Label>
+            <!--
+            <Label x:Name="LabelTotal" FontSize="20" Text="Total € 0.00" TextColor="White" BackgroundColor="#1690F4" HorizontalTextAlignment= "Center" />
+              -->
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="LTotal1" HorizontalTextAlignment="Center" TextColor="Black" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1">Totaal</Label>
+                <Label x:Name="LTotal2" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Blue" FontSize="16" Grid.Row="0" Grid.Column="2">0.00</Label>
+ 
+                <Label x:Name="LPayed1" HorizontalTextAlignment="Center" TextColor="Black" BackgroundColor="Transparent" Grid.Row="1" Grid.Column="1">Betaald</Label>
+                <Label x:Name="LPayed2" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Red" FontSize="16" Grid.Row="1" Grid.Column="2">0.00</Label>
+                
+                <Label x:Name="LPay" HorizontalTextAlignment="Center" TextColor="Black" BackgroundColor="Transparent" Grid.Row="2" Grid.Column="1">Betaal</Label>
+                <Frame Grid.Row="2" Grid.Column="2" BorderColor="Gray" CornerRadius="5" Padding="2">
+                    <local:NumericEntry x:Name="EntryPay" FontSize="18" Placeholder=""  PlaceholderColor="Olive" Keyboard="Numeric" 
+                           Completed="EntryPay_Completed" Focused="EntryPay_Focussed" Unfocused="EntryPay_Unfocused">
+                        <Entry.Behaviors>
+                            <local:NumericValidationBehavior />
+                        </Entry.Behaviors>
+                    </local:NumericEntry>
+                </Frame>
+
+            </Grid>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BtnCash" Text ="Cash"  BackgroundColor="Green" TextColor="White" Clicked="BtnCash_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+                <Button x:Name="BtnBancontact" Text ="Bancontact"  BackgroundColor="Green" TextColor="White" Clicked= "BtnBancontact_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+                <Button x:Name="BtnVoucher" Text ="Waardebon"  BackgroundColor="Green" TextColor="White" Clicked="BtnVoucher_Clicked" Grid.Row="1" Grid.Column="1"></Button>
+                <Button x:Name="BtnCheque" Text ="Cheque"  BackgroundColor="Green" TextColor="White" Clicked= "BtnCheque_Clicked" Grid.Row="1" Grid.Column="2"></Button>
+
+            </Grid>
+
+            <Frame BorderColor="Gray" CornerRadius="5" Padding="2">
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="5" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="LTPayedCash" HorizontalTextAlignment="Start" TextColor="Black" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1">Betaald Cash</Label>
+                <Label x:Name="LTPayedBC" HorizontalTextAlignment="Start" TextColor="Black" BackgroundColor="Transparent" Grid.Row="1" Grid.Column="1">Betaald BC</Label>
+                <Label x:Name="LTPayedVoucher" HorizontalTextAlignment="Start" TextColor="Black" BackgroundColor="Transparent" Grid.Row="2" Grid.Column="1">Betaald Waardebon</Label>
+                <Label x:Name="LTPayedCheque" HorizontalTextAlignment="Start" TextColor="Black" BackgroundColor="Transparent" Grid.Row="3" Grid.Column="1">Betaald Cheque</Label>
+
+                <Label x:Name="LPayedCash" HorizontalTextAlignment="Center" TextColor="Black" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2"></Label>
+                <Label x:Name="LPayedBC" HorizontalTextAlignment="Center" TextColor="Black" BackgroundColor="Transparent" Grid.Row="1" Grid.Column="2"></Label>
+                <Label x:Name="LPayedVoucher" HorizontalTextAlignment="Center" TextColor="Black" BackgroundColor="Transparent" Grid.Row="2" Grid.Column="2"></Label>
+                <Label x:Name="LPayedCheque" HorizontalTextAlignment="Center" TextColor="Black" BackgroundColor="Transparent" Grid.Row="3" Grid.Column="2"></Label>
+
+                </Grid>
+            </Frame>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+
+
+                <Frame Grid.Row="0" Grid.Column="1" BorderColor="Gray" CornerRadius="5" Padding="2">
+                    <local:NumericEntry x:Name="EntryDiscount" FontSize="18" Placeholder=""  PlaceholderColor="Olive" Keyboard="Numeric" 
+                           Completed="EntryDiscount_Completed" Focused="EntryDiscount_Focussed" Unfocused="EntryDiscount_Unfocused">
+                        <Entry.Behaviors>
+                            <local:NumericValidationBehavior />
+                        </Entry.Behaviors>
+                    </local:NumericEntry>
+                </Frame>
+
+
+                <Button x:Name="BtnDiscount" Text ="%"  BackgroundColor="Green" TextColor="White" Clicked="BtnDiscount_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+                <Button x:Name="BtnReturn" Text ="Terug"  BackgroundColor="Green" TextColor="White" Clicked="BtnReturn_Clicked" Grid.Row="0" Grid.Column="3"></Button>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

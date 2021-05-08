@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VerdeSoftApp.PageSync">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label x:Name="LabelTitle" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Synchronisatie</Label>
+            <Label x:Name="Titel2" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Transparent"></Label>
+
+            <!--
+            <Button x:Name="BtnSyncArt" BackgroundColor="Green" TextColor="White" Text="Artikels"  Clicked="BtnSyncArt_Clicked" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="LabelSyncArt" HorizontalTextAlignment="Center" BackgroundColor="Transparent" TextColor="Blue"/>
+            <Button x:Name="BtnSyncCust" BackgroundColor="Green" TextColor="White" Text="Klanten"  Clicked="BtnSyncCust_Clicked" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="LabelSyncCust" HorizontalTextAlignment="Center" BackgroundColor="Transparent" TextColor="Blue"/>
+            <Button x:Name="BtnSyncUser" BackgroundColor="Green" TextColor="White" Text="Gebruikers"  Clicked="BtnSyncUser_Clicked" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="LabelSyncUser" HorizontalTextAlignment="Center" BackgroundColor="Transparent" TextColor="Blue"/>
+
+            <Button x:Name="BtnClose" BackgroundColor="#1690F4" TextColor="White" Text="Terug"  Clicked="BtnClose_Clicked" HorizontalOptions="CenterAndExpand" />
+            -->
+
+            <Label x:Name="LabelSync" HorizontalTextAlignment="Center" BackgroundColor="Transparent" TextColor="Blue"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BtnSyncArt" BackgroundColor="Green" TextColor="White" Text="Artikels"  Clicked="BtnSyncArt_Clicked"  Grid.Row="0" Grid.Column="1"/>
+                <Button x:Name="BtnSyncCust" BackgroundColor="Green" TextColor="White" Text="Klanten"  Clicked="BtnSyncCust_Clicked"  Grid.Row="0" Grid.Column="2"/>
+                <Button x:Name="BtnSyncUser" BackgroundColor="Green" TextColor="White" Text="Gebruikers"  Clicked="BtnSyncUser_Clicked" Grid.Row="1" Grid.Column="1" />
+                <Button x:Name="BtnSyncDefPrices" BackgroundColor="Green" TextColor="White" Text="Prijzentabel"  Clicked="BtnSyncDefPrices_Clicked" Grid.Row="1" Grid.Column="2" />
+                <Button x:Name="BtnSyncStock" BackgroundColor="Green" TextColor="White" Text="Stock"  Clicked="BtnSyncStock_Clicked" Grid.Row="2" Grid.Column="1" />
+                <Button x:Name="BtnSyncBarcodes" BackgroundColor="Green" TextColor="White" Text="Barcodes"  Clicked="BtnSyncBarcodes_Clicked" Grid.Row="2" Grid.Column="2" />
+                <Button x:Name="BtnPing" BackgroundColor="Yellow" TextColor="Black" Text="Ping"  Clicked="BtnPing_Clicked" Grid.Row="3" Grid.Column="1" />
+                <Button x:Name="BtnClose" BackgroundColor="#1690F4" TextColor="White" Text="Terug"  Clicked="BtnClose_Clicked" Grid.Row="3" Grid.Column="2" />
+            </Grid>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

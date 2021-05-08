@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VerdeSoftApp.PageStockMutationModify">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="LabelTitle" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Wijzigen</Label>
+
+            <Grid x:Name="Grid1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="45" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+
+
+                <Label x:Name="LabelQuantity" FontSize="12" Text="Aantal" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
+                <Label x:Name="LabelPlace" FontSize="12" Text="Prijs" Grid.Row="0" Grid.Column="2" VerticalOptions="Center"/>
+                <Label x:Name="LabelRemark" FontSize="12" Text="Korting" Grid.Row="0" Grid.Column="3" VerticalOptions="Center"/>
+
+                <Label x:Name="LabelQuantityMut" FontSize="12" Text="" Grid.Row="1" Grid.Column="1" VerticalOptions="Center"/>
+                <Label x:Name="LabelPlaceMut" FontSize="12" Text="" Grid.Row="1" Grid.Column="2" VerticalOptions="Center"/>
+                <Label x:Name="LabelRemarkMut" FontSize="12" Text="" Grid.Row="1" Grid.Column="3" VerticalOptions="Center"/>
+
+                <Frame Grid.Row="2" Grid.Column="1" BorderColor="Gray" CornerRadius="5" Padding="2">
+                    <Entry x:Name="EntryQuantity" FontSize="14" Grid.Row="2" Grid.Column="1" Placeholder="Quantity" PlaceholderColor="Olive" 
+                       Focused="EntryQuantity_Focused" Unfocused="EntryQuantity_Unfocused"  Completed="EntryQuantity_Completed" HorizontalTextAlignment="End" Keyboard="Numeric">
+                    </Entry>
+                </Frame>
+
+                <Frame Grid.Row="2" Grid.Column="2" BorderColor="Gray" CornerRadius="5" Padding="2">
+                    <Entry x:Name="EntryPlace" FontSize="14" Grid.Row="2" Grid.Column="2" Placeholder="Plaats" PlaceholderColor="Olive" 
+                           Focused="EntryPlace_Focused" Unfocused="EntryPlace_Unfocused" Completed="EntryPlace_Completed" HorizontalTextAlignment="End" Keyboard="Default" >
+                    </Entry>
+                </Frame>
+
+                <Frame Grid.Row="2" Grid.Column="3" BorderColor="Gray" CornerRadius="5" Padding="2">
+                    <Entry x:Name="EntryRemark" FontSize="14" Grid.Row="2" Grid.Column="3" Placeholder="Opmerking" PlaceholderColor="Olive" 
+                           Focused="EntryRemark_Focused" Unfocused="EntryRemark_Unfocused" Completed="EntryRemark_Completed" HorizontalTextAlignment="End" Keyboard="Default">
+                    </Entry>
+                </Frame>
+            </Grid>
+
+            <Label x:Name="LabelArtName" FontSize="16" Text="" HorizontalTextAlignment= "Center" TextColor="Green"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BtnMinus" HorizontalOptions="Center"  Text ="+/-"  BackgroundColor="Green" TextColor="White" Clicked="BtnMinus_Clicked" Grid.Row="0" Grid.Column="0"></Button>
+
+            </Grid>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BtnReturn" Text = "Terug"  BackgroundColor="Green" TextColor="White" Clicked="BtnReturn_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+                <Button x:Name="BtnSave" Text ="Opslaan"  BackgroundColor="Green" TextColor="White" Clicked= "BtnSave_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+
+            </Grid>
+
+
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

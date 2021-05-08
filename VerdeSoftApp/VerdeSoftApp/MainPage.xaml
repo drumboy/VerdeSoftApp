@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VerdeSoftApp.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+
+        <Label x:Name="Titel" HorizontalTextAlignment="Center" BackgroundColor="Green" TextColor="White">VerdeSoft 1.0.0.35 - v 1.0.6 (Bèta 1)</Label>
+
+        <!--<Image x:Name="backgroundImage" Source="https://www.verdesoft.be/images/Verdesoft-02.png" 
+               HeightRequest="80" WidthRequest="30"></Image>-->
+        <Image x:Name="backgroundImage" Source="" HeightRequest="80" WidthRequest="30"></Image>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BtnCashRegister" BackgroundColor="Green" TextColor="White" Text="Kassa"  Clicked="BtnCashRegister_Clicked"  Grid.Row="0" Grid.Column="1"/>
+            <Frame  BorderColor="Gray" CornerRadius="5" Padding="2" Grid.Row="0" Grid.Column="2">
+                <Picker x:Name="DropDownUsers" FontSize="Small" Title="Selecteer gebruiker" ItemsSource="{Binding UserList}" SelectedItem="{Binding SelectedColorName, Mode=TwoWay}" BackgroundColor="Beige"  />
+            </Frame>
+
+        </Grid>
+
+        
+
+        <!--
+        
+        <Button BackgroundColor="Green" TextColor="White" Text="Kassa"  Clicked="BtnCashRegister_Clicked" />
+        <Button BackgroundColor="Green" TextColor="White" Text="Instellingen"  Clicked="BtnSettings_Clicked" />
+        <Button BackgroundColor="Green" TextColor="White" Text="Test"  Clicked="BtnTest_Clicked" /> 
+        -->
+        
+        <!--<ImageButton x:Name="ImgBtn" Source="search.png"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="ImageButton_Clicked" BackgroundColor="Green"/>-->
+        <!-- <Button x:Name="ImgBtn2" Text="Has Image" ImageSource="search.png"  /> -->
+
+        <!--
+        <Button x:Name="BtnInitDatabase"  BackgroundColor="Green" TextColor="White" Text="Initialiseer database"  Clicked="BtnInitDatabase_Clicked" />
+        <Button x:Name="BtnClose" BackgroundColor="Green" TextColor="White" Text="Afsluiten"  Clicked="BtnClose_Clicked" /> 
+        
+        -->
+        
+        <!--
+        <Button x:Name="BtnTest" BackgroundColor="Green" TextColor="White" Text="Test"  Clicked="BtnTest_Clicked" Grid.Row="1" Grid.Column="1" />
+        -->
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BtnStock" BackgroundColor="Green" TextColor="White" Text="Stock"  Clicked="BtnStock_Clicked"  Grid.Row="0" Grid.Column="1"/>
+            <Button x:Name="BtnLabel" BackgroundColor="Green" TextColor="White" Text="Label"  Clicked="BtnLabel_Clicked"  Grid.Row="0" Grid.Column="2"/>
+            <Button x:Name="BtnOrder" BackgroundColor="Green" TextColor="White" Text="Bestelling"  Clicked="BtnOrder_Clicked" Grid.Row="1" Grid.Column="1" />
+            <Button x:Name="BtnInventory" BackgroundColor="Green" TextColor="White" Text="Inventaris"  Clicked="BtnInventory_Clicked" Grid.Row="1" Grid.Column="2" />
+            <Button x:Name="BtnDamage" BackgroundColor="Green" TextColor="White" Text="Breuk"  Clicked="BtnDamage_Clicked" Grid.Row="2" Grid.Column="1" />
+            <Button x:Name="BtnControle" BackgroundColor="Green" TextColor="White" Text="Controle"  Clicked="BtnControle_Clicked" Grid.Row="2" Grid.Column="2" />
+        </Grid>
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BtnSync" BackgroundColor="#1690F4" TextColor="White" Text="Synchroniseer"  Clicked="BtnSync_Clicked" Grid.Row="0" Grid.Column="1"/>
+            <Button x:Name= "BtnSettings" BackgroundColor="Orange" TextColor="White" Text="Instellingen"  Clicked="BtnSettings_Clicked"  Grid.Row="0" Grid.Column="2" />
+        </Grid>
+
+        <!-- 105 - Neem Foto: Nieuwe module Foto Artikels -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BtnTakePhoto" IsVisible="true" BackgroundColor="Green" TextColor="White" Text=""  Clicked="BtnTakePhoto_Clicked" Grid.Row="0" Grid.Column="1" />
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BtnClose" BackgroundColor="Green" TextColor="White" Text="Afsluiten"  Clicked="BtnClose_Clicked" Grid.Row="0" Grid.Column="1" />
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

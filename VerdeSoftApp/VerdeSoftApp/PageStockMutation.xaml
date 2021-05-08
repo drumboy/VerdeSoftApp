@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VerdeSoftApp.PageStockMutation">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="LabelTitle" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Lijst</Label>
+            <Label x:Name="LabelMut" FontSize="20" Text="Stock mutaties" TextColor="White" BackgroundColor="#1690F4" HorizontalTextAlignment= "Center" />
+
+            <ListView ItemsSource="{Binding stockMutationList}"
+           x:Name="ListViewStockMutations"
+          HasUnevenRows="true"
+          ItemSelected="OnListViewItemSelected"
+          ItemTapped="OnListViewItemTapped">
+
+                <ListView.Header>
+                    <Grid Padding="10" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25" />
+                        </Grid.RowDefinitions>
+                        <Label Text="" FontAttributes="Bold" Grid.Column="0" Grid.Row="0" VerticalOptions="End"  />
+                        <Label Text="" FontSize="8" FontAttributes="Bold" Grid.Column="1" Grid.Row="0" VerticalOptions="End"  />
+                        <Label x:Name="LabelQuant" Text="Aant" FontAttributes="Bold" Grid.Column="2" Grid.Row="0" VerticalOptions="End" />
+                        <Label Text="Loc" FontAttributes="Bold" Grid.Column="3" Grid.Row="0" VerticalOptions="End" />
+                        <Label Text="Art" FontAttributes="Bold" Grid.Column="4" Grid.Row="0" VerticalOptions="End" />
+                    </Grid>
+                </ListView.Header>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30" />
+                                    <ColumnDefinition Width="30" />
+                                    <ColumnDefinition Width="40" />
+                                    <ColumnDefinition Width="70" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding Kind}" VerticalOptions="End" />
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding MutKind}" FontSize="8" VerticalOptions="End" />
+                                <Label Grid.Row="0" Grid.Column="2" Text="{Binding Quantity}" VerticalOptions="End" />
+                                <Label Grid.Row="0" Grid.Column="3" Text="{Binding Place}" VerticalOptions="End" />
+                                <Label Grid.Row="0" Grid.Column="4" Text="{Binding ArtName}" VerticalOptions="End" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BtnDelete" Text ="Verwijderen" BackgroundColor="Green" TextColor="White" Clicked="BtnDelete_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+                <Button x:Name="BtnSend" Text ="Versturen" BackgroundColor="Orange" TextColor="White" Clicked= "BtnSend_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+                <Button x:Name="BtnReturn" Text ="Terug" BackgroundColor="Green" TextColor="White" Clicked="BtnReturn_Clicked" Grid.Row="0" Grid.Column="3"></Button>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

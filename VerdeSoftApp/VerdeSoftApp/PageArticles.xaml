@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VerdeSoftApp.PageArticles">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="LabelTitle" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Green">Resultaat</Label>
+            <ListView ItemsSource="{Binding Articles}"
+          HasUnevenRows="true"
+          ItemSelected="OnListViewItemSelected"
+          ItemTapped="OnListViewItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="1" Text="{Binding Name}" FontAttributes="Bold" />
+                                <!--<Label x:Name="lblPhotoArticle" Grid.Row="0" Grid.Column="2" Text="{Binding IsPhotoAvailable}" FontAttributes="Bold" HorizontalOptions="End" />-->
+                                <Button x:Name="btnPhotoArticle" Grid.Row="0" Grid.Column="2" Text="{Binding IsPhotoAvailable}" IsVisible="{Binding ImageFound}" FontAttributes="Bold" HorizontalOptions="End" Clicked="btnPhotoArticle_Clicked" />
+                                <!--<Label Grid.Row="0" Grid.Column="2" Text="{Binding IsPhotoAvailable}" FontAttributes="Bold" HorizontalOptions="End">
+                                    --><!--<Label.Triggers>
+                                        <MultiTrigger TargetType="Label">
+                                            <MultiTrigger.Conditions>
+                                                <BindingCondition Binding="{Binding ImageFound}" Value="true"/>
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Text" Value="Foto"/>
+                                        </MultiTrigger>
+                                    </Label.Triggers>--><!--
+                                </Label>-->
+                                <!--<Image x:Name="ImageArticle" Source="" HorizontalOptions="End"  HeightRequest="20" WidthRequest="20" Grid.Row="0" Grid.Column="2">
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image" Binding="{Binding ImageFound}" Value="True">
+                                            <Setter Property="Source" Value="foto_article.png" />
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>-->
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Price1, StringFormat='{0:F2} €' }"  VerticalOptions="Start" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BtnReturn" Text ="Terug" BackgroundColor="Green" TextColor="White" Clicked="BtnReturn_Clicked" Grid.Row="0" Grid.Column="1"></Button>
+                <Button x:Name="BtnChoose" Text ="Kiezen" BackgroundColor="Green" TextColor="White" Clicked="BtnChoose_Clicked" Grid.Row="0" Grid.Column="2"></Button>
+                
+            </Grid>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
